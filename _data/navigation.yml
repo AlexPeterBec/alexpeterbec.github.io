@@ -1,7 +1,18 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Statistiques"
+    url: /stats/
+  - title: "Engineering"
+    url: /engnr/
+  - title: "Machine Learning"
+    url: /ml/
+  - title: "Resources"
+    url: /resources/
+  - title: "Kaggle"
+    url: /kaggle/
+  - title: "CV"
+    url: https://mmistakes.github.io/minimal-mistakes/about/
+    
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
