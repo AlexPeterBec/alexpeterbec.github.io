@@ -4,11 +4,9 @@ title: "Stats 1 - Apprentissage supervisé"
 excerpt: "Définitions et principes de base"
 classes: wide
 header:
-  image: "/assets/images/mnist.png"
+  image: "assets/images/curves-led.jpg"
 categories: [definitions, statistiques]
 ---
-
-![image](/assets/images/mnist.png?raw=true){: .center-image }
 
 # Introduction
 Pour chacun des datasets, on trouve un ensemble de variables pouvant être qualifiées de données *d'entrée*, qui sont mesurées ou prédéfinies. Celles-ci ont une influence sur la ou les variables de *sortie*. Pour chaque exemple, le but est d'utiliser les variables d'entrée pour prédire la valeur des variables de sortie.
@@ -28,6 +26,8 @@ Le type d'entrée peut également varier. Il peut exister des mesures qualitativ
 Un troisième type de variable est la *catégorielle ordonnée*, comme par exemple : *Small, Medium, Large*, où il y a en effet un ordre logique dans les valeurs, mais pas de notion de mesure ou d'ordre de grandeur.
 
 Les variables qualitatives sont habituellement représentées numériquement par des codes. Le cas le plus simple est le binaire quand on considère par exemple *Succes ou Echec*, on peut alors représenter cette valeur par le binaire 0/1 ou -1/1. Pour des raisons qui se revèleront évidentes, ces codes numériques sont parfois appelés *cibles*. Quand il y a plus de deux catégories, plusieurs options existent : La plus efficace est l'encodage via des *dummy variables* où l'on représente une mesure pouvant prendre K valeurs comme un vecteur de K mesures binaires, où une seule valeur peut prendre la valeur 1. Bien qu'il existe des encodages plus compacts, les *dummy variables* sont symétriques dans les niveaux de factorisation
+
+![image](/assets/images/mnist.png?raw=true){: .center-image }
 
 # Deux approches simples
 ### Modèles linéaires et moindre carrés
