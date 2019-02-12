@@ -1,6 +1,7 @@
 ---
 published: true
-title: Stats 1 - Apprentissage supervisé
+title: "Stats 1 - Apprentissage supervisé"
+excerpt: "Définitions et principes de base"
 classes: wide
 categories: [definitions, statistiques]
 ---
