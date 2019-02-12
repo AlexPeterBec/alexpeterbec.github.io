@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /stats/
+permalink: /st/
 author_profile: true
 ---
 

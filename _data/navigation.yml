@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Statistiques"
-    url: /stats/
+    url: /st/
   - title: "Engineering"
     url: /engnr/
   - title: "Machine Learning"
@@ -12,7 +12,7 @@ main:
     url: /kaggle/
   - title: "CV"
     url: https://mmistakes.github.io/minimal-mistakes/about/
-    
+
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
