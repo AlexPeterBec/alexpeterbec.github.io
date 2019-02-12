@@ -4,7 +4,7 @@ title: "Stats 1 - Apprentissage supervisé"
 excerpt: "Définitions et principes de base"
 classes: wide
 header:
-  teaser: "assets/images/curves-led.jpg"
+  image: "/assets/images/mnist.png"
 categories: [definitions, statistiques]
 ---
 
