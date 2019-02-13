@@ -1,7 +1,7 @@
 ---
 published: true
 title: "De zéro à TensorFlow - Théorie"
-excerpt: "Définitions et principes de base"
+excerpt: "Qu'est-ce qu'un tenseur ? Premiers scripts"
 classes: wide
 header:
   image: "assets/images/curves-led.jpg"
