@@ -54,7 +54,7 @@ Un tenseur peut être vu comme une matrice, et inversement, une matrice est un c
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/tensorflow/architecture.png){: .align-center}
 
-- Architectures supportées
+- Architectures materielles supportées
 - Languages supportés
 - APIs par dessus Tensorflow (Keras)
 
@@ -67,9 +67,7 @@ Il suffira alors d'integrer la librairie dans les imports : ```import tensorflow
 
 ## Les bases de TensorFlow
 
-### Utiliser une session
-Dans ce premier exemple on définit simplement deux constantes, et on déclare une opération sur ces constantes. **Ici, le print final ne renverra pas le résultat de cette multiplication**. En effet, c'est le principe de Tensorflow, comme évoqué en introduction : Ici c'est uniquement le **graph** de calcul qui est défini, aucun process de calcul n'est lancé.
-
+### Premier script
 ```
 import tensorflow as tf
 
@@ -83,6 +81,12 @@ result = tf.multiply(x1, x2)
 # Afficher les résultats
 print(result)
 ```
+
+Dans ce premier exemple on définit simplement deux constantes, et on déclare une opération sur ces constantes. **Ici, le print final ne renverra pas le résultat de cette multiplication**. En effet, c'est le principe de Tensorflow, comme évoqué en introduction : Ici c'est uniquement le **graph** de calcul qui est défini, aucun process de calcul n'est lancé.
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/tensorflow/graph.png){: .align-center}
+
+
 Dans l'exemple suivant on démarre une **session** afin que les calculs qui nous interessent s'effectuent : ```tf.Session()```
 
 ```
