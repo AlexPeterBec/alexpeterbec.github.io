@@ -19,9 +19,9 @@ Pour comprendre les tenseurs il est utile d'avoir en tête quelques notions d'al
 ### Vecteurs plan
 Vocabulaire :
 
-- Matrice : Tableau rectangulaire de valeurs.
-- Vecteur : Type particulier de matrice, on peut considérer un vecteur comme une matrice d'une seule colonne.
-- Scalaire : Les nombres réels qui multiplient les vecteurs dans un espace vectoriel.
+- **Matrice** : Tableau rectangulaire de valeurs.
+- **Vecteur** : Type particulier de matrice, on peut considérer un vecteur comme une matrice d'une seule colonne.
+- **Scalaire** : Les nombres réels qui multiplient les vecteurs dans un espace vectoriel.
 
 On peut donc considérer un vecteur comme un scalaire, qui possède une direction.
 
@@ -52,7 +52,7 @@ Pour travailler en environnement Jupyter Notebook, le plus simple est d'installe
 Il suffira alors d'integrer la librairie dans les imports : ```import tensorflow as tf```
 ## Les bases de TensorFlow
 
-#### Utiliser une session
+### Utiliser une session
 Dans ce premier exemple on définit simplement deux constantes, et on déclare une opération sur ces constantes. **Ici, le print final ne renverra pas le résultat de cette multiplication**. En effet, c'est le principe de Tensorflow, comme évoqué en introduction : Ici c'est uniquement le **graph** de calcul qui est défini, aucun process de calcul n'est lancé.
 
 ```
@@ -96,9 +96,16 @@ with tf.Session() as sess:
   print(output)
 ```
 
-Sources : 
+### Les types de variables
+
+
+
+
+### Sources : 
 
 - [Datacamp - Tensorflow tutorial](https://www.datacamp.com/community/tutorials/tensorflow-tutorial)
 - [Analytics Vidhya - Tensors and graphs](https://www.analyticsvidhya.com/blog/2017/03/tensorflow-understanding-tensors-and-graphs/)
 - [Artificence - Tensorflow, les tenseurs](https://artificence.com/2017/08/14/rang-forme-et-type-de-tenseur-avec-tensorflow/)
+- [Nishank Sharma - Tensorflow variables](https://medium.com/themlblog/getting-started-with-tensorflow-constants-variables-placeholders-and-sessions-80900727b489)
+- [Tensorflow guide](https://www.tensorflow.org/guide)
 
