@@ -1,7 +1,7 @@
 ---
 published: true
 title: "De zéro à TensorFlow - Théorie"
-excerpt: "Qu'est-ce qu'un tenseur ? Premiers scripts"
+excerpt: "Notion de tenseur, architecture, premiers scripts"
 classes: wide
 comments: true
 header:
@@ -48,10 +48,23 @@ Un tenseur peut être vu comme une matrice, et inversement, une matrice est un c
 - Tenseur de rang 3 : Une image en couleur - empilement de chaque couleur
 - Tenseur de rang 4 : Une vidéo en couleur
 
-## Options de déploiement
+## Déploiement et architecture
+
+#### Déploiement 
+
+
 Pour travailler en environnement Jupyter Notebook, le plus simple est d'installer le package avec pip : ```pip install tensorflow```
 
 Il suffira alors d'integrer la librairie dans les imports : ```import tensorflow as tf```
+
+#### Architecture de Tensorflow
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/tensorflow/architecture.png){: .align-center}
+
+- Architectures supportées
+- Languages supportés
+- APIs par dessus Tensorflow (Keras)
+
 ## Les bases de TensorFlow
 
 ### Utiliser une session
