@@ -3,6 +3,7 @@ published: true
 title: "Stats 1 - Apprentissage supervisé"
 excerpt: "Définitions et principes de base"
 classes: wide
+comments: true
 header:
   image: "assets/images/curves-led.jpg"
 categories: [definitions, statistiques]
