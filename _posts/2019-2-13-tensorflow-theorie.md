@@ -5,7 +5,7 @@ excerpt: "Qu'est-ce qu'un tenseur ? Premiers scripts"
 classes: wide
 comments: true
 header:
-  image: "assets/images/curves-led.jpg"
+  overlay_image: "assets/images/tensorflow/cover.jpg"
 categories: [definitions, tensorflow, tensors]
 ---
 
