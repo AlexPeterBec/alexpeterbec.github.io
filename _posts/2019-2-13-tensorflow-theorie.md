@@ -50,13 +50,6 @@ Un tenseur peut être vu comme une matrice, et inversement, une matrice est un c
 
 ## Déploiement et architecture
 
-#### Déploiement 
-
-
-Pour travailler en environnement Jupyter Notebook, le plus simple est d'installer le package avec pip : ```pip install tensorflow```
-
-Il suffira alors d'integrer la librairie dans les imports : ```import tensorflow as tf```
-
 #### Architecture de Tensorflow
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/tensorflow/architecture.png){: .align-center}
@@ -64,6 +57,13 @@ Il suffira alors d'integrer la librairie dans les imports : ```import tensorflow
 - Architectures supportées
 - Languages supportés
 - APIs par dessus Tensorflow (Keras)
+
+#### Déploiement 
+
+
+Pour travailler en environnement Jupyter Notebook, le plus simple est d'installer le package avec pip : ```pip install tensorflow```
+
+Il suffira alors d'integrer la librairie dans les imports : ```import tensorflow as tf```
 
 ## Les bases de TensorFlow
 
