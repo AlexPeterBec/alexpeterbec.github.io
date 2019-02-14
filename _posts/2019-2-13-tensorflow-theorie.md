@@ -17,6 +17,8 @@ Tensorflow est une librairie qui permet la conception, la construction et l'entr
 ## Du vecteur au tenseur
 Pour comprendre les tenseurs il est utile d'avoir en tête quelques notions d'algèbre linéaire et de calcul vectoriel.
 
+![Différentes dimensions](assets/images/tensorflow/tensors.png)
+
 ### Vecteurs plan
 Vocabulaire :
 
@@ -45,9 +47,6 @@ Un tenseur peut être vu comme une matrice, et inversement, une matrice est un c
 - Tenseur de rang 2 : Une image en niveaux de gris.
 - Tenseur de rang 3 : Une image en couleur - empilement de chaque couleur
 - Tenseur de rang 4 : Une vidéo en couleur
-
-![Différentes dimensions](assets/images/tensors.png)
-
 
 ## Options de déploiement
 Pour travailler en environnement Jupyter Notebook, le plus simple est d'installer le package avec pip : ```pip install tensorflow```
