@@ -17,7 +17,7 @@ Tensorflow est une librairie qui permet la conception, la construction et l'entr
 ## Du vecteur au tenseur
 Pour comprendre les tenseurs il est utile d'avoir en tête quelques notions d'algèbre linéaire et de calcul vectoriel.
 
-![Différentes dimensions](assets/images/tensorflow/tensors.png)
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/tensorflow/tensors.png){: .align-center}
 
 ### Vecteurs plan
 Vocabulaire :
