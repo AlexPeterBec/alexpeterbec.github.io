@@ -1,7 +1,7 @@
 ---
 published: true
 title: "De zéro à TensorFlow - Théorie"
-excerpt: "Notion de tenseur, architecture, premiers scripts"
+excerpt: "Architecture, tenseurs, premiers scripts"
 classes: wide
 comments: true
 header:
