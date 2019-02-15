@@ -9,10 +9,13 @@ header:
 categories: [definitions, tensorflow, tensors]
 ---
 
-Tensorflow est une librairie qui permet la conception, la construction et l'entrainement de modèles Deep Learning. Le moteur de calcul de Tensorflow se base sur un graphe, dans lequel circulent des tenseurs.. TensorFlow !
+Tensorflow est une librairie créée par Google pour la conception, la construction et l'entrainement de modèles Deep Learning. 
 
-- Les noeuds sont des **opérations** mathématiques (multiplication, somme..)
-- Les extremités sont des **données**, généralement des matrices multidimensionnelles ou bien de tenseurs
+Parmi les concurrents on trouve :
+- **PyTorch**, le framework ML de Facebook, basé sur le language Lua. Facile à prendre en main pour un developpeur Python, car se base sur le même flot de contrôle standard.
+- **CNTK**, le framework ML de Microsoft, proposant de une bonne vitesse de calcul et des bonnes performances en reconnaissance d'images.
+- **mxnet**, le framework ML choisi par Amazon Web Services.
+- **Caffe2**, un framework ML conçu pour des applications mobiles.
 
 ## Du vecteur au tenseur
 Pour comprendre les tenseurs il est utile d'avoir en tête quelques notions d'algèbre linéaire et de calcul vectoriel.
@@ -54,9 +57,9 @@ Un tenseur peut être vu comme une matrice, et inversement, une matrice est un c
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/tensorflow/architecture.png){: .align-center}
 
-- Architectures materielles supportées
-- Languages supportés
-- APIs par dessus Tensorflow (Keras)
+- **Couche basse** : TensorFlow s'adapte à de nombreuses architectures materielles, sur lesquelles la parallelisation des opérations est effectuée de manière transparente. Il s'execute aussi bien sur **CPU, GPU, iOS et Android**. La couche d'optimisation XLA (Accelerated Linear Algebra) améliore la vitesse, l'usage mémoire et la portabilité.
+- **Client Tensorflow** : Tensorflow est conçu pour supporter de nombreux languages, la meilleure intégration actuelle est celle en Python. Le C++, Java et Go sont également supportés.
+- **Couches superieures** : Parallelement aux clients classiques supportés, on trouve des bibliothèques d'abstraction utilisant le client python : Keras, Sonnet, TFLearn, qui masquent la complexité de Tensorflow et permettent d'automatiser de nombreuses tâches de conception.
 
 ### Déploiement 
 
@@ -83,6 +86,11 @@ print(result)
 ```
 
 Dans ce premier exemple on définit simplement deux constantes, et on déclare une opération sur ces constantes. **Ici, le print final ne donnera pas le résultat de cette multiplication**. En effet, c'est le principe de Tensorflow, comme évoqué en introduction : Ici c'est uniquement le **graph** de calcul qui est défini, aucun process de calcul n'est lancé.
+
+Le moteur de calcul de Tensorflow se base sur un graphe, dans lequel circulent des tenseurs.. TensorFlow !
+
+- Les noeuds sont des **opérations** mathématiques (multiplication, somme..)
+- Les extremités sont des **données**, généralement des matrices multidimensionnelles / des tenseurs.
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/tensorflow/graph.png){: .align-center}
 
