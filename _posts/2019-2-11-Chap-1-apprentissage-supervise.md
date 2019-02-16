@@ -44,10 +44,14 @@ Dans cette partie, nous verrons deux méthodes simples et efficaces de prédicti
  
 ### Modèles linéaires et moindre carrés
 
-Le modèle linéaire a été un pilier de la statistique durant les 30 dernières années et reste un outil très important à ce jour. On considère un vecteur de données d'entrée $$X^T = (X_1, X_2, ..., X_p)$$, et la sortie Y est évaluée selon le modèle suivant : $$\hat Y = \hat \beta + \sum_{j=1}^{p} X_j \hat \beta_j$$
+Le modèle linéaire a été un pilier de la statistique durant les 30 dernières années et reste un outil très important à ce jour. On considère un vecteur de données d'entrée $$X^T = (X_1, X_2, ..., X_p)$$, et la sortie Y est évaluée selon le modèle suivant : 
 
-Le terme $\hat\beta_0$ 
+$$\hat Y = \hat \beta + \sum_{j=1}^{p} X_j \hat \beta_j$$
 
+Le terme $$\hat\beta_0$$ est le terme d'intercept, appelé aussi **biais** en machine learning. C'est pourquoi on intègre la valeur 1 au début du vecteur de données $$X$$ pour pouvoir inclure $$\hat\beta_0$$ à l'ensemble des coefficients $$\hat\beta$$ et finalement écrire le modèle linéaire sous la forme d'un produit :
+
+$$\hat Y = X^T \hat\beta$$
+ 
 ### Methode des plus proches voisins
 ### Des moindres carrés aux plus proches voisins
 
