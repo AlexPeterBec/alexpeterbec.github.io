@@ -30,7 +30,7 @@ Les machines virtuelles sont les ancètres des containers Docker. Les machines v
 
 Les containers sont supérieurs car ils utilisent beaucoup moins de ressources, sont portables, et sont rapidement deployables.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/docker/VM-containers.png" alt="" width="150">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/docker/VM-containers.png" alt="" class="center" width="500">
 
 
 ### Docker image
