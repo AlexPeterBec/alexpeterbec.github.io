@@ -11,7 +11,7 @@ categories: [docker, containers]
 
 # Le concept
 
-Les containers sont énormément utilisés pour améliorer la sécurité, la reproductibilité et la scalablité des développements en data science. Docker est une plateforme qui permet de déployer des applications dans des containers.
+Les containers sont utilisés pour améliorer la sécurité, la reproductibilité et la scalablité des développements en data science. Docker est une plateforme qui permet de déployer des applications dans des containers.
 
 ## Concepts importants de Docker
 
@@ -30,7 +30,7 @@ Les machines virtuelles sont les ancètres des containers Docker. Les machines v
 
 Les containers sont supérieurs car ils utilisent beaucoup moins de ressources, sont portables, et sont rapidement deployables.
 
-<img src=https://scr.sad.supinfo.com/articles/resources/219471/6673/0.png alt=\"Docker Header\" style=\"height: 200px;\"/>
+<img src=https://scr.sad.supinfo.com/articles/resources/219471/6673/0.png alt="Docker Header" style="height: 200px;"/>
 
 ### Docker image
 On peut comparer les images Docker à des emporte pièces, ou des moules en patisserie. Une image est le modèle sur lequel on construit un nouveau container identique.
