@@ -28,7 +28,7 @@ Un container Docker est finalement un logiciel, dans lequel des programmes s'exe
 ### Machine virtuelle
 Les machines virtuelles sont les ancètres des containers Docker. Les machines virtuelles, elles aussi, isolent une application et ses dépendances (ce dont elle a besoin pour s'executer).
 
-Les containers sont supérieurs car ils utilisent beaucoup moins de ressources, sont portables, et sont rapidement deployables.
+Les containers sont supérieurs car ils utilisent beaucoup moins de ressources, sont portables, et sont rapidement deployables. On le voit bien sur ce schema :
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/docker/VM-containers.png" alt="" class="center" width="500">
 
