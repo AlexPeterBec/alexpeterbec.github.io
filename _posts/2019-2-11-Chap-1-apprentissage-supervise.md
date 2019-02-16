@@ -50,9 +50,9 @@ Le modèle linéaire a été un pilier de la statistique durant les 30 dernière
 
 ![image](/assets/images/stats1/linear.png?raw=true){: .center-image }
 
-**Exemple simple** : L'exemple le plus simple du modèle linéaire est l'approximation par un polynome du premier degré (p=1 dans la suite) ainsi $$Y = aX + b$$ avec b l'intercept (ordonnée à l'origine). Le modèle linéaire se généralise ensuite comme la contribution de chacune des variables indépendantes.
+**Exemple en dimension 2** : L'exemple le plus simple du modèle linéaire est l'approximation par un polynome du premier degré (p=1 dans la suite) ainsi $$Y = aX + b$$ avec b l'intercept (ordonnée à l'origine). Le modèle linéaire se généralise ensuite comme la contribution de chacune des variables indépendantes.
 
-On considère un vecteur de données d'entrée $$X^T = (X_1, X_2, ..., X_p)$$, et la sortie Y est évaluée selon le modèle suivant :
+**En plus grande dimension** : On considère un vecteur de données d'entrée $$X^T = (X_1, X_2, ..., X_p)$$, et la sortie Y est évaluée selon le modèle suivant :
 
 $$\hat Y = \hat \beta + \sum_{j=1}^{p} X_j \hat \beta_j$$
 
