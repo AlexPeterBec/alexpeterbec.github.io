@@ -1,6 +1,6 @@
 ---
 published: true
-title: "Docker : Les bonnes bases"
+title: "Docker : Les bonnes bases 1"
 excerpt: "Container, Image, Dockerfile"
 classes: wide
 comments: true
@@ -30,6 +30,8 @@ Les machines virtuelles sont les ancètres des containers Docker. Les machines v
 
 Les containers sont supérieurs car ils utilisent beaucoup moins de ressources, sont portables, et sont rapidement deployables.
 
+<img src=https://scr.sad.supinfo.com/articles/resources/219471/6673/0.png alt=\"Docker Header\" style=\"height: 200px;\"/>
+
 ### Docker image
 On peut comparer les images Docker à des emporte pièces, ou des moules en patisserie. Une image est le modèle sur lequel on construit un nouveau container identique.
 
@@ -44,3 +46,12 @@ C'est le fichier qui indique à Docker comment construire notre image :
 Une image docker, associée à la commande ```docker run image_name``` démarre un container avec l'image demandée.
 
 Pour distribuer cette image, il existe le [Docker Hub](https://hub.docker.com/) qui recense toutes les images que l'on peut obtenir avec ```docker run *```
+
+
+## Exemple
+
+
+## Sources
+
+[Containers & Virtualization](https://www.smartfile.com/blog/what-is-containerization-and-has-it-killed-virtualization/)
+[Enough Docker to be useful](https://towardsdatascience.com/learn-enough-docker-to-be-useful-b7ba70caeb4b)
