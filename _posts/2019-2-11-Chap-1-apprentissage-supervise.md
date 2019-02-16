@@ -34,6 +34,8 @@ Les variables qualitatives sont habituellement représentées numériquement par
 
 ![image](/assets/images/mnist.png?raw=true){: .center-image }
 
+Un exemple introductif en machine learning est la reconnaissance des chiffres manuscrits de la base MNIST : L'algorithme apprend à partir d'exemples dont il connait la réponse, pour ensuite prédire des exemples jamais vus auparavant.
+
 # Deux approches simples
 
 Dans cette partie, nous verrons deux méthodes simples et efficaces de prédictions : Le modèle linéaire entrainé via les moindres carrés, et la prédiction basée sur les K plus proches voisins.
@@ -41,17 +43,23 @@ Dans cette partie, nous verrons deux méthodes simples et efficaces de prédicti
 - Le **modèle linéaire** fait hypothèses très importantes sur la distribution des données, fournit donc des prédictions stables, mais potentiellement erronées.
 - La méthode des **K plus proches voisins** fait des hypothèses moins fortes sur les données : Ses prédictions sont plus précises, mais peuvent être instables.
 
- 
+
 ### Modèles linéaires et moindre carrés
 
-Le modèle linéaire a été un pilier de la statistique durant les 30 dernières années et reste un outil très important à ce jour. On considère un vecteur de données d'entrée $$X^T = (X_1, X_2, ..., X_p)$$, et la sortie Y est évaluée selon le modèle suivant : 
+Le modèle linéaire a été un pilier de la statistique durant les 30 dernières années et reste un outil très important à ce jour.
+
+![image](/assets/images/stats1/linear.png?raw=true){: .center-image }
+
+**Exemple simple** : L'exemple le plus simple du modèle linéaire est l'approximation par un polynome du premier degré (p=1 dans la suite) ainsi $$Y = aX + b$$ avec b l'intercept (ordonnée à l'origine). Le modèle linéaire se généralise ensuite comme la contribution de chacune des variables indépendantes.
+
+On considère un vecteur de données d'entrée $$X^T = (X_1, X_2, ..., X_p)$$, et la sortie Y est évaluée selon le modèle suivant :
 
 $$\hat Y = \hat \beta + \sum_{j=1}^{p} X_j \hat \beta_j$$
 
 Le terme $$\hat\beta_0$$ est le terme d'intercept, appelé aussi **biais** en machine learning. C'est pourquoi on intègre la valeur 1 au début du vecteur de données $$X$$ pour pouvoir inclure $$\hat\beta_0$$ à l'ensemble des coefficients $$\hat\beta$$ et finalement écrire le modèle linéaire sous la forme d'un produit :
 
 $$\hat Y = X^T \hat\beta$$
- 
+
 ### Methode des plus proches voisins
 ### Des moindres carrés aux plus proches voisins
 
