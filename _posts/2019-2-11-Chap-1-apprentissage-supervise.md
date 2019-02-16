@@ -24,7 +24,9 @@ Les formes de variables en *sortie* peuvent varier :
 - Un résultat **quantitatif**, où certaines valeurs sont plus grandes que les autres, et les mesures proches en valeur sont proches par leur nature.
 - Un résultat **qualitatif, catégorique, discret**, admet qu'il existe un nombre fini de valeurs de sortie : 3 classes d'Iris, 10 digits à reconnaitre. Il n'y a pas d'ordre parmi ces classes et on trouve souvent des valeurs descriptives plutôt que des nombres.
 
-Pour ces deux types de sorties, il est logique de penser à utiliser les entrées pour prédire les sorties. Cette distinction entre les types de sorties a amené à considérer deux types de problèmes : La *regression* quand il s'agit de prédire une valeur numérique, la *classification* quand il s'agit de prédire une valeur qualitative. Nous verrons que ces deux problème ont beaucoup en commun et peuvent être vus comme une tâche d'approximation de fonction.
+Pour ces deux types de sorties, il est logique de penser à utiliser les entrées pour prédire les sorties. Cette distinction entre les types de sorties a amené à considérer deux types de problèmes, nous verrons que ces deux problème ont beaucoup en commun et peuvent être vus comme une tâche d'approximation de fonction.
+- La *regression* quand il s'agit de prédire une valeur numérique.
+- La *classification* quand il s'agit de prédire une valeur qualitative.
 
 Le type d'entrée peut également varier. Il peut exister des mesures qualitatives *et* quantitatives dans le même ensemble d'entrée. Il existe par conséquent des méthodes adaptées au type d'entrée considérée, certaines pour les mesures qualitatives ou quantitatives en particulier, d'autres pour les deux sans distinction.
 
