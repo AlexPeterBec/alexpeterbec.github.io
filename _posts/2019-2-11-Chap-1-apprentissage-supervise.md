@@ -13,8 +13,7 @@ categories: [definitions, statistiques]
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-# Introduction
-Pour chacun des datasets, on trouve un ensemble de variables pouvant être qualifiées de données *d'entrée*, qui sont mesurées ou prédéfinies. Celles-ci ont une influence sur la ou les variables de *sortie*. Pour chaque exemple, le but est d'utiliser les variables d'entrée pour prédire la valeur des variables de sortie.
+Dans le domaine de l'apprentissage, pour chaque datasets, on trouve un ensemble de variables pouvant être qualifiées de données *d'entrée*, qui sont mesurées ou prédéfinies. Celles-ci ont une influence sur la ou les variables de *sortie*. Pour chaque exemple, le but est d'utiliser les variables d'entrée pour prédire la valeur des variables de sortie.
 
 Dans la litterature statistique, les entrées sont appelées les *prédicteurs*, et plus classiquement les *variables indépendantes*. Dans la reconnaissance de motifs, le terme *features* est préféré. Les sorties sont quant à elles appelées *réponses* ou bien *variables dépendantes*.
 
