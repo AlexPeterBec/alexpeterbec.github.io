@@ -5,7 +5,7 @@ excerpt: "Définitions et principes de base"
 classes: wide
 comments: true
 header:
-  image: "assets/images/curves-led.jpg"
+  overlay_image: "assets/images/stats1/curves-led.jpg"
 categories: [definitions, statistiques]
 ---
 
@@ -35,7 +35,7 @@ Les variables qualitatives peuvent être représentées de plusieurs manières :
 - Le cas le plus simple est le binaire quand on considère par exemple *Succes ou Echec*, on peut alors représenter cette valeur par le binaire 0/1 ou -1/1. Pour des raisons qui se revèleront évidentes, ces codes numériques sont parfois appelés *cibles*.
 - Quand il y a plus de deux catégories, plusieurs options existent : La plus efficace est l'encodage via des *dummy variables* où l'on représente une mesure pouvant prendre K valeurs comme un vecteur de K mesures binaires, où une seule valeur peut prendre la valeur 1. Bien qu'il existe des encodages plus compacts, les *dummy variables* sont symétriques dans les niveaux de factorisation
 
-![image](/assets/images/mnist.png?raw=true){: .center-image }
+![image](/assets/images/stats1/mnist.png?raw=true){: .center-image }
 
 Un exemple introductif en machine learning est la reconnaissance des chiffres manuscrits de la base MNIST : L'algorithme apprend à partir d'exemples dont il connait la réponse, pour ensuite prédire des exemples jamais vus auparavant.
 
