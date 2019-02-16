@@ -44,7 +44,7 @@ Dans cette partie, nous verrons deux méthodes simples et efficaces de prédicti
  
 ### Modèles linéaires et moindre carrés
 
-Le modèle linéaire a été un pilier de la statistique durant les 30 dernières années et reste un outil très important à ce jour. On considère un vecteur d'entrée $$X^T = (X_1, X_2, ..., X_p)$$, et on prédit la sortie Y selon le modèle suivant.
+Le modèle linéaire a été un pilier de la statistique durant les 30 dernières années et reste un outil très important à ce jour. On considère un vecteur d'entrée $$X^T = (X_1, X_2, ..., X_p)$$, et la sortie Y est évaluée selon le modèle suivant :
 
 ### Methode des plus proches voisins
 ### Des moindres carrés aux plus proches voisins
