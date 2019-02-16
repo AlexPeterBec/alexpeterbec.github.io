@@ -31,7 +31,17 @@ Les variables qualitatives sont habituellement représentées numériquement par
 ![image](/assets/images/mnist.png?raw=true){: .center-image }
 
 # Deux approches simples
+
+Dans cette partie, nous verrons deux méthodes simples et efficaces de prédictions : Le modèle linéaire entrainé via les moindres carrés, et la prédiction basée sur les K plus proches voisins.
+
+- Le **modèle linéaire** fait hypothèses très importantes sur la distribution des données, fournit donc des prédictions stables, mais potentiellement erronées.
+- La méthode des **K plus proches voisins** fait des hypothèses moins fortes sur les données : Ses prédictions sont plus précises, mais peuvent être instables.
+
+ 
 ### Modèles linéaires et moindre carrés
+
+Le modèle linéaire a été un pilier de la statistique durant les 30 dernières années et reste un outil très important à ce jour. On considère un vecteur d'entrée $$X^T = (X_1, X_2, ..., X_p)$$ 
+
 ### Methode des plus proches voisins
 ### Des moindres carrés aux plus proches voisins
 
