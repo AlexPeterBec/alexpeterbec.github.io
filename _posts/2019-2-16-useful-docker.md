@@ -25,22 +25,22 @@ On peut comparer un container Docker comme **une chose vivante**, qui existe sou
 
 Un container Docker est finalement un logiciel, dans lequel des programmes s'executent. Il peut y en avoir plusieurs en parallèle sur une unique machine, qui peuvent individuellement être executés, inspectés, stoppés, supprimés.
 
-#### Machine virtuelle
+### Machine virtuelle
 Les machines virtuelles sont les ancètres des containers Docker. Les machines virtuelles, elles aussi, isolent une application et ses dépendances (ce dont elle a besoin pour s'executer).
 
 Les containers sont supérieurs car ils utilisent beaucoup moins de ressources, sont portables, et sont rapidement deployables.
 
-#### Docker image
+### Docker image
 On peut comparer les images Docker à des emporte pièces, ou des moules en patisserie. Une image est le modèle sur lequel on construit un nouveau container identique.
 
 **L'image Docker contient dans un package : le Dockerfile, les librairies, et le code de l'application.**
 
-#### Dockerfile
+### Dockerfile
 C'est le fichier qui indique à Docker comment construire notre image :
 - Elle fait référence à une image de base, les plus populaires étant python, ubuntu, alpine.
 - Une image intermédiaire par dessus l'image de base. Pour une application machine learning, typiquement charger Numpy, Pandas, et SciKit learn.
 
-#### Lancement et enregistrement
+### Lancement et enregistrement
 Une image docker, associée à la commande ```docker run image_name``` démarre un container avec l'image demandée.
 
-Pour distribuer cette image, il existe le [Docker Hub](https://hub.docker.com/) qui recense toutes les images que l'on peut obtenir avec ```docker run *``` 
+Pour distribuer cette image, il existe le [Docker Hub](https://hub.docker.com/) qui recense toutes les images que l'on peut obtenir avec ```docker run *```
