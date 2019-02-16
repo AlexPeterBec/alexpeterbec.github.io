@@ -30,7 +30,8 @@ Les machines virtuelles sont les ancètres des containers Docker. Les machines v
 
 Les containers sont supérieurs car ils utilisent beaucoup moins de ressources, sont portables, et sont rapidement deployables.
 
-<img src="../assets/images/docker/VM-containers.png" alt="VM vs. containers" title="VM vs. containers" height="200" />
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/docker/VM-containers.png" alt="" width="150">
+
 
 ### Docker image
 On peut comparer les images Docker à des emporte pièces, ou des moules en patisserie. Une image est le modèle sur lequel on construit un nouveau container identique.
@@ -51,7 +52,9 @@ Pour distribuer cette image, il existe le [Docker Hub](https://hub.docker.com/) 
 ## Résumé
 Le Dockerfile contient les instructions pour construire l'image finale. Il utilise les différents composants qui sont des couches logicielles successives.
 
--
+- La couche de fondation (ex. Ubuntu) qui est préchargée et ne sera pas modifiable.
+- Chargement des librairies externes (ex.Sci-Kit)
+- Chargement du code de l'application.
 
 
 ## Sources
