@@ -45,6 +45,6 @@ $$\mathfrak{L}(\hat y, y) = -(y\log \hat y+(1-y)\log(1-\hat y))$$
 
 Cette fonction de Loss est adaptée car elle est convexe et la descente de gradient arrivera à trouver un minimum. La procédure d'apprentissage va consister à minimiser cette fonction, elle est en effet minimale pour $$\hat y^{i}$$ égal à $$y^{i}$$.
 
-La **fonction de  coût** est définie par l'application de la fonction de perte à chacun des exemples d'entrainement :
+La **fonction de  coût (Cost)** est définie par l'application de la fonction de perte à chacun des exemples d'entrainement :
 
-$$\math{J}(w, b)=\frac{1}{m}\sum_{1}^{m}\mathfrak{L}(\hat y^{(i)},y^{(i)})$$
+$$J(w, b)=\frac{1}{m}\sum_{1}^{m}\mathfrak{L}(\hat y^{(i)},y^{(i)})$$
