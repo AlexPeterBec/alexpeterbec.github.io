@@ -23,10 +23,10 @@ Qu'attend-t-on d'un container ?
 
 On peut comparer un container Docker comme **une chose vivante**, qui existe sous une forme unique, qui a une durée de vie. Un container Docker est une image Docker à qui on a donné vie.
 
-Un container Docker est finalement un logiciel, dans lequel des programmes s'executent. Il peut y en avoir plusieurs en parallèle sur une unique machine, qui peuvent individuellement être executés, inspectés, stoppés, supprimés.
+Un container Docker est finalement un logiciel, dans lequel des programmes s'exécutent. Il peut y en avoir plusieurs en parallèle sur une unique machine, qui peuvent individuellement être exécutés, inspectés, stoppés, supprimés.
 
 ### Machine virtuelle
-Les machines virtuelles sont les ancètres des containers Docker. Les machines virtuelles, elles aussi, isolent une application et ses dépendances (ce dont elle a besoin pour s'executer).
+Les machines virtuelles sont les ancêtres des containers Docker. Les machines virtuelles, elles aussi, isolent une application et ses dépendances (ce dont elle a besoin pour s'executer).
 
 Les containers sont supérieurs car ils utilisent beaucoup moins de ressources, sont portables, et sont rapidement deployables. On le voit bien sur ce schema :
 
@@ -52,12 +52,31 @@ Pour distribuer cette image, il existe le [Docker Hub](https://hub.docker.com/) 
 ## Résumé
 Le Dockerfile contient les instructions pour construire l'image finale. Il utilise les différents composants qui sont des couches logicielles successives.
 
-- La couche de fondation (ex. Ubuntu) qui est préchargée et ne sera pas modifiable.
+- La couche de fondation (ex. Ubuntu) qui est pré-chargée et ne sera pas modifiable.
 - Chargement des librairies externes (ex.Sci-Kit)
 - Chargement du code de l'application.
 
 
+## Termes utiles 
+
+
+- *Engine* : *Docker Engine*, c'est la technologie qui permet de containériser des applications.
+- *Client* : L'interface qui reçoit des commandes comme ```docker build``` et les transmet à Docker pour être exécuté.
+- *Daemon* : Le serveur qui reçoit et execute les commandes.
+- *Volumes* : C'est un mécanisme proposé par Docker pour la gestion du stockage. C'est un système de fichier interne à l'application Docker, totalement géré par lui et facilement accessible par tout containers, ou bien par l'interface utilisateur.
+- *Registry* : Une librairie proposant des images Docker.
+- *Docker Hub* : C'est le *registry* officiel de Docker, qui permet de stocker facilement des images custom.
+- *Repository* : Dans un *registry* on trouve un repository pour chaque image (ubuntu, alpine, python..), chacun de ces repositories contiennent les différentes versions de l'image.
+
+Pour faire travailler plusieurs images docker et les relier on utilise :
+
+- *Networking* : Les containers Docker sont capables de communiquer entre eux, ou bien avec des applications tierces.
+- *Compose* : Outil pour créer des applications Docker avec plusieurs containers. A partir d'un fichier de configuration YAML, on définit les services de l'application.
+- *Swarm* : On utilise Swarm pour déployer des containers sur un ensemble de machines (cluster). La solution *Kubernetes* est habituellement préférée pour ce type de tâche.
+- *Services* : Pour un déploiement multi-machine, différents aspects de l'application seront désignés comme des Services.
+
+
 ## Sources
 
-[Containers & Virtualization](https://www.smartfile.com/blog/what-is-containerization-and-has-it-killed-virtualization/)
-[Enough Docker to be useful](https://towardsdatascience.com/learn-enough-docker-to-be-useful-b7ba70caeb4b)
+- [Containers & Virtualization](https://www.smartfile.com/blog/what-is-containerization-and-has-it-killed-virtualization/)
+- [Enough Docker to be useful](https://towardsdatascience.com/learn-enough-docker-to-be-useful-b7ba70caeb4b)
