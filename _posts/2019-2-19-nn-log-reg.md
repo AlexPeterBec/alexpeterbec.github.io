@@ -1,6 +1,6 @@
 ---
 published: true
-title: "Réseau de neurones, Problème de classification binaire"
+title: "Réseau de neurones, Classification binaire"
 excerpt: "Course 1 - Week 2"
 classes: wide
 comments: true
@@ -8,6 +8,10 @@ header:
   overlay_image: "assets/images/nn1/cover.jpg"
 categories: [nn, logreg]
 ---
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 Il s'agit de classifier le contenu d'une image, il y a un chat (1) ou pas de chat (0).
 
