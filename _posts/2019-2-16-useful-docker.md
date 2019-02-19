@@ -60,23 +60,24 @@ Le Dockerfile contient les instructions pour construire l'image finale. Il utili
 ## Termes utiles 
 
 
-- *Engine* : *Docker Engine*, c'est la technologie qui permet de containériser des applications.
-- *Client* : L'interface qui reçoit des commandes comme ```docker build``` et les transmet à Docker pour être exécuté.
-- *Daemon* : Le serveur qui reçoit et execute les commandes.
-- *Volumes* : C'est un mécanisme proposé par Docker pour la gestion du stockage. C'est un système de fichier interne à l'application Docker, totalement géré par lui et facilement accessible par tout containers, ou bien par l'interface utilisateur.
-- *Registry* : Une librairie proposant des images Docker.
-- *Docker Hub* : C'est le *registry* officiel de Docker, qui permet de stocker facilement des images custom.
-- *Repository* : Dans un *registry* on trouve un repository pour chaque image (ubuntu, alpine, python..), chacun de ces repositories contiennent les différentes versions de l'image.
+- **Engine** : *Docker Engine*, c'est la technologie qui permet de containériser des applications.
+- **Client** : L'interface qui reçoit des commandes comme ```docker build``` et les transmet à Docker pour être exécuté.
+- **Daemon** : Le serveur qui reçoit et execute les commandes.
+- **Volumes** : C'est un mécanisme proposé par Docker pour la gestion du stockage. C'est un système de fichier interne à l'application Docker, totalement géré par lui et facilement accessible par tout containers, ou bien par l'interface utilisateur.
+- **Registry** : Une librairie proposant des images Docker.
+- **Docker Hub** : C'est le *registry* officiel de Docker, qui permet de stocker facilement des images custom.
+- **Repository** : Dans un *registry* on trouve un repository pour chaque image (ubuntu, alpine, python..), chacun de ces repositories contiennent les différentes versions de l'image.
 
 Pour faire travailler plusieurs images docker et les relier on utilise :
 
-- *Networking* : Les containers Docker sont capables de communiquer entre eux, ou bien avec des applications tierces.
-- *Compose* : Outil pour créer des applications Docker avec plusieurs containers. A partir d'un fichier de configuration YAML, on définit les services de l'application.
-- *Swarm* : On utilise Swarm pour déployer des containers sur un ensemble de machines (cluster). La solution *Kubernetes* est habituellement préférée pour ce type de tâche.
-- *Services* : Pour un déploiement multi-machine, différents aspects de l'application seront désignés comme des Services.
+- **Networking** : Les containers Docker sont capables de communiquer entre eux, ou bien avec des applications tierces.
+- **Compose** : Outil pour créer des applications Docker avec plusieurs containers. A partir d'un fichier de configuration YAML, on définit les services de l'application.
+- **Swarm** : On utilise Swarm pour déployer des containers sur un ensemble de machines (cluster). La solution *Kubernetes* est habituellement préférée pour ce type de tâche.
+- **Services** : Pour un déploiement multi-machine, différents aspects de l'application seront désignés comme des Services.
 
 
 ## Sources
 
+- [Documentation Docker](https://docs.docker.com)
 - [Containers & Virtualization](https://www.smartfile.com/blog/what-is-containerization-and-has-it-killed-virtualization/)
 - [Enough Docker to be useful](https://towardsdatascience.com/learn-enough-docker-to-be-useful-b7ba70caeb4b)
