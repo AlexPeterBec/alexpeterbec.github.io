@@ -1,7 +1,7 @@
 ---
 published: true
 title: "Docker 1 : Les concepts"
-excerpt: "Container, Image, Dockerfile"
+excerpt: "Container, Images, notions de base"
 classes: wide
 comments: true
 header:
