@@ -1,0 +1,28 @@
+---
+published: false
+title: "Keras"
+excerpt: ""
+classes: wide
+comments: true
+header:
+  overlay_image: "assets/images/stats1/curves-led.jpg"
+categories: [definitions, statistiques]
+---
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+# Différentes API
+
+Pour le modele séquentiel, on dit que notre modèle étend la classe Senquentielle. Dans cette API on ajoute des couches successives.
+
+Pour le modèle fonctionnel, chaque couche est vue comme une fonction, on peut donc appeler directement la couche ou le modèle pour l'appliquer à un tenseur.
+
+# Modele de language avec Jean-Sebastien Bach
+
+Beaucoup de manipulation de données, trouver les données et le mettre en forme. C'est cette mise en forme qui va conditionner le traitement du problème.
+
+# Embedding avec l'exemple des avis IMDB
+
+On prend des avis de longueur fixe (100 mots) 
