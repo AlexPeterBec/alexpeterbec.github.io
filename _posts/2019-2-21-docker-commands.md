@@ -9,12 +9,11 @@ header:
 categories: [docker, containers]
 ---
 
-# Images Docker
 
 Pour rappel : 
-- Un container est une image Docker mise en route. C'est un système d'exploitation minimaliste, qui contient une application spécifique. 
-- L'image Docker est créée au moment de la construction du container. Le container est créé à son lancement.
-- Un container est construit comme un ensemble de couches, c'est le Dockerfile qui spécifie l'ordre d'ajout des couches.
+- Un **container** est une image Docker mise en route. C'est un système d'exploitation minimaliste, qui contient une application spécifique. 
+- **L'image** Docker est créée au moment de la construction du container. Le container est créé à son lancement.
+- Un container est construit comme un ensemble de **couches**, c'est le Dockerfile qui spécifie l'ordre d'ajout des couches.
 
 Le **Dockerfile** est au coeur de Docker, c'est le plan de construction de  l'image qui servira à créer le container. C'est un fichier appelé *Dockerfile* sans extension, et doit se trouver dans le dossier courant lorsqu'on lance la commande ```docker build```, on peut ajouter un dockerfile situé ailleurs avec le flag ```-f```.
 
