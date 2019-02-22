@@ -6,10 +6,10 @@ main:
     url: /engnr/
   - title: "Machine Learning"
     url: /ml/
-  - title: "Resources"
-    url: /resources/
   - title: "Kaggle"
     url: /kaggle/
+  - title: "Biblio"
+    url: /resources/
   - title: "CV"
     url: https://mmistakes.github.io/minimal-mistakes/about/
 

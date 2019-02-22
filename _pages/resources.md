@@ -6,6 +6,10 @@ author_profile: true
 
 Resources
 
+### Medium & Youtube Channels
+[Julien Simon - AWS Technical Evalgelist](https://medium.com/@julsimon)
+[Siraj Raval - AI Videos](https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A)
+
 ### Articles
 [How to Become a Data Scientist - Brandon Rohrer](https://brohrer.github.io/one_step_program_become_data_scientist.html)  
 [How to Use t-SNE Effectively - Martin Wattenberg](http://distill.pub/2016/misread-tsne/)  
