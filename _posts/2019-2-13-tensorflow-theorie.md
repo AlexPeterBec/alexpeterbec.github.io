@@ -9,7 +9,7 @@ header:
 categories: [definitions, tensorflow, tensors]
 ---
 
-Tensorflow est une **librairie machine learning créée par Google** pour la conception, la construction et l'entrainement de modèles. 
+Tensorflow est une **librairie machine learning créée par Google** pour la conception, la construction et l'entrainement de modèles.
 
 Parmi les concurrents on trouve :
 - **PyTorch**, le framework ML de Facebook, basé sur le language Lua. Facile à prendre en main pour un developpeur Python, car se base sur le même flot de contrôle standard.
@@ -35,7 +35,7 @@ Les vecteurs plans sont la forme la plus simple de tenseurs. Ils sont similaires
 
 On considère un vecteur 2 x 1. C'est à dire qu'il appartient à l'ensemble des nombres réels qui est constitué de paires, ie. ils appartiennent à un espace à deux dimensions. On les représente donc sous la forme (x, y). On peut suivre le même raisonnement pour un vecteur 3 x 1 dans un espace à trois dimensions.
 
-### Bases 
+### Bases
 
 Nous avons vu que ces vecteurs sont facilement représentables dans différents espaces, mais ce qui nous interesse est d'effectuer des opérations. Pour cela on va utiliser des bases (ou vecteurs unitaires).
 
@@ -61,7 +61,7 @@ Un tenseur peut être vu comme une matrice, et inversement, une matrice est un c
 - **Client Tensorflow** : Tensorflow est conçu pour supporter de nombreux languages, la meilleure intégration actuelle est celle en Python. Le C++, Java et Go sont également supportés.
 - **Couches superieures** : Parallelement aux clients classiques supportés, on trouve des bibliothèques d'abstraction utilisant le client python : Keras, Sonnet, TFLearn, qui masquent la complexité de Tensorflow et permettent d'automatiser de nombreuses tâches de conception.
 
-### Déploiement 
+### Déploiement
 
 
 Pour travailler en environnement Jupyter Notebook, le plus simple est d'installer le package avec pip : ```pip install tensorflow```
@@ -123,16 +123,13 @@ with tf.Session() as sess:
   print(output)
 ```
 
-### Les types de variables
 
 
 
-
-### Sources : 
+### Sources :
 
 - [Datacamp - Tensorflow tutorial](https://www.datacamp.com/community/tutorials/tensorflow-tutorial)
 - [Analytics Vidhya - Tensors and graphs](https://www.analyticsvidhya.com/blog/2017/03/tensorflow-understanding-tensors-and-graphs/)
 - [Artificence - Tensorflow, les tenseurs](https://artificence.com/2017/08/14/rang-forme-et-type-de-tenseur-avec-tensorflow/)
 - [Nishank Sharma - Tensorflow variables](https://medium.com/themlblog/getting-started-with-tensorflow-constants-variables-placeholders-and-sessions-80900727b489)
 - [Tensorflow guide](https://www.tensorflow.org/guide)
-
