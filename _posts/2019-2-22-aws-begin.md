@@ -6,7 +6,7 @@ classes: wide
 comments: true
 header:
   overlay_image: "assets/images/aws/cover.jpg"
-  overlay_filter: 0.5
+  overlay_filter: 0.3
 categories: [cloud, aws, basics]
 ---
 
