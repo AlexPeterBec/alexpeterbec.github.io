@@ -84,6 +84,13 @@ Cette commande construit une image Docker à partir des fichiers présents dans 
 
 À la fin des instructions, **une image docker est créée**. On peut visualiser avec la commande ```docker images```, qui recense les images dont Docker dispose. On y retrouvera l'image de base Ubuntu, car Docker optimise les téléchargements en conservant les images utilisées.
 
+```bash
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+python-sample    latest              5d42a9f98d6e        11 minutes ago      1.4GB
+ubuntu              latest              47b19964fb50        3 weeks ago         88.1MB
+```
+
+
 
 
 ## Sources
