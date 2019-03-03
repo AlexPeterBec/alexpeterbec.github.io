@@ -82,7 +82,7 @@ docker build -t python-sample:latest .
 
 Cette commande construit une image Docker à partir des fichiers présents dans le répertoire, elle va interpréter séquentiellement les instructions dans le fichier Dockerfile.
 
-À la fin des instructions, **une image docker est créée**. On peut visualiser avec la commande ```docker images```, qui recense les images dont Docker dispose. On y retrouvera l'image de base Ubuntu, car Docker optimise les téléchargements en conservant les images utilisées.
+À la fin des instructions, **une image docker est créée**. On peut visualiser avec la commande ```docker images```, qui recense les images dont Docker dispose. On y retrouve l'image de base Ubuntu appelée dans le Dockerfile avec ```ubuntu:latest```, car Docker optimise les téléchargements en conservant les images utilisées.
 
 ```bash
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
@@ -90,8 +90,39 @@ python-sample    latest              5d42a9f98d6e        11 minutes ago      1.4
 ubuntu              latest              47b19964fb50        3 weeks ago         88.1MB
 ```
 
+On dispose maintenant d'une image docker, mais pour l'instant, rien ne s'execute. On va utiliser la commande ```docker run``` pour créer un container à partir d'une image :
 
+```bash
+docker run -d -p 5000:5000 python-sample
+```
 
+Explications :
+- ```docker run python-sample``` est la commande de base pour lancer un container selon une image.
+- ```-d``` permet de lancer le container en mode détaché, et de récupérer l'identifiant du container lors de son lancement.
+- ```-p 5000:5000``` permet d'exposer un port du container, ici par exemple le port 5000 pour les applis flask.
+
+```bash
+[Alex@workplace ~/docker-app]$ docker run -d -p 5000:5000 flask-sample-one
+4f5a138b9d11c0066491ed25972a06d2daf070b4a6181eb7d0e0627c00188c35
+```
+
+On récupère donc l'identifiant du container dans lequel s'execute notre application, et on peut y accéder à l'adresse 0.0.0.0:5000 !
+
+## Quelques commandes pour gérer les images et containers
+
+Containers :
+- ```docker ps``` : Voir les containers en cours d'execution.
+- ```docker ps -a``` : Voir tous les containers (également ceux arrêtés).
+- ```docker logs 5d42a9f98d6e``` : Accéder aux logs du container avec son ID.
+
+Images :
+- ```docker images``` : Lister les images disponibles.
+- ```docker pull ubuntu``` : Charger une image dans la librairie Docker, ici Ubuntu, la version la plus récente est téélchargée.
+
+Faire le ménage :
+- ```docker stop $(docker ps -aq)``` : Arrêter tous les containers en cours d'execution.
+- ```docker rm $(docker ps -aq)``` : Supprimer tous les containers (impossible de supprimer l'image correspondante d'un container, même arrêté).
+- ```docker rmi $(docker images -q)``` : Supprimer toutes les images en mémoire (utile après plusieurs builds de test).
 
 ## Sources
 
