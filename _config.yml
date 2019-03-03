@@ -112,7 +112,7 @@ author:
   location         : "Paris"
   email            :
   links:
-    - label: "Email"
+    - label: "Mail"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:alx.bec@gmail.com
     - label: "LinkedIn"
