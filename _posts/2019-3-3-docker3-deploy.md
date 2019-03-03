@@ -35,9 +35,35 @@ Flask
 
 ## Construction de l'image
 
+Passons à l'écriture de la recette pour construire l'image Docker. Pour rappel : l'image Docker est une sorte d'emporte-pièce, qui permet de créer de nouveaux containers avec une configuration précise. Notre application s'executera alors dans chacun des containers.
 
+Pour créer notre image docker, on se sert du **Dockerfile** : c'est un enchainement de commandes permettant d'automatiser des opérations lors de la création de l'image.
 
+Voici les différentes étapes :
 
+```bash
+# Spécification de l'image de base utilisée pour notre nouvelle image
+FROM ubuntu:latest
+
+# Optionnel : Information dur l'auteur
+MAINTAINER Alexandre
+
+# Mises à jour de l'image et installation des packages spécifiques
+RUN apt-get update -y
+RUN apt-get install -y python3-pip python3-dev build-essential
+
+# Copie de tout les fichiers dans un nouveau sous-dossier
+COPY . /app
+# Définir app comme le dossier de travail
+WORKDIR /app
+
+# Installer toutes les dépendances avec pip3
+RUN pip3 install -r requirements.txt
+
+# Lancement de l'appli
+ENTRYPOINT ["python3"]
+CMD ["main.py"]
+```
 
 
 ## Sources
