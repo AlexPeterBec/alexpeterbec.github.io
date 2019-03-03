@@ -39,7 +39,7 @@ Passons à l'écriture de la recette pour construire l'image Docker. Pour rappel
 
 Pour créer notre image docker, on se sert du **Dockerfile** : c'est un enchainement de commandes permettant d'automatiser des opérations lors de la création de l'image.
 
-Voici les différentes étapes :
+Voici les différentes étapes que l'on spécifie dans un fichier appelé *Dockerfile* (sans extension), dans notre répertoire **docker-app**.
 
 ```bash
 # Spécification de l'image de base utilisée pour notre nouvelle image
@@ -64,6 +64,26 @@ RUN pip3 install -r requirements.txt
 ENTRYPOINT ["python3"]
 CMD ["main.py"]
 ```
+
+Le sous-dossier **app** n'est pas créé dans votre dossier de travail, l'instruction **COPY** permet d'inclure tout nos fichiers dans le container pour qu'il puisse les utiliser : par exemple utiliser le fichier requirements.txt pour connaitre les librairies à importer.
+
+## Lancement des opérations Docker
+
+Maintenant que le Dockerfile est prêt, on peut commencer à manipuler quelques commandes Docker pour créer une image et lancer un container.
+
+On se place dans notre dossier **docker-app** et on commence par créer l'image avec :
+
+```bash
+docker build -t python-sample:latest .
+```
+
+- docker build est l'instruction qui crée une image
+- -t est l'option pour spécifier un tag à l'image crée, ici "python-sample" avec la précision que l'on crée la version "latest" la plus récente.
+
+Cette commande construit une image Docker à partir des fichiers présents dans le répertoire, elle va interpréter séquentiellement les instructions dans le fichier Dockerfile.
+
+À la fin des instructions, **une image docker est créée**. On peut visualiser avec la commande ```docker images```, qui recense les images dont Docker dispose. On y retrouvera l'image de base Ubuntu, car Docker optimise les téléchargements en conservant les images utilisées.
+
 
 
 ## Sources
