@@ -10,8 +10,4 @@ redirect_from:
   - /about.html
 ---
 
-Bienvenue sur mon blog personnel, j'essaye de poster un article par semaine sur divers sujets :
-- Data Engineering
-- Machine Learning
-- Deep Learning
-- Statistiques
+Bonjour
