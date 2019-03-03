@@ -5,9 +5,6 @@ excerpt: "About me"
 author_profile: true
 header :
     image: "assets/images/contents/main-cover.jpg"
-redirect_from: 
-  - /about/
-  - /about.html
 ---
 
 Bonjour
