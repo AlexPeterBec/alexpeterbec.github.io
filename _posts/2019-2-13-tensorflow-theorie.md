@@ -6,6 +6,7 @@ classes: wide
 comments: true
 header:
   overlay_image: "assets/images/tensorflow/cover.jpg"
+  teaser: "assets/images/tensorflow/cover.jpg"
 categories: [definitions, tensorflow, tensors]
 ---
 

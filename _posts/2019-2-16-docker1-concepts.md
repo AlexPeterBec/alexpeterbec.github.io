@@ -6,6 +6,7 @@ classes: wide
 comments: true
 header:
   overlay_image: "assets/images/docker/cover.jpg"
+  teaser: "assets/images/docker/cover.jpg"
 categories: [docker, containers]
 ---
 
@@ -57,7 +58,7 @@ Le Dockerfile contient les instructions pour construire l'image finale. Il utili
 - Chargement du code de l'application.
 
 
-## Termes utiles 
+## Termes utiles
 
 
 - **Engine** : *Docker Engine*, c'est la technologie qui permet de containériser des applications.

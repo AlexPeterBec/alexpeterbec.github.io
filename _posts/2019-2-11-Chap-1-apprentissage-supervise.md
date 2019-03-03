@@ -6,6 +6,7 @@ classes: wide
 comments: true
 header:
   overlay_image: "assets/images/stats1/curves-led.jpg"
+  teaser: "assets/images/stats1/curves-led.jpg"
 categories: [definitions, statistiques]
 ---
 

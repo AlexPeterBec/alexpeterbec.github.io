@@ -6,6 +6,7 @@ classes: wide
 comments: true
 header:
   overlay_image: "assets/images/docker/cover.jpg"
+  teaser: "assets/images/docker/cover.jpg"
 categories: [docker, python]
 ---
 

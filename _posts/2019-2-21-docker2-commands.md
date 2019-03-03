@@ -6,12 +6,13 @@ classes: wide
 comments: true
 header:
   overlay_image: "assets/images/docker/cover.jpg"
+  teaser: "assets/images/docker/cover.jpg"
 categories: [docker, containers]
 ---
 
 
-Pour rappel : 
-- Un **container** est une image Docker mise en route. C'est un système d'exploitation minimaliste, qui contient une application spécifique. 
+Pour rappel :
+- Un **container** est une image Docker mise en route. C'est un système d'exploitation minimaliste, qui contient une application spécifique.
 - **L'image** Docker est créée au moment de la construction du container. Le container est créé à son lancement.
 - Un container est construit comme un ensemble de **couches**, c'est le Dockerfile qui spécifie l'ordre d'ajout des couches.
 
