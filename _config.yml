@@ -116,11 +116,11 @@ author:
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:alx.bec@gmail.com
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin-square"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/becalexandre/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://https://github.com/alexpeterbec/"
+      url: "https://github.com/alexpeterbec/"
 
 # Site Footer
 footer:
