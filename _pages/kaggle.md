@@ -4,4 +4,4 @@ permalink: /kaggle/
 author_profile: true
 ---
 
-Blog Posts About All Things Kaggle Challenges
+Ecrire des articles prend du temps, les articles concernant les challenges Kaggle sont déjà dans le planning.
