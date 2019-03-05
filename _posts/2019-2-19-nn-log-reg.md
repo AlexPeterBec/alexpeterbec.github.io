@@ -1,7 +1,7 @@
 ---
 published: true
 title: "Réseau de neurones, Classification binaire"
-excerpt: "Course 1 - Week 2"
+excerpt: ""
 classes: wide
 comments: true
 header:
