@@ -46,7 +46,7 @@ Voici les différentes étapes que l'on spécifie dans un fichier appelé *Docke
 # Spécification de l'image de base utilisée pour notre nouvelle image
 FROM ubuntu:latest
 
-# Optionnel : Information dur l'auteur
+# Optionnel : Information sur l'auteur
 MAINTAINER Alexandre
 
 # Mises à jour de l'image et installation des packages spécifiques
