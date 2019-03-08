@@ -61,6 +61,7 @@ On indique Access Key / Secret Key pour s'identifier.
 # Apprentissage
 
 - Exploration du manuel des commandes ```aws <command> help```
+- Exploration des [pages de reference](https://docs.aws.amazon.com/cli/latest/reference/s3api/)
 
 ## Sources
 
