@@ -44,13 +44,19 @@ Pour commencer à utiliser la CLI, on n'utilise pas nos identifiants AWS classiq
 
 On a créé un utilisateur avec les droits nécessaires, et on dispose d'un fichier CSV **credentials.csv** avec les champs suivants :
 
-| Username | Nom d'utilisateur |
-| Password | Le mot de passe pour acceder à la console web amazon (ici normalement vide car on a choisi l'accès par programmation) |
+| **Username** | Nom d'utilisateur |
+| **Password** | Le mot de passe pour acceder à la console web amazon (ici normalement vide car on a choisi l'accès par programmation) |
 | **Access Key ID** | C'est notre identifiant pour se connecter à AWS CLI |
 | **Secret Access Key** | C'est la clé secrète pour se connecter. |
-| Console login link | Lien d'accès à la console web, non valable dans ce cas (accès programmation) |
+| **Console login link** | Lien d'accès à la console web, non valable dans ce cas (accès programmation) |
 
 ## Mise en route de AWS CLI
+
+Pour commencer à utiliser AWS CLI :
+
+> `aws configure`
+
+On indique Access Key / Secret Key pour s'identifier.
 
 # Apprentissage
 
