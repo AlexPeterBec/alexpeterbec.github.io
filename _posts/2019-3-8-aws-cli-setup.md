@@ -22,7 +22,7 @@ Pour commencer à utiliser la CLI, il faudra uniquement disposer d'un **compte A
 
 # Installation
 
-La [documentation](https://docs.aws.amazon.com/fr_fr/cli/latest/userguide/cli-chap-install.html) est bien faite pour l'installation selon l'OS.
+La <a href="https://docs.aws.amazon.com/fr_fr/cli/latest/userguide/cli-chap-install.html" target="_blank">documentation</a> est bien faite pour l'installation selon l'OS.
 
 Si on dispose déjà de Python installé. L'outil AWS CLI s'installe facilement via l'outil **pip** de python :
 
@@ -61,8 +61,8 @@ On indique Access Key / Secret Key pour s'identifier.
 # Apprentissage
 
 - Exploration du manuel des commandes ```aws <command> help```
-- Exploration des pages de <a href="https://docs.aws.amazon.com/cli/latest/reference/s3api/" target="_blank">référence</a>
+- Exploration des pages de référence. Par exemple <a href="https://docs.aws.amazon.com/cli/latest/reference/s3api/" target="_blank">cette page</a> pour manipuler des buckets S3.
 
 ## Sources
 
-- [Documentation AWS](https://docs.aws.amazon.com/index.html#lang/fr_fr)
+- <a href="https://docs.aws.amazon.com/cli/latest/reference/s3api/" target="_blank">Documentation AWS</a>
