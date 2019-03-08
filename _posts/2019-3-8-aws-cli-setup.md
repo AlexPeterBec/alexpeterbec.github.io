@@ -35,11 +35,11 @@ Pour commencer à utiliser la CLI, on n'utilise pas nos identifiants AWS classiq
 - Les identifiants que l'on va utiliser resteront en mémoire dans l'outil, AWS recommande de ne pas utiliser nos identifiant "maitres". En cas de compromission du poste, on pourra toujours révoquer les identifiants et en créer des nouveaux.
 
 Création d'un utilisateur :
-- On se rend dans le service **IAM**, dans la rubrique **Utilisateurs**.
-- On choisit un **nom** et on spécifie qu'on veut un accès par **programmation**.
-- A l'étape suivante on inclue notre utilisateur dans un groupe. Il faut que ce groupe possède les **droits administrateur AdministratorAccess** pour pouvoir lancer tout les services sans limitations (Il est possible de filtrer très spécifiquement les droits par services).
-- *L'étape d'ajout de balises est optionnelle. Elle sert à ajouter des étiquettes pour s'y retrouver entre les différents utilisateurs existants.*
-- On vérifie nos choix et on valide. **Il est important de télécharger les identifiants sur la dernière page**.
+1. On se rend dans le service **IAM**, dans la rubrique **Utilisateurs**.
+2. On choisit un **nom** et on spécifie qu'on veut un accès par **programmation**.
+3. A l'étape suivante on inclue notre utilisateur dans un groupe. Il faut que ce groupe possède les **droits administrateur AdministratorAccess** pour pouvoir lancer tout les services sans limitations (Il est possible de filtrer très spécifiquement les droits par services).
+4. *L'étape d'ajout de balises est optionnelle. Elle sert à ajouter des étiquettes pour s'y retrouver entre les différents utilisateurs existants.*
+5. On vérifie nos choix et on valide. **Il est important de télécharger les identifiants sur la dernière page**.
 
 On a créé un utilisateur avec les droits nécessaires, et on dispose d'un fichier CSV **credentials.csv** avec les champs suivants :
 - Le nom d'utilisateur
