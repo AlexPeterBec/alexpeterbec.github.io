@@ -34,7 +34,8 @@ Pour commencer à utiliser la CLI, on n'utilise pas nos identifiants AWS classiq
 - Lorsqu'on créé un nouveau role dans IAM, on peut lui attribuer des droits spécifiques, et limiter les pouvoirs qui lui sont attribués. Par exemple, on n'attribue pas les mêmes droits à un developpeur, ou à l'admin système.
 - Les identifiants que l'on va utiliser resteront en mémoire dans l'outil, AWS recommande de ne pas utiliser nos identifiant "maitres". En cas de compromission du poste, on pourra toujours révoquer les identifiants et en créer des nouveaux.
 
-Création d'un utilisateur :
+## Création d'un utilisateur
+
 1. On se rend dans le service **IAM**, dans la rubrique **Utilisateurs**.
 2. On choisit un **nom** et on spécifie qu'on veut un accès par **programmation**.
 3. A l'étape suivante on inclue notre utilisateur dans un groupe. Il faut que ce groupe possède les **droits administrateur AdministratorAccess** pour pouvoir lancer tout les services sans limitations (Il est possible de filtrer très spécifiquement les droits par services).
@@ -42,11 +43,14 @@ Création d'un utilisateur :
 5. On vérifie nos choix et on valide. **Il est important de télécharger les identifiants sur la dernière page**.
 
 On a créé un utilisateur avec les droits nécessaires, et on dispose d'un fichier CSV **credentials.csv** avec les champs suivants :
-- Le nom d'utilisateur
-- Le mot de passe pour acceder à la console web amazon (ici normalement vide car on a choisi l'accès par programmation)
-- Access Key ID : C'est notre identifiant pour se connecter à AWS CLI
-- Secret Access Key : C'est la clé secrète pour de connection.
-- Console login link : C'est un lien d'accès à la console web, non valable dans ce cas (accès programmation).
+
+| Username | Nom d'utilisateur |
+| Password | Le mot de passe pour acceder à la console web amazon (ici normalement vide car on a choisi l'accès par programmation) |
+| **Access Key ID** | C'est notre identifiant pour se connecter à AWS CLI |
+| **Secret Access Key** | C'est la clé secrète pour se connecter. |
+| Console login link | Lien d'accès à la console web, non valable dans ce cas (accès programmation) |
+
+## Mise en route de AWS CLI
 
 # Apprentissage
 
