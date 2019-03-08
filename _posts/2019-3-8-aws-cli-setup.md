@@ -60,9 +60,12 @@ On indique Access Key / Secret Key pour s'identifier.
 
 # Apprentissage
 
-- Exploration du manuel des commandes ```aws <command> help```
+- Exploration du manuel des commandes
+
+> `aws <command> help`
+
 - Exploration des pages de référence. Par exemple <a href="https://docs.aws.amazon.com/cli/latest/reference/s3api/" target="_blank">cette page</a> pour manipuler des buckets S3.
 
 ## Sources
 
-- <a href="https://docs.aws.amazon.com/cli/latest/reference/s3api/" target="_blank">Documentation AWS</a>
+- <a href="https://docs.aws.amazon.com/cli/latest/index.html" target="_blank">Documentation AWS pour CLI</a>
