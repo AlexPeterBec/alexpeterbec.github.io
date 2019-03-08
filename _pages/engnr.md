@@ -9,7 +9,9 @@ Cette section regroupe les contenus propres au data engineering et aux technos d
 ## Cloud AWS
 [1. Principaux services](https://alexpeterbec.github.io/cloud/aws/basics/aws-begin/)
 
-[2. Command Line Interface](https://alexpeterbec.github.io/cloud/aws/cli/aws-cli/)
+[2. Command Line Interface : Install & Setup](https://alexpeterbec.github.io/cloud/aws/cli/aws-cli-setup/)
+
+[3. Command Line Interface : Commandes & Utilisation](https://alexpeterbec.github.io/cloud/aws/cli/aws-cli/)
 
 ## Docker
 [1. Les concepts](https://alexpeterbec.github.io/docker/containers/docker1-concepts/)
