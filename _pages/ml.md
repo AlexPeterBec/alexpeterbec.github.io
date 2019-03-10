@@ -14,3 +14,5 @@ Cette section reprend divers projets et études que je mène en machine learning
 [Qu'est-ce qu'un réseau de neurones ?](https://alexpeterbec.github.io/nn/intro-dl/)
 
 [Réseau de neurones, Problème de classification binaire](https://alexpeterbec.github.io/nn/logreg/nn-log-reg/)
+
+[Recherche des meilleurs paramètres avec la descente de gradient](https://alexpeterbec.github.io/ml/algebre/nn-gradient-descent/)
