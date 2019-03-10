@@ -1,6 +1,6 @@
 ---
 published: true
-title: "La descente de gradient et les graphes de calcul"
+title: "Descente de gradient, Graphes de calcul"
 excerpt: "NN Basics"
 toc: true
 toc_sticky: true
@@ -89,13 +89,12 @@ $$\frac{dJ}{dv} = \frac{0.003}{0.001} = 3$$
 
 - On remonte ensuite vers les variables d'entrée, pour **a** qui est plus simple :
 
-$$\frac{dJ}{da} = \frac{dJ}{dv} x \frac{dv}{da} = \frac{0.003}{0.001} . \frac{0.003}{0.001} = 3 x 1 = 3$$
+$$\frac{dJ}{da} = \frac{dJ}{dv} . \frac{dv}{da} = \frac{0.003}{0.001} . \frac{0.003}{0.001} = 3 . 1 = 3$$
 
 - Ainsi de suite, on peut décomposer chaune des étapes pour remonter à l'influence des variables d'entrée.
 
-# Sources
-
 On a vu dans cet article le principe de la descente de gradient, et de dérivées en chaine. Ce sont des éléments très important pour les réseaux de neurones. On trouve quantité d'articles sur le sujet auprès des sources spécialisées, et cela constitue les bases pour l'enseignement du deep learning.
 
-- <a href="https://docs.aws.amazon.com/cli/latest/index.html" target="_blank">[TowardsDataScience] Nombreux articles sur la descente de gradient</a>
-- Coursera Deep Learning (Andrew Ng)
+# Sources
+- [TowardsDataScience] <a href="https://towardsdatascience.com/its-only-natural-an-excessively-deep-dive-into-natural-gradient-optimization-75d464b89dbb" target="_blank">Nombreux articles sur la descente de gradient</a>
+- <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank">Coursera Deep Learning</a> (Andrew Ng)
