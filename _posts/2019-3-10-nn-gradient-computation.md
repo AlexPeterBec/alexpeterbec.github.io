@@ -24,14 +24,19 @@ Nous verrons ici comment utiliser la descente de gradient pour apprendre les par
 Fonction de coût :
 $$J(w, b)=\frac{1}{m}\sum_{1}^{m}\mathfrak{L}(\hat y^{(i)},y^{(i)})$$
 
+##### Minimisation de J
+
 On veut trouver les paramètres w et b qui **minimisent** la fonction J(w, b). Si il était possible de représenter pour toutes les valeurs de l'espace des couples (w, b), on verrait facilement pour quelles valeurs la fonction de perte est minimale. Or, trouver un seul point de la valeur de la fonction de perte necessite du **temps de calcul** (et augmente avec la complexité de notre algorithme).
 
-L'algorithme de **descente de gradient** est largement utilisé dans le machine learning pour éviter d'évaluer les performances pour un grand nombre de paramètres. Cet algorithme permet de faire évoluer nos paramètres (w, b) dans le bon sens (le sens qui induit une perte plus petite). On voit sur l'image ci-dessous le type d'évolution que l'on souhaite faire suivre à nos paramètres, on veut arriver sur les points les plus bas du paysage, qui correspondent aux valeurs basses de la fonction de coût.
+##### La descente de gradient
+L'algorithme de **descente de gradient** est largement utilisé dans le machine learning pour éviter d'évaluer les performances pour un grand nombre de paramètres. Cet algorithme permet de faire évoluer nos paramètres (w, b) dans le bon sens (le sens qui induit une perte plus petite).
 
+On voit sur l'image ci-dessous le type d'évolution que l'on souhaite faire suivre à nos paramètres, on veut arriver sur les points les plus bas du paysage, qui correspondent aux valeurs basses de la fonction de coût. Les paramètres theta sont nos paramètres w et b.
 
 <img src="https://cdn-images-1.medium.com/max/1600/1*f9a162GhpMbiTVTAua_lLQ.png" alt="" class="center">
 
-Pour la descente de gradient, on a vu que l'on a besoin de calculer les dérivées selon chacune des variables d'entrée. Dans un réseau de neurone, on peut voir le problème comme un graphe de calcul et calculer les dérivées en chaine.
+##### Utilisation des graphes de calcul
+Pour la descente de gradient, on a vu que l'on a besoin de calculer les dérivées selon chacune des variables d'entrée. Dans un réseau de neurone, on peut voir le problème comme un **graphe de calcul** et calculer les dérivées en chaine.
 
 # La descente de gradient
 
