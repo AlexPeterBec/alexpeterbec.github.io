@@ -11,7 +11,7 @@ main:
   - title: "Biblio"
     url: /resources/
   - title: "CV"
-    url: https://alexpeterbec.github.io/assets/images/CV-Alexandre-Bec.pdf
+    url: https://alexpeterbec.github.io/assets/CV-Alexandre-Bec.pdf
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
