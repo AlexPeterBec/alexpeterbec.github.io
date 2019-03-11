@@ -5,7 +5,7 @@ excerpt: "Cassandra, Kafka, Spark, Elastic"
 toc: true
 toc_sticky: true
 toc_label: "Apache Scalable"
-toc_icon: "microchip"
+toc_icon: "align-center"
 comments: true
 header:
 overlay_image: "assets/images/nn1/cover.jpg"
@@ -13,7 +13,7 @@ teaser: "assets/images/nn1/cover.jpg"
 categories: []
 ---
 
-Les technologies Apache sont incontournables dans les architectures distribuées. 
+Les technologies open-source Apache sont présentes dans la quasi-totalité des architectures distribuées. Avec plus de 30 projets actifs rien que pour les problématiques data, Apache est un incontournable pour construire un architecture. Dans cet article je détaille quatre solutions open-source très répandues, rapides, et scalables.
 
 # Apache Cassandra
 
