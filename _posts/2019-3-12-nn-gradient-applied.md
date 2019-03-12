@@ -66,6 +66,17 @@ Dans la suite nous verrons comment appliquer le même raisonnement à **plusieur
 
 # Descente de gradient sur m données d'entrainement
 
+Dans les raisonnements précédents, on minimise la fonction de **perte L**, qui est l'évaluation de la **performance sur un couple prédiction / vraie valeur**. 
+
+On va maintenant s'intéresser à la fonction de **coût J** : C'est la moyenne des fonctions de perte, sur **l'ensemble des données d'entrainement**. C'est cette quantité que l'on va chercher à minimiser sur l'ensemble de nos données. 
+
+$$J(w, b)=\frac{1}{m}\sum_{1}^{m}\mathfrak{L}(a^{(i)},y)$$
+
+Sa dérivée par rapport au poids $$w_{1}$$ s'exprime ainsi :
+
+$$\frac{\partial J(w, b)}{\partial w_{1}} = \frac{1}{m}\sum_{1}^{m}\frac{\partial L(a^{(i)}, y^{(i)})}{\partial w_{i}}$$
+
+Comme on a déjà vu l'étape de calcul du terme à l'intérieur de la somme, il ne reste plus qu'à moyenner ce terme sur l'ensemble des données d'apprentissage pour effectuer la mise à jour.
 
 
 ## Internet
