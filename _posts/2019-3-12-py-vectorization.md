@@ -28,11 +28,33 @@ L'approche **classique**, non-vectorisée serait d'itérer sur chacun des indice
 
 Avec python, pour effectuer cette même opération de manière vectorisée, on utilise la fonction `np.dot(w, x) + b` , de la librairie numpy. 
 
-Il se trouve que ce type d'opération est extrêmement **rapide** : Pour multiplier deux vecteurs de taille 1 million, la boucle for prend 500 fois plus de temps que l'opération avec np.dot. En effet, les opérations de la librairie numpy sont capables de paralleliser les opérations sur le CPU/GPU au lieu de les effectuer séquentiellement (comme c'est le cas avec une boucle for).
+Il se trouve que ce type d'opération est extrêmement **rapide** : Pour multiplier deux vecteurs de taille 1 million, la boucle for prend **500 fois plus de temps** que l'opération avec np.dot. 
 
-
+En effet, les opérations de la librairie numpy sont capables de **paralleliser** les opérations sur le CPU/GPU au lieu de les effectuer séquentiellement (comme c'est le cas avec une boucle for).
 
 # Quelques exemples
+
+- Multiplication de matrices :
+
+`u = np.dot(A, v)`
+
+- On dispose d'un vecteur v de dimension n, et on souhaite **appliquer une fonction à chacun des éléments** du vecteur :
+
+```python
+u = np.exp(v)
+u = np.log(v)
+u = np.abs(v)
+u = np.maximum(v, 0)
+```
+
+- Utilisation d'un vecteur de poids en entrée du réseau de neurones, plutôt qu'une variable pour chacun :
+
+```python
+dw = np.zeros((nx, 1))  # Initialisation
+dw += xi * dzi          # Mise à jour
+dw /= m                 # Moyenne train-set
+```
+
 
 # Regression Logistique
 
