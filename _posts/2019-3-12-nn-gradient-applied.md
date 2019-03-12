@@ -68,6 +68,8 @@ Dans la suite nous verrons comment appliquer le même raisonnement à **plusieur
 
 Dans les raisonnements précédents, on minimise la fonction de **perte L**, qui est l'évaluation de la **performance sur un couple prédiction / vraie valeur**. 
 
+## Fonction de coût
+
 On va maintenant s'intéresser à la fonction de **coût J** : C'est la moyenne des fonctions de perte, sur **l'ensemble des données d'entrainement**. C'est cette quantité que l'on va chercher à minimiser sur l'ensemble de nos données. 
 
 $$J(w, b)=\frac{1}{m}\sum_{1}^{m}\mathfrak{L}(a^{(i)},y)$$
@@ -78,6 +80,36 @@ $$\frac{\partial J(w, b)}{\partial w_{1}} = \frac{1}{m}\sum_{1}^{m}\frac{\partia
 
 Comme on a déjà vu l'étape de calcul du terme à l'intérieur de la somme, il ne reste plus qu'à moyenner ce terme sur l'ensemble des données d'apprentissage pour effectuer la mise à jour.
 
+## Algorithme
+
+Avec les éléments vus jusqu'à présent, on peut commencer à établir une version simple de l'algorithme de descente de gradient
+
+$$\usepackage{algorithm}
+\usepackage{algorithmic}
+\begin{algorithm}
+\caption{Calculate $y = x^n$}
+\begin{algorithmic} 
+\REQUIRE $n \geq 0 \vee x \neq 0$
+\ENSURE $y = x^n$
+\STATE $y \leftarrow 1$
+\IF{$n < 0$}
+\STATE $X \leftarrow 1 / x$
+\STATE $N \leftarrow -n$
+\ELSE
+\STATE $X \leftarrow x$
+\STATE $N \leftarrow n$
+\ENDIF
+\WHILE{$N \neq 0$}
+\IF{$N$ is even}
+\STATE $X \leftarrow X \times X$
+\STATE $N \leftarrow N / 2$
+\ELSE[$N$ is odd]
+\STATE $y \leftarrow y \times X$
+\STATE $N \leftarrow N - 1$
+\ENDIF
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}$$
 
 ## Internet
 <img src="https://cdn-images-1.medium.com/max/1600/1*f9a162GhpMbiTVTAua_lLQ.png" alt="" class="center">
