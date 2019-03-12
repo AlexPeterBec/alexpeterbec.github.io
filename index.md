@@ -19,9 +19,6 @@ Je m'intéresse particulièrement aux sujets data engineering et data science, q
 
 A la recherche de nouveaux challenges dès le mois de Juillet 2019, n'hésitez pas à m'ajouter sur LinkedIn ou me contacter par mail. [Ici  mon CV](https://alexpeterbec.github.io/assets/docs/CV-Alexandre-Bec.pdf){:target="_blank"}.
 
-
-{{ content }}
-
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% for post in paginator.posts %}
