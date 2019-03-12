@@ -34,7 +34,7 @@ En effet, les opérations de la librairie numpy sont capables de **paralleliser*
 
 # Quelques exemples
 
-Multiplication de matrices :
+Multiplication de matrices/vecteurs :
 
 ```python
 u = np.dot(A, v)
@@ -57,7 +57,13 @@ dw += xi * dzi          # Mise à jour
 dw /= m                 # Moyenne train-set
 ```
 
-# Retour sur : Regression logistique
+# Regression logistique
+
+Pour ne plus avoir besoin de boucles dans notre implémentation de la régression logistique, on va utiliser les formes matricielles : X est la matrice de données d'entrainement, contenant nx variables sur les lignes, et m exemples sur les colonnes.
+
+La première étapes étant de calculer la fonction Z, on l'écrit comme un produit de matrices, et on obtient avec une seule opération toutes les valeurs de  pour l'ensemble du train-set :
+
+$$ [z^{1}, z^{2}, ..., z^{n}] = w^\intercal . X + [b, b, ..., b] $$
 
 # Broadcasting
 
