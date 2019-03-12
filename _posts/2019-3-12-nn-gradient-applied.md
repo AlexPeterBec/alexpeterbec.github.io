@@ -24,7 +24,7 @@ On reprend le cadre simple de la regression logistique avec les éléments suiva
 - $$ \hat y = a = \sigma(z)$$ : La prédiction par la fonction d'activation.
 - $$\mathfrak{L}(a, y) = -(y\log a+(1-y)\log(1-a))$$ : La fonction de perte pour une prédiction a.
 
-Ainsi, pour deux variables d'entrée $$X_{1}$$ et $$X_{2}$$, avec leurs poids associés $$w_{1}$$ et $$w_{2}$$ et le terme de biais b on a :
+Ainsi, pour deux variables d'entrée $$x_{1}$$ et $$x_{2}$$, avec leurs poids associés $$w_{1}$$ et $$w_{2}$$ et le terme de biais b on a :
 - $$z(x_{1}, x_{2}) = w_{1}x_{1}+w_{2}x_{2}+b$$ : L'équation de classification
 - $$\hat y = a = \sigma (z)$$ : La prédiction a.
 - $$\mathfrak{L}(a, y)$$ : La fonction de perte se calcule finalement sur la prédiction a, et la vraie valeur y.
@@ -37,7 +37,20 @@ Le but est d'évaluer la fonction de perte L afin de mettre à jour les paramèt
 
 Comme vu dans le premier article sur la descente de gradient, on cherche à remonter successivement dans les dérivées. 
 
-La première dérivée qui nous interesse est celle de a : $$\frac{d\mathfrak{L}(a, y)}{da}$$. C'est l'influence de a sur l'évolution de la fonction de perte. Si on reprend l'expression de L(a, y), on trouve que la dérivée est égale à $$-\frac{y}{a} + \frac{1-y}{1-a}$$ par la dérivation des fonctions Log. 
+La première dérivée qui nous interesse est celle de a : $$\frac{d\mathfrak{L}(a, y)}{da}$$. C'est l'influence de a sur l'évolution de la fonction de perte. Si on reprend l'expression de L(a, y), par la dérivation des fonctions Log on trouve : 
+
+$$\frac{d\mathfrak{L}(a, y)}{da} = -\frac{y}{a} + \frac{1-y}{1-a}$$
+
+On remonte d'une étape dans le diagramme et on s'interesse à l'influence de la fonction Z : 
+
+$$\frac{d\mathfrak{L}(a, y)}{dz} = \frac{d\mathfrak{L}(a, y)}{da} . \frac{da}{dz}$$
+
+Il s'agit d'un produit utilisant le terme trouvé à la première étape, il suffit de s'interesser à la fonction qui transforme Z pour arriver à A, c'est la fonction sigmoïde. Sa dérivée est égale à $$\frac{da}{dz} = a.(1-a)$$. Par produit on obtient $$\frac{d\mathfrak{L}(a, y)}{dz} = a - y$$
+
+L'étape finale du calcul est d'arrivée à l'influence de chaque variable d'entrée sur la fonction de perte grâce à l'expression précédente. Pour le paramètre $$x_{1}$$ on va modifier le poids $$w_{1}$$, on calcule donc : 
+
+$$\frac{\partial L}{\partial w_{1}} = x_{1} . dz$$
+
 
 # Activer les extraits Latex
 
