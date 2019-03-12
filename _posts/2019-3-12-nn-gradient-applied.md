@@ -29,25 +29,30 @@ Ainsi, pour deux variables d'entrée $$x_{1}$$ et $$x_{2}$$, avec leurs poids as
 - $$\hat y = a = \sigma (z)$$ : La prédiction a.
 - $$\mathfrak{L}(a, y)$$ : La fonction de perte se calcule finalement sur la prédiction a, et la vraie valeur y.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/nn1/applied-schema1.png" alt="" class="center" width="500">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/nn1/applied-schema1.png" alt="" class="center" width="700">
 
-Le but est d'évaluer la fonction de perte L afin de mettre à jour les paramètres de sorte à minimiser L.
+Le but de la descente de gradient est d'évaluer la fonction de perte L afin de mettre à jour les paramètres (dans la direction opposée au gradient) afin de minimiser L.
 
-## Les dérivées 
+## Les dérivées successives
 
 Comme vu dans le premier article sur la descente de gradient, on cherche à remonter successivement dans les dérivées. 
 
-La première dérivée qui nous interesse est celle de a : $$\frac{d\mathfrak{L}(a, y)}{da}$$. C'est l'influence de a sur l'évolution de la fonction de perte. Si on reprend l'expression de L(a, y), par la dérivation des fonctions Log on trouve : 
+### Influence de a
+La première dérivée qui nous interesse est celle de a : $$\frac{d\mathfrak{L}(a, y)}{da}$$. C'est **l'influence de a** sur l'évolution de la fonction de perte. Si on reprend l'expression de L(a, y), par la dérivation des fonctions Log on trouve : 
 
 $$\frac{d\mathfrak{L}(a, y)}{da} = -\frac{y}{a} + \frac{1-y}{1-a}$$
 
-On remonte d'une étape dans le diagramme et on s'interesse à l'influence de la fonction Z : 
+### Influence de z
+On remonte d'une étape dans le diagramme et on s'interesse à **l'influence de la variable Z** : 
 
 $$\frac{d\mathfrak{L}(a, y)}{dz} = \frac{d\mathfrak{L}(a, y)}{da} . \frac{da}{dz}$$
 
-Il s'agit d'un produit utilisant le terme trouvé à la première étape, il suffit de s'interesser à la fonction qui transforme Z pour arriver à A, c'est la fonction sigmoïde. Sa dérivée est égale à $$\frac{da}{dz} = a.(1-a)$$. Par produit on obtient $$dz = \frac{d\mathfrak{L}(a, y)}{dz} = a - y$$
+Il s'agit d'un produit utilisant le terme trouvé à la première étape, il suffit de s'interesser à la fonction qui transforme Z pour arriver à A, c'est la fonction sigmoïde. Sa dérivée est égale à $$\frac{da}{dz} = a.(1-a)$$. Par produit on obtient : 
 
-L'étape finale du calcul est d'arrivée à l'influence de chaque variable d'entrée sur la fonction de perte grâce à l'expression précédente. Pour le paramètre $$x_{1}$$ on va modifier le poids $$w_{1}$$, on calcule donc : 
+$$dz = \frac{d\mathfrak{L}(a, y)}{dz} = a - y$$
+
+### Influence des variables d'entrée
+L'étape finale du calcul est d'arrivée à **l'influence de chaque variable d'entrée** sur la fonction de perte grâce à l'expression précédente. Pour le paramètre $$x_{1}$$ on va modifier le poids $$w_{1}$$, on calcule donc : 
 
 $$\frac{\partial L}{\partial w_{1}} = x_{1} . dz$$
 
@@ -55,7 +60,11 @@ L'expression est similaire pour le poids $$w_{2}$$. Pour le biais on a $$db = dz
 
 $$w_{1} := w_{1} - \alpha dw_{1}$$
 
-On a vu dans ce paragraphe comment effectuer la mise à jour des poids pour un seul exemple d'entrainement de notre algorithme. Dans la suite nous verrons comment appliquer le même raisonnement à plusieurs données d'entrainement : quand on dispose de nombreux couples $$(x_{1}, x_{2})$$.
+On a vu dans ce paragraphe comment effectuer la mise à jour des poids pour un seul exemple d'entrainement de notre algorithme. 
+
+Dans la suite nous verrons comment appliquer le même raisonnement à **plusieurs données d'entrainement** : quand on dispose de nombreux couples $$(x_{1}, x_{2})$$.
+
+# Descente de gradient sur m données d'entrainement
 
 
 
