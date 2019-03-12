@@ -36,7 +36,9 @@ En effet, les opérations de la librairie numpy sont capables de **paralleliser*
 
 Multiplication de matrices :
 
-`u = np.dot(A, v)`
+```python
+u = np.dot(A, v)
+```
 
 On dispose d'un vecteur v de dimension n, et on souhaite **appliquer une fonction à chacun des éléments** du vecteur :
 
@@ -47,7 +49,7 @@ u = np.abs(v)
 u = np.maximum(v, 0)
 ```
 
-Utilisation d'un vecteur de poids en entrée du réseau de neurones, plutôt qu'une variable pour chacun :
+Utilisation d'un **vecteur de poids** en entrée du réseau de neurones, plutôt qu'une variable pour chacun :
 
 ```python
 dw = np.zeros((nx, 1))  # Initialisation
