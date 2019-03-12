@@ -45,19 +45,20 @@ On remonte d'une étape dans le diagramme et on s'interesse à l'influence de la
 
 $$\frac{d\mathfrak{L}(a, y)}{dz} = \frac{d\mathfrak{L}(a, y)}{da} . \frac{da}{dz}$$
 
-Il s'agit d'un produit utilisant le terme trouvé à la première étape, il suffit de s'interesser à la fonction qui transforme Z pour arriver à A, c'est la fonction sigmoïde. Sa dérivée est égale à $$\frac{da}{dz} = a.(1-a)$$. Par produit on obtient $$\frac{d\mathfrak{L}(a, y)}{dz} = a - y$$
+Il s'agit d'un produit utilisant le terme trouvé à la première étape, il suffit de s'interesser à la fonction qui transforme Z pour arriver à A, c'est la fonction sigmoïde. Sa dérivée est égale à $$\frac{da}{dz} = a.(1-a)$$. Par produit on obtient $$dz = \frac{d\mathfrak{L}(a, y)}{dz} = a - y$$
 
 L'étape finale du calcul est d'arrivée à l'influence de chaque variable d'entrée sur la fonction de perte grâce à l'expression précédente. Pour le paramètre $$x_{1}$$ on va modifier le poids $$w_{1}$$, on calcule donc : 
 
 $$\frac{\partial L}{\partial w_{1}} = x_{1} . dz$$
 
+L'expression est similaire pour le poids $$w_{2}$$. Pour le biais on a $$db = dz$$. Ce sont les quantités que l'on utilisera pour notre mise à jour des poids dans la descente de gradient :
 
-# Activer les extraits Latex
+$$w_{1} := w_{1} - \alpha dw_{1}$$
+
+On a vu dans ce paragraphe comment effectuer la mise à jour des poids pour un seul exemple d'entrainement de notre algorithme. Dans la suite nous verrons comment appliquer le même raisonnement à plusieurs données d'entrainement : quand on dispose de nombreux couples $$(x_{1}, x_{2})$$.
 
 
-$$J(w, b)=\frac{1}{m}\sum_{1}^{m}\mathfrak{L}(\hat y^{(i)},y^{(i)})$$
 
-# Images
 ## Internet
 <img src="https://cdn-images-1.medium.com/max/1600/1*f9a162GhpMbiTVTAua_lLQ.png" alt="" class="center">
 
