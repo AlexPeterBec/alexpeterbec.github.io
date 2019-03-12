@@ -16,3 +16,5 @@ Cette section reprend divers projets et études que je mène en machine learning
 [Réseau de neurones, Problème de classification binaire](https://alexpeterbec.github.io/nn/logreg/nn-log-reg/)
 
 [Descente de gradient et Graph de calcul](https://alexpeterbec.github.io/ml/graph/algebre/nn-gradient-computation/)
+
+[Descente de gradient appliquée](https://alexpeterbec.github.io/ml/nn-gradient-applied/)
