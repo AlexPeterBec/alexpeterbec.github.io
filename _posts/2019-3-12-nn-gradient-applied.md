@@ -31,6 +31,14 @@ Ainsi, pour deux variables d'entrée $$X_{1}$$ et $$X_{2}$$, avec leurs poids as
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/nn1/applied-schema1.png" alt="" class="center" width="500">
 
+Le but est d'évaluer la fonction de perte L afin de mettre à jour les paramètres de sorte à minimiser L.
+
+## Les dérivées 
+
+Comme vu dans le premier article sur la descente de gradient, on cherche à remonter successivement dans les dérivées. 
+
+La première dérivée qui nous interesse est celle de a : $$\frac{d\mathfrak{L}(a, y)}{da}$$. C'est l'influence de a sur l'évolution de la fonction de perte. Si on reprend l'expression de L(a, y), on trouve que la dérivée est égale à $$-\frac{y}{a} + \frac{1-y}{1-a}$$ par la dérivation des fonctions Log. 
+
 # Activer les extraits Latex
 
 
