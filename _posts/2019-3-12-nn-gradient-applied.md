@@ -116,8 +116,7 @@ Le pseudo algorithme vu ci-dessus présente le défaut d'utiliser **deux boucles
 
 En deep learning, avoir des boucles for est une entorse à l'efficacité des algorithmes. Éviter l'usage des boucles for permet de scaler plus facilement à des datasets plus gros.
 
-Pour se débarasser de ces boucles, on utilisera des techniques de vectorisation, indispensables de nos jour vu les quantités de données utilisées.
-
+Pour se débarasser de ces boucles, on utilisera des techniques de **vectorisation**, indispensables de nos jour vu les quantités de données utilisées.
 
 # Sources
 - <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank">Deep Learning course</a> (Coursera - Andrew Ng)
