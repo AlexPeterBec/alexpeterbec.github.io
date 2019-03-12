@@ -123,9 +123,10 @@ Dans ce cas, numpy va chercher la **dimension commune** des deux matrics, et **�
 
 # Vecteurs numpy
 
-Lorsque l'on crée un vecteur aléatoire avec `np.random.randn(5)`par exemple, on obtient un vecteur de rang 1, de dimension `(5,)`, dont la transposée est égal au vecteur. Il vaudra mieux exprimer les dimensions complètes avec `np.random.randn(5, 1)`, qui donne réellement un vecteur manipulable.
+Lorsque l'on crée un vecteur aléatoire avec `np.random.randn(5)`par exemple, on obtient un vecteur de rang 1, de dimension `(5,)`, dont la transposée est égal au vecteur. Il vaudra mieux exprimer les dimensions complètes avec `np.random.randn(5, 1)`, qui donne réellement un vecteur colonne manipulable.
 
-Sommer verticalement : `A.sum(axis=0)`
+- Sommer verticalement : `A.sum(axis=0)`
+- Verifier la dimension d'un vecteur : `assert(a.shape == (5, 1))`
 
 # Sources
 - <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank">Deep Learning course</a> (Coursera - Andrew Ng)
