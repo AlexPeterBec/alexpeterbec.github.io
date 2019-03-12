@@ -14,7 +14,9 @@ header:
 categories: [kafka, cassandra, elastic, spark]
 ---
 
-Les technologies open-source Apache sont présentes dans la quasi-totalité des architectures distribuées. Avec plus de <a href="https://streamdata.io/blog/open-source-apache-big-data-projects/" target="_blank">30 projets</a> actifs rien que pour les problématiques data, Apache est un incontournable pour construire un architecture. Dans cet article je détaille quatre solutions open-source très répandues, rapides, et scalables.
+Les technologies open-source Apache sont présentes dans la quasi-totalité des architectures distribuées. Avec plus de <a href="https://streamdata.io/blog/open-source-apache-big-data-projects/" target="_blank">30 projets</a> actifs rien que pour les problématiques data, Apache est un incontournable pour construire un architecture. 
+
+Dans cet article je détaille quatre solutions open-source très répandues, rapides, et scalables. Pour chacune de ces technos, les use-cases les plus adaptés. Enfin nous verrons 3 architectures mettant en oeuvre ces solutions.
 
 # Apache Cassandra
 
@@ -34,10 +36,10 @@ Cassandra peut être vu comme une table de hashage grand volumes. Chaque donnée
 
 ## Quand ne pas l'utiliser
 
-- Analytics & Data warehouse
-- Applications temps réel et visualisation AdHoc
-- Ne respecte pas ACID (?) notamment l'isolation
-- Utiliser Cassandra comme une file d'attente
+- Analytics & Data warehouse.
+- Applications temps réel et visualisation AdHoc.
+- Ne respecte pas ACID, notamment l'isolation.
+- Ne pas utiliser Cassandra comme une file d'attente.
 
 # Apache Kafka
 
@@ -45,6 +47,10 @@ Kafka est une solution très populaire pour la gestion de files de messages. C'e
 - Les **topics**, qui sont des files de messages, où les messages s'accumulent.
 - Les **producers** qui produisent des messages et les stockent dans un ou plusieurs topics.
 - Les **consumers** qui consomment les messages d'un ou plusieurs topics.
+
+<div align="center">
+  <img src="https://kafka.apache.org/0110/images/kafka-apis.png" alt="Kafka APIs">
+</div>
 
 ## Quand l'utiliser
 
@@ -74,7 +80,7 @@ Apache Spark propose une alternative plus performante au paradigme MapReduce. Sp
 
 ## Quand ne pas l'utiliser
 
-Spark ne convient pas pour des opérations en temps réel, en raison du temps de mise en route élevé.
+Spark ne convient pas pour des opérations en temps réel, en raison du temps de mise en route élevé des jobs Spark.
 
 # Elasticsearch (Apache Lucene)
 
@@ -113,9 +119,5 @@ Les données collectées sont rassemblées dans Kafka, qui répartit les flux ve
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/architectures/kafka-iot.png" alt="" class="center">
 
-# Images
-<img src="https://cdn-images-1.medium.com/max/1600/1*f9a162GhpMbiTVTAua_lLQ.png" alt="" class="center">
-
 # Sources
-- <a href="https://towardsdatascience.com/its-only-natural-an-excessively-deep-dive-into-natural-gradient-optimization-75d464b89dbb" target="_blank">Nombreux articles sur la descente de gradient</a> (TowardsDataScience) 
-- <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank">Deep Learning course</a> (Coursera - Andrew Ng)
+- Salon Big Data Paris 11 Mars 2019 - Ateliers sur les solutions Apache scalables.
