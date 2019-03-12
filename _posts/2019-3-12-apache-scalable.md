@@ -98,19 +98,19 @@ A l'intérieur d'Elasticsearch les données sont réparties sous forme de **docu
 
 Pour les micro services, Kafka est l'outil de prédilection, il centralise les flux grâce à ses nombreux connecteurs. Les demandes utilisateur peuvent être regroupées en topics afin de consommer les tâches au rythme le plus adapté et de répartir la charge.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/nosql/archi-microservices.png" alt="" class="center" width="500">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/architectures/kafka-microservices.png" alt="" class="center">
 
 ## ETL
 
 Les données sont réparties dans divers systèmes de stockage selon les besoins et les usages qui en sont fait. Ici on se sert essentiellement de Spark pour des opérations ETL de migration ou d'enrichissement entre ces espaces de stockage.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/nosql/archi-etl.png" alt="" class="center" width="500">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/architectures/spark-etl.png" alt="" class="center">
 
 ## Objets connectés
 
 Les données collectées sont rassemblées dans Kafka, qui répartit les flux vers chaque système approprié pour le traitement.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/nosql/archi-iot.png" alt="" class="center" width="500">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/architectures/kafka-iot.png" alt="" class="center">
 
 # Images
 <img src="https://cdn-images-1.medium.com/max/1600/1*f9a162GhpMbiTVTAua_lLQ.png" alt="" class="center">
