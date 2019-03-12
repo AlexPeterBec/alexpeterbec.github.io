@@ -80,14 +80,21 @@ $$\frac{\partial J(w, b)}{\partial w_{1}} = \frac{1}{m}\sum_{1}^{m}\frac{\partia
 
 Comme on a déjà vu l'étape de calcul du terme à l'intérieur de la somme, il ne reste plus qu'à moyenner ce terme sur l'ensemble des données d'apprentissage pour effectuer la mise à jour.
 
-## Algorithme
+## Pseudo-algorithme
 
 Avec les éléments vus jusqu'à présent, on peut commencer à établir une version simple de l'algorithme de descente de gradient
 
 ```python
-J=0, dw1=0, dw2=0, db=0
-for i=1 to m:
-    zi = wT.xi + b
+J=0, dw1=0, dw2=0, db=0     # Initialisation des variables
+for i=1 to m:               # Iteration sur train-set
+    zi = wT.xi + b          # Calcul de Z(x1, x2)
+    ai = sigma(zi)          # Prediction
+    J += L(ai, y)           # Ajout de la fonction de perte
+    dzi = ai - yi           # Influence de Z
+    dw1 += x1i * dzi        # Influence du poids w1 (étape i)
+    dw2 += x2i * dzi
+    db += dzi
+J/=m, dw1/=m, dw2/=m, db/=m  # Moyenne sur le train-set
 ```
 
 ## Internet
