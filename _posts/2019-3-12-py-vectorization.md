@@ -61,13 +61,71 @@ dw /= m                 # Moyenne train-set
 
 Pour ne plus avoir besoin de boucles dans notre implémentation de la régression logistique, on va utiliser les formes matricielles : X est la matrice de données d'entrainement, contenant nx variables sur les lignes, et m exemples sur les colonnes.
 
-La première étapes étant de calculer la fonction Z, on l'écrit comme un produit de matrices, et on obtient avec une seule opération toutes les valeurs de  pour l'ensemble du train-set :
+La première étapes étant de calculer la fonction Z, on l'écrit comme un produit de matrices, et on obtient avec **une seule opération** toutes les valeurs de Z pour l'ensemble du train-set :
 
-$$ [z^{1}, z^{2}, ..., z^{n}] = w^\intercal . X + [b, b, ..., b] $$
+$$Z = [z^{(1)}, z^{(2)}, ..., z^{(m)}] = w^\intercal . X + [b, b, ..., b] $$
+
+En python, cela revient à :
+
+```python
+Z = np.dot(w.T, X) + b
+```
+
+L'étape suivante est d'évaluer chacune des valeurs de Z par la fonction sigmoïde. Il suffira de déclarer la fonction sigmpïde dans une fonction python et l'appliquer à l'ensemble du vecteur.
+
+# Calcul du gradient par vectorisation
+
+## Calcul de dZ
+
+On a vu que pour chaque exemple de notre train-set, on a besoin de calculer $$dz^{(i)}$$. Ici encore on va regrouper ces valeurs dans un vecteur de taille m :
+
+$$ dZ = [dz^{(1)}, dz^{(2)}, ..., dz^{(m)}]$$
+
+En définissant deux vecteurs de taille m pour les valeurs de A et de Y. On peut simplement calculer le vecteur dZ car pour chacun des termes, c'et la différence $$a^{(i)} - y^{(i)}$$. En python cela va simplement s'exprimer :
+
+```python
+dZ = A - Y
+```
+
+## Vectorisation des m exemples
+
+Pour la grandeur db, qui est la somme des valeurs dans le vecteur dZ on peut faire :
+
+```python
+db = 1/m * np.sum(dZ)
+```
+Pour la grandeur $$dw = \frac{1}{m} . X . dz^\intercal$$ on peut ici aussi utiliser une ligne de code :
+
+```python
+dw = 1/m * np.sum(X, dZ.T)
+```
+
+En regroupant toutes les simplifications grâce aux matrices, on peut faire un **passage sur tout le train-set** (forward propagation) avec ces lignes :
+
+```python
+Z = np.dot(w.T, X) + b
+A = sigmoid(Z)
+dZ = A -Y
+dw = 1/m * np.sum(X, dZ.T)
+db = 1/m * np.sum(dZ)
+
+w = w - r * dw
+b = b - r * db
+```
+
+On a encore besoin d'une boucle pour effectuer **chacun des passages** de notre descente de gradient.
 
 # Broadcasting
 
+Le broadcasting est beaucoup utilisé dans les **opérations matricielles**. Lorsque l'on souhaite effectuer des opérations entre deux matrices (ici, des numpy arrays), on ne fournit pas toujours deux tables de mêmes dimensions.
+
+Dans ce cas, numpy va chercher la **dimension commune** des deux matrics, et **étendre la plus petite**, dans la direction des lignes ou des colonnes, afin de les faire correspondre, et effectuer l'opération terme à terme.
+
 # Vecteurs numpy
+
+Lorsque l'on crée un vecteur aléatoire avec `np.random.randn(5)`par exemple, on obtient un vecteur de rang 1, de dimension `(5,)`, dont la transposée est égal au vecteur. Il vaudra mieux exprimer les dimensions complètes avec `np.random.randn(5, 1)`, qui donne réellement un vecteur manipulable.
+
+Sommer verticalement : `A.sum(axis=0)`
 
 # Sources
 - <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank">Deep Learning course</a> (Coursera - Andrew Ng)
