@@ -60,7 +60,7 @@ Kafka est une solution très populaire pour la gestion de files de messages. C'e
 
 ## Quand ne pas l'utiliser
 
-- Ne pas utiliser Kafka comme une source de données
+- Ne pas utiliser Kafka comme une source de données.
 - Traiter toutes les données séquentiellement depuis un topic.
 - Les cas de contraintes temps réel ne sont pas adaptés.
 
@@ -84,9 +84,15 @@ Spark ne convient pas pour des opérations en temps réel, en raison du temps de
 
 # Elasticsearch (Apache Lucene)
 
-ElasticSearch est open source, et il est basé sur la solution Apache Lucene. Elasticsearch est aujourd'hui très répandu dans les contextes big data car il propose des temps de réponse très faibles pour explorer les données en mode 'moteur de recherche'. Il est basé sur les éléments suivants :
+ElasticSearch est open source, et il est basé sur la solution Apache Lucene. Elasticsearch est aujourd'hui très répandu dans les contextes big data car il propose des temps de réponse très faibles pour explorer les données en mode 'moteur de recherche'.
 
 A l'intérieur d'Elasticsearch les données sont réparties sous forme de **documents** dans des **index**. A l'intérieur d'un index, chacun des documents possèdent les mêmes champs.
+
+La solution de visualisation **Kibana** a beaucoup évolué depuis les premières versions et propose un dashboard très complet :
+
+<div align="center">
+  <img src="https://d2.alternativeto.net/dist/s/https--www-elastic-co-products-kibana_989074_full.jpg?format=jpg&width=1600&height=1600&mode=min&upscale=false" alt="Kafka APIs">
+</div>
 
 ## Quand l'utiliser
 
