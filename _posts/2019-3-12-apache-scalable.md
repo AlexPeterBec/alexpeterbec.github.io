@@ -14,7 +14,7 @@ header:
 categories: [kafka, cassandra, elastic, spark]
 ---
 
-Les technologies open-source Apache sont présentes dans la quasi-totalité des architectures distribuées. Avec plus de <a href="https://streamdata.io/blog/open-source-apache-big-data-projects/" target="_blank">30 projets</a> actifs rien que pour les problématiques data, Apache est un incontournable pour construire un architecture. 
+Les technologies open-source Apache sont présentes dans la quasi-totalité des architectures distribuées. Avec plus de <a href="https://streamdata.io/blog/open-source-apache-big-data-projects/" target="_blank">30 projets</a> actifs rien que pour les problématiques data, Apache est un incontournable des solutions data. 
 
 Dans cet article je détaille quatre solutions open-source très répandues, rapides, et scalables. Pour chacune de ces technos, les use-cases les plus adaptés. Enfin nous verrons 3 architectures mettant en oeuvre ces solutions.
 
