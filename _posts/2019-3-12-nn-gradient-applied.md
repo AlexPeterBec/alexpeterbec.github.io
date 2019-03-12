@@ -84,32 +84,11 @@ Comme on a déjà vu l'étape de calcul du terme à l'intérieur de la somme, il
 
 Avec les éléments vus jusqu'à présent, on peut commencer à établir une version simple de l'algorithme de descente de gradient
 
-$$\usepackage{algorithm}
-\usepackage{algorithmic}
-\begin{algorithm}
-\caption{Calculate $y = x^n$}
-\begin{algorithmic} 
-\REQUIRE $n \geq 0 \vee x \neq 0$
-\ENSURE $y = x^n$
-\STATE $y \leftarrow 1$
-\IF{$n < 0$}
-\STATE $X \leftarrow 1 / x$
-\STATE $N \leftarrow -n$
-\ELSE
-\STATE $X \leftarrow x$
-\STATE $N \leftarrow n$
-\ENDIF
-\WHILE{$N \neq 0$}
-\IF{$N$ is even}
-\STATE $X \leftarrow X \times X$
-\STATE $N \leftarrow N / 2$
-\ELSE[$N$ is odd]
-\STATE $y \leftarrow y \times X$
-\STATE $N \leftarrow N - 1$
-\ENDIF
-\ENDWHILE
-\end{algorithmic}
-\end{algorithm}$$
+```python
+J=0, dw1=0, dw2=0, db=0
+for i=1 to m:
+    zi = wT.xi + b
+```
 
 ## Internet
 <img src="https://cdn-images-1.medium.com/max/1600/1*f9a162GhpMbiTVTAua_lLQ.png" alt="" class="center">
