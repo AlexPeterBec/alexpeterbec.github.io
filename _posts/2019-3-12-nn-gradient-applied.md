@@ -79,7 +79,7 @@ Sa dérivée par rapport au poids $$w_{1}$$ s'exprime ainsi :
 
 $$\frac{\partial J(w, b)}{\partial w_{1}} = \frac{1}{m}\sum_{1}^{m}\frac{\partial L(a^{(i)}, y^{(i)})}{\partial w_{i}}$$
 
-Comme on a déjà vu l'étape de calcul du terme à l'intérieur de la somme, il ne reste plus qu'à moyenner ce terme sur l'ensemble des données d'apprentissage pour effectuer la mise à jour.
+Comme on a déjà vu l'étape de calcul du terme à l'intérieur de la somme, il ne reste plus qu'à **moyenner** ce terme sur l'ensemble des données d'apprentissage pour effectuer la **mise à jour**.
 
 ## Pseudo-algorithme
 
@@ -103,8 +103,8 @@ w2 = w2 - alpha * dw2
 b = b - alpha * db
 ```
 
-- On utilise les quantités J, dw1, dw2 et db comme des accumulateurs, et on effectue une moyenne sur le nombre de données d'entrainement. 
-- Tout ce pseudo algorithme constitue une seule étape de la descente de gradient, c'est à dire le chemin entre deux croix sur le graphique ci-dessous. Il faut donc effectuer plusieurs itérations afin de descendre au plus bas pour notre fonction de perte J.
+- On utilise les quantités J, dw1, dw2 et db comme des **accumulateurs**, et on effectue une moyenne sur le nombre de données d'entrainement. 
+- Tout ce pseudo algorithme constitue une seule étape de la descente de gradient, c'est à dire le **chemin entre deux croix** sur le graphique ci-dessous. Il faut donc effectuer plusieurs itérations afin de descendre au plus bas pour notre fonction de perte J.
 
 <img src="https://cdn-images-1.medium.com/max/1600/1*f9a162GhpMbiTVTAua_lLQ.png" alt="" class="center">
 
