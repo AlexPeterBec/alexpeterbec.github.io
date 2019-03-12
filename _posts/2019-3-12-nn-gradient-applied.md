@@ -24,6 +24,10 @@ On reprend le cadre simple de la regression logistique avec les éléments suiva
 - $$ \hat y = a = \sigma(z)$$ : La prédiction par la fonction d'activation.
 - $$\mathfrak{L}(a, y) = -(y\log a+(1-y)\log(1-a))$$ : La fonction de perte pour une prédiction a.
 
+Ainsi, pour deux variables d'entrée $$X_{1}$$ et $$X_{2}$$, avec leurs poids associés $$w_{1}$$ et $$w_{2}$$ et le terme de biais b on a :
+- $$z = w_{1}x_{1}+w_{2}x_{2}+b$$ : L'équation de classification
+- $$\hat y = a = \sigma (z)$$ : La prédiction a.
+
 # Activer les extraits Latex
 
 
