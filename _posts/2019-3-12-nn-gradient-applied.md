@@ -20,8 +20,9 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 ## Hypothèses de départ
 
 On reprend le cadre simple de la regression logistique avec les éléments suivants :
-- $$z = wTx + b$$ l'équation de regression.
-- $$ \hat y = a = \sigma(z)$$ L'estimation par la fonction d'activation.
+- $$z = w^\intercal \mathbf{x} + b$$ : L'équation de regression.
+- $$ \hat y = a = \sigma(z)$$ : La prédiction par la fonction d'activation.
+- $$\mathfrak{L}(a, y) = -(y\log a+(1-y)\log(1-a))$$ : La fonction de perte pour une prédiction a.
 
 # Activer les extraits Latex
 
