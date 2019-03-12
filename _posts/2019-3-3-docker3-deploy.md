@@ -3,6 +3,7 @@ published: true
 title: "Docker 3 : Déployer une application Python"
 excerpt: "Création d'un container custom"
 classes: wide
+author_profile: false
 comments: true
 header:
   overlay_image: "assets/images/docker/cover.jpg"

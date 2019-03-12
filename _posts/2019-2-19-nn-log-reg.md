@@ -4,6 +4,7 @@ title: "Réseau de neurones, Classification binaire"
 excerpt: ""
 classes: wide
 comments: true
+author_profile: false
 header:
   overlay_image: "assets/images/nn1/cover.jpg"
   teaser: "assets/images/nn1/cover.jpg"

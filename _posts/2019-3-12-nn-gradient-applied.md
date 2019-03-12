@@ -6,6 +6,7 @@ toc: true
 toc_sticky: true
 toc_label: "Descente de gradient"
 toc_icon: "infinity"
+author_profile: false
 comments: true
 header:
     overlay_image: "assets/images/nn1/cover.jpg"

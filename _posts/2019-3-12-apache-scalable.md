@@ -7,9 +7,10 @@ toc_sticky: true
 toc_label: "Apache Scalable"
 toc_icon: "align-center"
 comments: true
+author_profile: false
 header:
-overlay_image: "assets/images/nn1/cover.jpg"
-teaser: "assets/images/nn1/cover.jpg"
+	overlay_image: "assets/images/nn1/cover.jpg"
+	teaser: "assets/images/nn1/cover.jpg"
 categories: []
 ---
 

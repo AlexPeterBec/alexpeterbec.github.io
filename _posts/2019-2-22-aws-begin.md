@@ -7,6 +7,7 @@ toc: true
 toc_sticky: true
 toc_label: "Principaux services"
 toc_icon: "cloud"
+author_profile: false
 header:
   overlay_image: "assets/images/aws/cover.jpg"
   overlay_filter: 0.2

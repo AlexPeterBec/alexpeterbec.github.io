@@ -4,6 +4,7 @@ title: "Stats 1 - Apprentissage supervisé"
 excerpt: "Définitions et principes de base"
 classes: wide
 comments: true
+author_profile: false
 header:
   overlay_image: "assets/images/stats1/curves-led.jpg"
   teaser: "assets/images/stats1/curves-led.jpg"

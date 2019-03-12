@@ -4,6 +4,7 @@ title: "Docker 2 : Commandes et Dockerfile"
 excerpt: "Anatomie du Dockerfile"
 classes: wide
 comments: true
+author_profile: false
 header:
   overlay_image: "assets/images/docker/cover.jpg"
   teaser: "assets/images/docker/cover.jpg"

@@ -4,6 +4,7 @@ title: "De zéro à TensorFlow - Théorie"
 excerpt: "Architecture, tenseurs, premiers scripts"
 classes: wide
 comments: true
+author_profile: false
 header:
   overlay_image: "assets/images/tensorflow/cover.jpg"
   teaser: "assets/images/tensorflow/cover.jpg"

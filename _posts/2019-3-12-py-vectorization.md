@@ -7,6 +7,7 @@ toc_sticky: true
 toc_label: "Vectorization"
 toc_icon: "infinity"
 comments: true
+author_profile: false
 header:
     overlay_image: "assets/images/nn1/cover.jpg"
     teaser: "assets/images/nn1/cover.jpg"

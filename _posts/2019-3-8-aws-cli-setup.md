@@ -2,6 +2,7 @@
 published: true
 title: "AWS - Installer et parametrer la CLI"
 excerpt: "CLI Setup"
+author_profile: false
 toc: true
 toc_sticky: true
 toc_label: "CLI Setup"

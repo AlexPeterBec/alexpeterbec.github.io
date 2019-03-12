@@ -6,6 +6,7 @@ toc: true
 toc_sticky: true
 toc_label: "NN Basics"
 toc_icon: "microchip"
+author_profile: false
 comments: true
 header:
   overlay_image: "assets/images/nn1/cover.jpg"
@@ -96,5 +97,5 @@ $$\frac{dJ}{da} = \frac{dJ}{dv} . \frac{dv}{da} = \frac{0.003}{0.001} . \frac{0.
 On a vu dans cet article le principe de la descente de gradient, et de dérivées en chaine. Ce sont des éléments très important pour les réseaux de neurones. On trouve quantité d'articles sur le sujet auprès des sources spécialisées, et cela constitue les bases pour l'enseignement du deep learning.
 
 # Sources
-- <a href="https://towardsdatascience.com/its-only-natural-an-excessively-deep-dive-into-natural-gradient-optimization-75d464b89dbb" target="_blank">Nombreux articles sur la descente de gradient</a> (TowardsDataScience) 
+- <a href="https://towardsdatascience.com/its-only-natural-an-excessively-deep-dive-into-natural-gradient-optimization-75d464b89dbb" target="_blank">Nombreux articles sur la descente de gradient</a> (TowardsDataScience)
 - <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank">Deep Learning course</a> (Coursera - Andrew Ng)
