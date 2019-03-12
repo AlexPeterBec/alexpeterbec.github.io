@@ -8,13 +8,14 @@ toc_label: "Descente de gradient"
 toc_icon: "infinity"
 comments: true
 header:
-overlay_image: "assets/images/nn1/cover.jpg"
-teaser: "assets/images/nn1/cover.jpg"
+    overlay_image: "assets/images/nn1/cover.jpg"
+    teaser: "assets/images/nn1/cover.jpg"
 categories: [ml]
 ---
 <script type="text/javascript" async
 src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+
 # Descente de gradient pour la regression logistique
 
 ## Hypothèses de départ
@@ -95,15 +96,28 @@ for i=1 to m:               # Iteration sur train-set
     dw2 += x2i * dzi
     db += dzi
 J/=m, dw1/=m, dw2/=m, db/=m  # Moyenne sur le train-set
+
+# Mise à jour des paramètres 
+w1 = w1 - alpha * dw1
+w2 = w2 - alpha * dw2
+b = b - alpha * db
 ```
 
-## Internet
+- On utilise les quantités J, dw1, dw2 et db comme des accumulateurs, et on effectue une moyenne sur le nombre de données d'entrainement. 
+- Tout ce pseudo algorithme constitue une seule étape de la descente de gradient, c'est à dire le chemin entre deux croix sur le graphique ci-dessous. Il faut donc effectuer plusieurs itérations afin de descendre au plus bas pour notre fonction de perte J.
+
 <img src="https://cdn-images-1.medium.com/max/1600/1*f9a162GhpMbiTVTAua_lLQ.png" alt="" class="center">
 
-## Hebergé Git
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/docker/VM-containers.png" alt="" class="center" width="500">
+## Optimisation
+
+Le pseudo algorithme vu ci-dessus présente le défaut d'utiliser **deux boucles for** :
+- Une boucle pour itérer sur l'ensemble du train set.
+- Une boucle pour mettre à jour chacun des paramètres après le calcul de *dzi* (ici nous en avons uniquement deux donc cela n'apparait pas clairement).
+
+En deep learning, avoir des boucles for est une entorse à l'efficacité des algorithmes. Éviter l'usage des boucles for permet de scaler plus facilement à des datasets plus gros.
+
+Pour se débarasser de ces boucles, on utilisera des techniques de vectorisation, indispensables de nos jour vu les quantités de données utilisées.
 
 
 # Sources
-- <a href="https://towardsdatascience.com/its-only-natural-an-excessively-deep-dive-into-natural-gradient-optimization-75d464b89dbb" target="_blank">Nombreux articles sur la descente de gradient</a> (TowardsDataScience) 
 - <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank">Deep Learning course</a> (Coursera - Andrew Ng)
