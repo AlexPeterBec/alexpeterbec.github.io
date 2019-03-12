@@ -5,7 +5,7 @@ excerpt: "Regression Logistique et m exemples"
 toc: true
 toc_sticky: true
 toc_label: "Descente de gradient"
-toc_icon: "microchip"
+toc_icon: "infinity"
 comments: true
 header:
 overlay_image: "assets/images/nn1/cover.jpg"
@@ -25,8 +25,11 @@ On reprend le cadre simple de la regression logistique avec les éléments suiva
 - $$\mathfrak{L}(a, y) = -(y\log a+(1-y)\log(1-a))$$ : La fonction de perte pour une prédiction a.
 
 Ainsi, pour deux variables d'entrée $$X_{1}$$ et $$X_{2}$$, avec leurs poids associés $$w_{1}$$ et $$w_{2}$$ et le terme de biais b on a :
-- $$z = w_{1}x_{1}+w_{2}x_{2}+b$$ : L'équation de classification
+- $$z(x_{1}, x_{2}) = w_{1}x_{1}+w_{2}x_{2}+b$$ : L'équation de classification
 - $$\hat y = a = \sigma (z)$$ : La prédiction a.
+- $$\mathfrak{L}(a, y)$$ : La fonction de perte se calcule finalement sur la prédiction a, et la vraie valeur y.
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/nn1/applied-schema1.png" alt="" class="center" width="500">
 
 # Activer les extraits Latex
 
