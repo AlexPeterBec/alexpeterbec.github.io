@@ -21,7 +21,7 @@ title_separator          : "-"
 name                     : "Alexandre Bec"
 description              : ""
 url                      : https://alexpeterbec.github.io
-baseurl                  : "/index.html" # the subpath of your site, e.g. "/blog"
+baseurl                  :  # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # Default teaser image "assets/images/contents/main-cover.jpg"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
