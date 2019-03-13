@@ -52,11 +52,11 @@ Cassandra peut être vu comme une table de hashage grand volumes. Chaque donnée
 # Apache Kafka
 
 <div align="center">
-  <img src="https://kafka.apache.org/images/logo.png" alt="Kafka Logo">
+  <img src="https://kafka.apache.org/images/logo.png" alt="Kafka Logo" vspace="50">
 </div>
 
 
-Kafka est une solution très populaire pour la gestion de files de messages. C'est un système qui centralise les flux, un Hub. Comme pour les aéroports, le traffic est centralisé et géré efficacement. Le fonctionnement de Kafka est articulé autour de plusieurs éléments : 
+Kafka est une solution très populaire pour la **gestion des files de messages**. C'est un système qui centralise les flux, un Hub. Comme pour les aéroports, le traffic est centralisé et géré efficacement. Le fonctionnement de Kafka est articulé autour de plusieurs éléments : 
 - Les **topics**, qui sont des files de messages, où les messages s'accumulent.
 - Les **producers** qui produisent des messages et les stockent dans un ou plusieurs topics.
 - Les **consumers** qui consomment les messages d'un ou plusieurs topics.
