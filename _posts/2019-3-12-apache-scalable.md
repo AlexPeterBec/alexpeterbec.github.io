@@ -14,6 +14,14 @@ header:
 categories: [kafka, cassandra, elastic, spark]
 ---
 
+D'abord quelques clarifications :
+- La licence **Apache** est une licence de logiciel libre et open source, elle permet l'utilisation et la distribution du code sous toutes formes (y compris commercial). Cela implique que le code source est public, et que les modifications sont soumises à l'approbation générale.
+- On parle de technologie **scalable** quand on a besoin de faire grossir la charge d'une application : Pour une base de donnée, on veut que les performances soient constantes en lecture/écriture quand le volume de données augmente. Idem pour le traitement de flux de données avec les quantités de données traitées.
+
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Apache_Software_Foundation_Logo_%282016%29.svg/1200px-Apache_Software_Foundation_Logo_%282016%29.svg.png" alt="Kafka APIs">
+</div>
+
 Les technologies open-source Apache sont présentes dans la quasi-totalité des architectures distribuées. Avec plus de <a href="https://streamdata.io/blog/open-source-apache-big-data-projects/" target="_blank">30 projets</a> actifs rien que pour les problématiques data, Apache est un incontournable des solutions data. 
 
 Dans cet article je détaille quatre solutions open-source très répandues, rapides, et scalables. Pour chacune de ces technos, les use-cases les plus adaptés. Enfin nous verrons 3 architectures mettant en oeuvre ces solutions.
