@@ -52,7 +52,7 @@ Cassandra peut être vu comme une table de hashage grand volumes. Chaque donnée
 # Apache Kafka
 
 <div align="center">
-  <img src="https://kafka.apache.org/images/logo.png" alt="Kafka Logo" vspace="50">
+  <img src="https://kafka.apache.org/images/logo.png" alt="Kafka Logo" vspace="30">
 </div>
 
 
