@@ -51,6 +51,10 @@ Cassandra peut être vu comme une table de hashage grand volumes. Chaque donnée
 
 # Apache Kafka
 
+<div align="center">
+  <img src="https://kafka.apache.org/images/logo.png" alt="Kafka Logo">
+</div>
+
 Kafka est une solution très populaire pour la gestion de files de messages. C'est un système qui centralise les flux, un Hub. Comme pour les aéroports, le traffic est centralisé et géré efficacement. Le fonctionnement de Kafka est articulé autour de plusieurs éléments : 
 - Les **topics**, qui sont des files de messages, où les messages s'accumulent.
 - Les **producers** qui produisent des messages et les stockent dans un ou plusieurs topics.
@@ -80,6 +84,10 @@ Apache Spark propose une alternative plus performante au paradigme MapReduce. Sp
 - **Mesos**, le scheduler pour gérer les ressources d'un datacenter (similaire à YARN mais cadre plus large).
 - **Kubernetes**, déploiement automatisé d'application en containers.
 
+<div align="center">
+  <img src="https://blog.jetoile.fr/images/rdd/spark.png" alt="Apache Spark">
+</div>
+
 ## Quand l'utiliser
 
 - Quand on souhaite travailler sur de **gros volumes de données**. Spark n'est pas adapté aux traitements de faible volumes, en effet, les jobs ont besoin de temps pour être déployés et pour se lancer. Une fois passé ce temps de lancement, la valeur ajoutée de Spark augmente avec le volume de données traitées.
@@ -99,7 +107,7 @@ A l'intérieur d'Elasticsearch les données sont réparties sous forme de **docu
 La solution de visualisation **Kibana** a beaucoup évolué depuis les premières versions et propose un dashboard très complet :
 
 <div align="center">
-  <img src="https://d2.alternativeto.net/dist/s/https--www-elastic-co-products-kibana_989074_full.jpg?format=jpg&width=1600&height=1600&mode=min&upscale=false" alt="Kafka APIs">
+  <img src="https://d2.alternativeto.net/dist/s/https--www-elastic-co-products-kibana_989074_full.jpg?format=jpg&width=1600&height=1600&mode=min&upscale=false" alt="Kibana Dashboard">
 </div>
 
 ## Quand l'utiliser
