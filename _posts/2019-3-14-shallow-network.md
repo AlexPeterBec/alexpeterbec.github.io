@@ -5,7 +5,7 @@ excerpt: "Notions globales, représentations"
 toc: true
 toc_sticky: true
 toc_label: "Réseaux de neurones"
-toc_icon: "ruler-combined"
+toc_icon: "microchip"
 comments: true
 author_profile: false
 header:
@@ -19,17 +19,23 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 
 # Vue globale des réseaux de neurones
 
-On a vu dans les articles de la première partie, l'exemple de la regression logistique, composé d'un seul élément appelé neurone, qui effectue :
-- La multiplication matricielle des poids, et somme avec le terme de biais b.
-- Le passage dans une fonction d'activation sigma.
+On a vu dans les articles de la première partie, l'exemple de la regression logistique, composé d'**un seul élément appelé neurone**, qui effectue :
 
-On va maintenant passer à une représentation plus "profonde" et considérer des couches successives de neurones. Chaque rond sur le schema est un neurone effectuant les opérations vues ci-dessus.
 
 <div align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/MultiLayerNeuralNetworkBigger_english.png" alt="Kafka APIs">
+    <img src="https://ml-cheatsheet.readthedocs.io/en/latest/_images/neuron.png" alt="Neuron">
 </div>
 
-Avant, on utilisait simplement le terme w pour désigner les poids associés à chaque variables d'entrée. On a besoin de complexifier l'écriture pour prendre en compte la notion de couche dans nos variables et ne pas toujours utiliser les mêmes. La notation commune est $$W^{[1]}, z^{[1]}, b^{[1]}$$ pour désigner les grandeurs associées à la première couche, ainsi de suite.
+- La multiplication matricielle des poids (w) par les variables d'entrée, et ajoute le terme de biais (b).
+- Le passage dans une fonction d'activation sigma.
+
+On va maintenant passer à une représentation plus "profonde" et considérer des couches successives de neurones. Chaque rond sur le schema est un neurone effectuant les opérations ci-dessus.
+
+<div align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/MultiLayerNeuralNetworkBigger_english.png" alt="NN">
+</div>
+
+Avant, on utilisait simplement le terme w pour désigner les poids associés à chaque variables d'entrée. On a maintenant besoin de complexifier l'écriture pour **prendre en compte la notion de couches** dans nos variables et ne pas toujours utiliser les mêmes. La notation commune est $$W^{[1]}, z^{[1]}, b^{[1]}$$ pour désigner les grandeurs associées à la première couche, ainsi de suite.
 
 On verra dans la suite que les mécanismes de propagation forward/backward s'appliquent aussi bien avec un réseau en plusieurs couches.
 
@@ -38,13 +44,13 @@ On verra dans la suite que les mécanismes de propagation forward/backward s'app
 Reprenons la représentation de notre réseau de neurones :
 
 <div align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/MultiLayerNeuralNetworkBigger_english.png" alt="Kafka APIs">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/MultiLayerNeuralNetworkBigger_english.png" alt="NN">
 </div>
 
 On peut décomposer le schema en différentes parties :
-- La couche d'entrée, les variables en entrée.
-- Une couche cachée. "Cachée" car les valeurs contenues dans ces neurones ne sont pas observées, et elles ne sont pas fixées par les entrées/sorties définies par notre ensemble de données d'entrainement.
-- La couche de sortie, responsable de la valeur de sortie estimée par le réseau.
+- La couche d'**entrée/input**, les variables en entrée.
+- Une couche **cachée/hidden**. "Cachée" car les valeurs contenues dans ces neurones ne sont pas observées, et elles ne sont pas fixées par les entrées/sorties définies par notre ensemble de données d'entrainement.
+- La couche de **sortie/output**, responsable de la valeur de sortie estimée par le réseau.
 
 ## Taille du réseau
 
@@ -58,7 +64,7 @@ On peut remarquer que la dimension du vecteur de poids va correspondre avec le n
 
 Concernant **le biais** de la couche cachée $$B^{[1]}$$ : chacun des neurones possède un biais, on a donc un vecteur de dimension $$[3, 1]$$.
 
-De manière générale, il est important de garder les dimensions à l'esprit lorsque l'on conçoit un réseau de neurones. La dimension des matrices de paramètres d'une couche dépend de la couche précédente, et de la configuration de la couche considérée.
+De manière générale, il est important de **garder les dimensions à l'esprit** lorsque l'on conçoit un réseau de neurones. La dimension des matrices de paramètres d'une couche dépend de la couche précédente, et de la configuration de la couche considérée.
 
 # Sources
 
