@@ -19,15 +19,20 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 
 # Vue globale des réseaux de neurones
 
-On a vu dans les articles de la première partie, l'exemple de la regression logistique, composé d'**un seul élément appelé neurone**, qui effectue :
+## Un neurone
+
+On a vu dans les articles de la première partie, l'exemple de la regression logistique, composé d'**un seul élément appelé neurone**.
 
 
 <div align="center">
-    <img src="https://ml-cheatsheet.readthedocs.io/en/latest/_images/neuron.png" alt="Neuron">
+    <img src="https://ml-cheatsheet.readthedocs.io/en/latest/_images/neuron.png" alt="Neuron" vspace="10">
 </div>
 
+On a vu qu'il effectuait les opérations suivantes :
 - La multiplication matricielle des poids (w) par les variables d'entrée, et ajoute le terme de biais (b).
 - Le passage dans une fonction d'activation sigma.
+
+## Beaucoup de neurones
 
 On va maintenant passer à une représentation plus "profonde" et considérer des couches successives de neurones. Chaque rond sur le schema est un neurone effectuant les opérations ci-dessus.
 
@@ -65,6 +70,8 @@ On peut remarquer que la dimension du vecteur de poids va correspondre avec le n
 Concernant **le biais** de la couche cachée $$B^{[1]}$$ : chacun des neurones possède un biais, on a donc un vecteur de dimension $$[3, 1]$$.
 
 De manière générale, il est important de **garder les dimensions à l'esprit** lorsque l'on conçoit un réseau de neurones. La dimension des matrices de paramètres d'une couche dépend de la couche précédente, et de la configuration de la couche considérée.
+
+# Propagation et calcul de la valeur de sortie
 
 # Sources
 
