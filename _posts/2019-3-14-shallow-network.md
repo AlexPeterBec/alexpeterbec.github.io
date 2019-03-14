@@ -84,7 +84,7 @@ Concentrons-nous sur un seul noeud du réseau : Le **premier neurone de la couch
 > Notation : $$a^{[l]}_{i}$$ la valeur de **a** pour la couche *l*, et pour le noeud *i* dans cette couche.
 
 Expressions de Z et A pour le premier neurone de la couche cachée :
-$$z^{[1]}_{1} = w^{[1]\intercal}_{1} \mathbf{x} + b^{[1]}_{1}$$
+$$z^{[1]}_{1} = w^{[1]\intercal}_{1} x + b^{[1]}_{1}$$
 $$a^{[1]}_{1} = \sigma (z^{[1]}_{1})$$
 
 De même pour chaque neurone dans la couche cachée.
@@ -93,11 +93,11 @@ De même pour chaque neurone dans la couche cachée.
 
 On a les équations suivantes pour chacun des 3 neurones de la couche cachée :
 
-$$z^{[1]}_{1} = w^{[1]\intercal}_{1} \mathbf{x} + b^{[1]}_{1}$$
+$$z^{[1]}_{1} = w^{[1]\intercal}_{1} x + b^{[1]}_{1}$$
 
-$$z^{[1]}_{2} = w^{[1]\intercal}_{2} \mathbf{x} + b^{[1]}_{2}$$
+$$z^{[1]}_{2} = w^{[1]\intercal}_{2} x + b^{[1]}_{2}$$
 
-$$z^{[1]}_{2} = w^{[1]\intercal}_{3} \mathbf{x} + b^{[1]}_{3}$$
+$$z^{[1]}_{2} = w^{[1]\intercal}_{3} x + b^{[1]}_{3}$$
 
 On peut rassembler les poids $$w^{[1]\intercal}_{i}$$ dans une matrice (Ici de taille 3x3). On a un vecteur par ligne puisque ce sont des transposées.
 
