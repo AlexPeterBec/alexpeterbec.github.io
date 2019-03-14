@@ -20,3 +20,7 @@ Cette section reprend divers projets et études que je mène en machine learning
 [Descente de gradient appliquée à la regression logistique](https://alexpeterbec.github.io/ml/nn-gradient-applied/)
 
 [Python : La vectorisation](https://alexpeterbec.github.io/ml/python/py-vectorization/)
+
+## Réseaux de neurones profonds
+
+[Assemblages de neurones](https://alexpeterbec.github.io/neural/nets/shallow-network/)
