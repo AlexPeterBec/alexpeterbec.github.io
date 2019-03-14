@@ -73,6 +73,39 @@ De manière générale, il est important de **garder les dimensions à l'esprit*
 
 # Propagation et calcul de la valeur de sortie
 
+<div align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/MultiLayerNeuralNetworkBigger_english.png" alt="NN">
+</div>
+
+## Ecriture des fonctions dans la couche cachée
+
+Concentrons-nous sur un seul noeud du réseau : Le **premier neurone de la couche cachée**. Nous avons vu qu'il effectue deux opérations : La multiplication de matrices pour calculer Z, puis l'application d'une fonction d'activation sur Z, pour finalement obtenir A.
+
+Notation : $$a^{[l]}_{i}$$ la valeur de **a** pour la couche *l*, et pour le noeud *i* dans cette couche.
+
+- $$z^{[1]}_{1} = w^{[1]\intercal}_{1} \mathbf{x} + b^{[1]}_{1}$$
+- $$a^{[1]}_{1} = \sigma (z^{[1]}_{1})$$
+
+De même pour chaque neurone dans la couche cachée.
+
+## Produit de matrice pour la couche cachée
+
+On a les équations suivantes pour chacun des 3 neurones de la couche cachée :
+
+$$z^{[1]}_{1} = w^{[1]\intercal}_{1} \mathbf{x} + b^{[1]}_{1}$$
+$$z^{[1]}_{2} = w^{[1]\intercal}_{2} \mathbf{x} + b^{[1]}_{2}$$
+$$z^{[1]}_{2} = w^{[1]\intercal}_{3} \mathbf{x} + b^{[1]}_{3}$$
+
+On peut rassembler les poids $$w^{[1]\intercal}_{i}$$ dans une matrice (Ici de taille 3x3). On a un vecteur par ligne puisque ce sont des transposées.
+
+Pour obtenir la **matrice des Z** (première opération dans les neurones) de la couche , on va multiplier la matrice des poids par les données en entrée, (ici le vecteur $$[x_{1}, x_{2}, x_{3}]$$), et on ajoute le vecteur colonne des poids B.
+
+La matrice résultante (3, 1) correspond bien aux valeurs Z que l'on va passer à la fonction d'activation, on peut l'appeler $$Z^{[1]}$$.
+
+Pour chacune des couches on va utiliser le **même type de formules**, c'est la **taille des matrices** qui va varier selon le nombre de neurones, et selon le nombre de neurones de la couche précédente.
+
+Dans la suite, nous verrons comment traiter ces opérations multiples grâce à la vectorisation en Python.
+
 # Sources
 
 - <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank">Deep Learning course</a> (Coursera - Andrew Ng)
