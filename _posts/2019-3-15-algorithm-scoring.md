@@ -111,6 +111,25 @@ La précision nous informe sur la performance pour une classe donnée : Sur tout
 
 $$Justesse =  \frac{Succès(Classe1)}{Total(Classe1)} = \frac{VP}{VP + FP}$$
 
+## Sensibilité (Recall)
+
+Sur toutes les images de chat, quelle est la proportion d'images où l'algorithme a identifié un chat.
+
+> La sensibilité mesure la proportion des cas bien identifiés pour une classe donnée.
+
+$$Recall =  \frac{Succès(Classe1)}{Total(Classe1)} = \frac{VP}{VP + FN}$$
+
+Le choix entre **précision et sensibilité** se fera sur l'importance attachée aux faux négatifs ou faux positifs.
+
+## F1-Score
+
+On ne veut pas toujours exprimer la précision et la sensibilité : La mesure du F1 score permet d'**embarquer ces deux mesures** dans un même score. On pourrait bien sûr faire une simple moyenne, mais ce serait peu représentatif.
+
+On utilise donc la moyenne harmonique, qui favorise la plus petite valeur quand les deux valeurs sont éloignées :
+
+$$F1-Score = \frac{2 \times Precision \times Recall}{Precision + Recall}$$
+
+
 # Sources
 
 - [TowardsDataScience : Evaluation de modèles](https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234)
