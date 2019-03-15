@@ -99,7 +99,7 @@ Pour que cette mesure soit pertinente, il faut que le jeu de données soit globa
 
 L'accuracy ne convient pas du tout pour un dataset deséquilibré, en effet, si 5% des valeurs sont de la classe 1 et qu'on prédit uniformément la classe 0 pour tout les exemples, on aura une accuracy de 95%, ce qui n'est pas représentatif.
 
-> Justesse : Dans quelle proportion des cas l'algorithme fait une bonne prédiction.
+> Dans quelle proportion des cas l'algorithme fait une bonne prédiction.
 
 $$Justesse =  \frac{Succès}{Total} = \frac{VP + VF}{VP + VF + FP + FN}$$
 
@@ -107,7 +107,7 @@ $$Justesse =  \frac{Succès}{Total} = \frac{VP + VF}{VP + VF + FP + FN}$$
 
 La précision nous informe sur la performance pour une classe donnée : Sur toutes les images où l'algorithme a trouvé un chat, quelle proportion contenait réellement un chat.
 
-> Précision : Pour les prédictions d'une classe donnée, quelle proportion est bien classifiée.
+> Pour les prédictions d'une classe donnée, quelle proportion est bien classifiée.
 
 $$Justesse =  \frac{Succès(Classe1)}{Total(Classe1)} = \frac{VP}{VP + FP}$$
 
@@ -115,7 +115,7 @@ $$Justesse =  \frac{Succès(Classe1)}{Total(Classe1)} = \frac{VP}{VP + FP}$$
 
 Sur toutes les images de chat, quelle est la proportion d'images où l'algorithme a identifié un chat.
 
-> La sensibilité mesure la proportion des cas bien identifiés pour une classe donnée.
+> Proportion des cas bien identifiés pour une classe donnée.
 
 $$Recall =  \frac{Succès(Classe1)}{Total(Classe1)} = \frac{VP}{VP + FN}$$
 
@@ -123,7 +123,9 @@ Le choix entre **précision et sensibilité** se fera sur l'importance attachée
 
 ## F1-Score
 
-On ne veut pas toujours exprimer la précision et la sensibilité : La mesure du F1 score permet d'**embarquer ces deux mesures** dans un même score. On pourrait bien sûr faire une simple moyenne, mais ce serait peu représentatif.
+On ne veut pas toujours exprimer la précision et la sensibilité : La mesure du F1 score permet d'**embarquer ces deux mesures** dans un même score. On pourrait bien sûr faire une simple moyenne, mais ce serait peu représentatif. Le F1 score donne des résultats pertinents pour des classes déséquilibrées, mais il faudra creuser avec d'autres mesures pour en savoir plus.
+
+> Score prenant en compte la sensibilité et la précision, qui traite bien le déséquilibre de classes.
 
 On utilise donc la moyenne harmonique, qui favorise la plus petite valeur quand les deux valeurs sont éloignées :
 
@@ -131,9 +133,9 @@ $$F1 Score = \frac{2 \times Precision \times Recall}{Precision + Recall}$$
 
 ## Area Under Curve (AUC)
 
-Maintenant que l'on a vu quelques exemples autour de la matrice de confusion, passons à une des mesures les plus largement utilisées pour l'évaluation de modèles de classification binaire : La mesure AUC.
+Maintenant que l'on a vu quelques exemples autour de la matrice de confusion, passons à une des mesures les plus **largement utilisées** pour l'évaluation de modèles de classification binaire : La mesure AUC.
 
-En détail, il s'agit de l'aire sous la courbe ROC (Receiver Operating Characteristic) que l'on mesure. On compare alors notre courbe à celle d'un classifieur aléatoire, qui est la courbe en rouge ci-dessous. Idéalement, on souhaite avoir la courbe la plus haute possible vers le coin superieur gauche, c-à-d avoir un taux maximal de vrais positifs.
+En détail, il s'agit de l'**aire sous la courbe ROC** (Receiver Operating Characteristic) que l'on mesure. On compare alors notre courbe à celle d'un classifieur aléatoire, qui est la courbe en rouge ci-dessous. Idéalement, on souhaite avoir la courbe la plus haute possible vers le coin superieur gauche, c-à-d avoir un **taux maximal de vrais positifs**.
 
 > L'AUC permet de quantifier à quel point l'algorithme s'éloigne d'un classifieur aléatoire.
 
