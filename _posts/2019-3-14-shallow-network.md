@@ -105,12 +105,19 @@ Pour obtenir la **matrice des Z** (première opération dans les neurones) de la
 
 $$\left[ \begin{array}{cccc} z_{1} \\ z_{2} \\ z_{3} \end{array} \right] =
 \left[ \begin{array}{cccc}
-w_{1}[1] & w_{1}[2] & w_{1}[3] w_{2}[1] & w_{2}[2] & w_{2}[3]
+w_{1}[1] & w_{1}[2] & w_{1}[3] \\
+w_{2}[1] & w_{2}[2] & w_{2}[3] \\
 w_{3}[1]  & w_{3}[2] & w_{3}[3] \end{array} \right]
 .
-\left[ \begin{array}{cccc}x_{1} x_{2} x_{3} \end{array} \right]
+\left[ \begin{array}{cccc}
+x_{1} \\
+x_{2} \\
+x_{3} \end{array} \right]
 +
-\left[ \begin{array}{cccc}b_{1} b_{2} b_{3} \end{array} \right]$$
+\left[ \begin{array}{cccc}
+b_{1} \\
+b_{2} \\
+b_{3} \end{array} \right]$$
 
 La matrice résultante (3, 1) correspond bien aux valeurs Z que l'on va passer à la fonction d'activation, on peut l'appeler $$Z^{[1]}$$.
 
