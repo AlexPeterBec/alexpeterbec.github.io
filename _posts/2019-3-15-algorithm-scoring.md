@@ -127,7 +127,9 @@ On ne veut pas toujours exprimer la précision et la sensibilité : La mesure du
 
 On utilise donc la moyenne harmonique, qui favorise la plus petite valeur quand les deux valeurs sont éloignées :
 
-$$F1-Score = \frac{2 \times Precision \times Recall}{Precision + Recall}$$
+$$F1 Score = \frac{2 \times Precision \times Recall}{Precision + Recall}$$
+
+# 
 
 
 # Sources
