@@ -67,10 +67,45 @@ Dans le K-fold, on peut donc faire varier K de 2 à N :
 
 Dans la partie précédente, on a évoqué la mesure de scores sur les différents dataset. Dans cette partie, on verra que la matrice de confusion nous permet d'obtenir diverses mesures de performance pour la classification binaire.
 
-Dans cette partie, on traite un problème de **classification binaire** (prédiction de 0 ou 1). La matrice de confusion va présenter les résultats en confrontant la dimension **Vérité (Actual)** et **Prédiction (Predicted)** :
+## La matrice et ses éléments
+
+Dans cette partie, on traite un problème de **classification binaire** (prédiction de 0 ou 1). La matrice de confusion va présenter les résultats en confrontant la dimension **Vérité (Actual)** et **Prédiction (Predicted)**.
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/machine-learning/confusion-matrix.png){: .align-center}
 
+Prenons l'exemple de la reconnaissance de chat sur une image : 0 ce n'est pas un chat, 1 c'est un chat.
+
+La diagonale des réussites en vert :
+- Les **Vrai positifs (VP)** : L'algorithme a reconnu un chat sur l'image, et c'était réellement un chat.
+- Les **Vrai négatifs (VN)** : L'algorithme n'a pas trouvé de chat sur l'image, et il n'y en avait pas.
+
+La diagonale des erreurs en rouge :
+- Les **Faux positifs (FP)** : L'algorithme a reconnu un chat, alors que c'était un chien.
+- Les **Faux négatifs (FN)** : L'algorithme n'a pas trouvé de chat dans l'image, alors qu'il y en avait un.
+
+Selon les cas d'usages, on va chercher à minimiser une erreur ou l'autre :
+- Si notre algorithme classifie des mails comme spam ou non, on peut souhaiter minimiser les **faux positifs**, c'est à dire ne pas envoyer un mail important dans les spams.
+- Si notre algorithme analyse des patients pour détecter des cas de cancer avant étude par un médecin, on souhaite détecter tout les cas de cancer, on ne veut pas avoir de **faux négatifs**. En contre-partie on augmentera le taux de faux positifs, qui seront alors écartés lors d'étude par un médecin.
+
+## Accuracy / Justesse
+
+Une mesure très courante que l'on tire de la matrice de confusion est **la justesse / l'accuracy**. C'est la rapport entre les prédictions justes, sur le nombre total de prédictions.
+
+Pour que cette mesure soit pertinente, il faut que le jeu de données soit globalement **équilibré**.
+
+L'accuracy ne convient pas du tout pour un dataset deséquilibré, en effet, si 5% des valeurs sont de la classe 1 et qu'on prédit uniformément la classe 0 pour tout les exemples, on aura une accuracy de 95%, ce qui n'est pas représentatif.
+
+> Justesse : Dans quelle proportion des cas l'algorithme fait une bonne prédiction.
+
+$$Justesse =  \frac{Succès}{Total} = \frac{VP + VF}{VP + VF + FP + FN}$$
+
+## Précision
+
+La précision nous informe sur la performance pour une classe donnée : Sur toutes les images où l'algorithme a trouvé un chat, quelle proportion contenait réellement un chat.
+
+> Précision : Pour les prédictions d'une classe donnée, quelle proportion est bien classifiée.
+
+$$Justesse =  \frac{Succès(Classe1)}{Total(Classe1)} = \frac{VP}{VP + FP}$$
 
 # Sources
 
