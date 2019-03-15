@@ -35,7 +35,7 @@ Le train/validation/test split est une technique très répandue, qui fonctionne
     <img src="https://qph.fs.quoracdn.net/main-qimg-e4755860eefa095dcab79659e356cf56" alt="Evaluation Flow-chart" vspace="10">
 </div>
 
-## Validation croisée
+## Validation croisée / K-fold
 
 La validation croisée est une extension du train/test split. On parle aussi de **cross-validation** ou **cv** dans les paramètres des algorithmes. Elle est utilisée quand la **quantité de données est limitée**, ou bien quand on dispose des ressources/temps nécessaires pour effectuer **plusieurs passages** sur les données.
 
@@ -43,11 +43,26 @@ Le principe de la validation croisée est de faire une boucle pour que tout le d
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/machine-learning/cross-validation.png){: .align-center}
 
-## Validation croisée stratifiée
+Les **métriques** d'évaluation calculées sur chacun des sets de validation, sont finalement **moyennées** pour présenter une métrique de validation.
+
+La cross-validation est une **bonne pratique** qu'il faut prendre comme habitude. Elle permet d'évaluer de manière plus précise le modèle, et de mieux se protéger du sur-apprentissage.
+
+Dans le K-fold, on peut donc faire varier K de 2 à N :
+- Pour *K=2*, on sépare le dataset d'entrainement en deux. C'est la séparation la plus grossière possible.
+- Pour *K=N*, avec N le nombre de données d'entrainement. On cache uniquement une valeur à chaque passage, on parle de *Leave-one-out*. C'est un traitement généralement très couteux en temps de calcul.
+- Les valeurs de K utilisées sont généralement **5, 7, 10**, qui sont des valeurs acceptables, mais il n'y a pas de règle formelle.
+
+> Plus on augmente K, plus la difference entre les sets entrainement/validation est grande, on se rapproche d'un set d'entrainement complet. En se rapprochant du set d'entrainement complet, le biais introduit est plus faible.
 
 
-### Sources :
+## Variantes de la validation croisée
+
+- On a déjà vu plus haut la **Leave-one-out cross-val**.
+- La **stratified k-fold** cross validation, est une version pour les jeux de données **déséquilibrés**. On va introduire une contrainte d'équilibre des classes soit conservé (de 0 et de 1 par exemple).
+- La validation croisée **répétée** : On effectue plusieurs fois le process de KFold, avec un tirage aléatoire lors de la constitution des folds à chaque itération.
+
+
+# Sources
 
 - [TowardsDataScience : Evaluation de modèles](https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234)
 - [Performance Metrics for ML](https://www.dezyre.com/data-science-in-python-tutorial/performance-metrics-for-machine-learning-algorithm)
-- []()
