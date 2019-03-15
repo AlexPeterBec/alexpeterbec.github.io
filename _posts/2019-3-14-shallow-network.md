@@ -93,21 +93,21 @@ De même pour chaque neurone dans la couche cachée.
 
 On a les équations suivantes pour chacun des 3 neurones de la couche cachée :
 
-$$z^{[1]}_{1} = w^{[1]\intercal}_{1} x + b^{[1]}_{1}$$
-
-$$z^{[1]}_{2} = w^{[1]\intercal}_{2} x + b^{[1]}_{2}$$
-
-$$z^{[1]}_{2} = w^{[1]\intercal}_{3} x + b^{[1]}_{3}$$
+$$z^{[1]}_{1} = w^{[1]\intercal}_{1} x + b^{[1]}_{1} \\
+z^{[1]}_{2} = w^{[1]\intercal}_{2} x + b^{[1]}_{2} \\
+z^{[1]}_{2} = w^{[1]\intercal}_{3} x + b^{[1]}_{3}$$
 
 On peut rassembler les poids $$w^{[1]\intercal}_{i}$$ dans une matrice (Ici de taille 3x3). On a un vecteur par ligne puisque ce sont des transposées.
 
-Pour obtenir la **matrice des Z** (première opération dans les neurones) de la couche , on va multiplier la matrice des poids par les données en entrée, (ici le vecteur $$[x_{1}, x_{2}, x_{3}]$$), et on ajoute le vecteur colonne des poids B :
+Pour obtenir la **matrice des Z** (première opération dans les neurones) de la couche , on va multiplier la matrice des poids par les données en entrée, (ici le vecteur $$[x_{1}, x_{2}, x_{3}]$$), et on ajoute le vecteur colonne des poids B. Pour la couche cachée on a donc :
 
 $$\left[ \begin{array}{c} z_{1} \\ z_{2} \\ z_{3} \end{array} \right] =
 \left[ \begin{array}{ccc} w_{1}[1] & w_{1}[2] & w_{1}[3] \\
 w_{2}[1] & w_{2}[2] & w_{2}[3] \\ w_{3}[1]  & w_{3}[2] & w_{3}[3] \end{array} \right].
 \left[ \begin{array}{c} x_{1} \\ x_{2} \\ x_{3} \end{array} \right]
 + \left[ \begin{array}{c} b_{1} \\ b_{2} \\ b_{3} \end{array} \right]$$
+
+$$w_{1}[1]$$ représente le poids affecté à la première variable d'entrée, pour le premier neurone.
 
 La matrice résultante (3, 1) correspond bien aux valeurs Z que l'on va passer à la fonction d'activation, on peut l'appeler $$Z^{[1]}$$.
 
