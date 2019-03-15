@@ -35,10 +35,13 @@ Le train/validation/test split est une technique très répandue, qui fonctionne
     <img src="https://qph.fs.quoracdn.net/main-qimg-e4755860eefa095dcab79659e356cf56" alt="Evaluation Flow-chart" vspace="10">
 </div>
 
-
 ## Validation croisée
 
-La validation croisée est une extension du train/test split. On parle aussi de **cross-validation** ou **cv** dans les paramètres des algorithmes. Elle est utilisée quand la **quantité de données est limitée**, ou bien quand on dispose des ressources nécessaires pour effectuer **plusieurs passages** sur les données.
+La validation croisée est une extension du train/test split. On parle aussi de **cross-validation** ou **cv** dans les paramètres des algorithmes. Elle est utilisée quand la **quantité de données est limitée**, ou bien quand on dispose des ressources/temps nécessaires pour effectuer **plusieurs passages** sur les données.
+
+Le principe de la validation croisée est de faire une boucle pour que tout le dataset d'entrainement ait servi d'ensemble de validation. On parle de **folds** et on en utilise généralement 5 ou 7. C'est à dire que le dataset d'entrainement sera séparé en 7 parties et qu'on effectue **7 passages** (entrainement et évaluation sur validation set).
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/machine-learning/cross-validation.png){: .align-center}
 
 ## Validation croisée stratifiée
 
