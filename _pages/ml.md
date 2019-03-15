@@ -5,8 +5,11 @@ author_profile: true
 ---
 
 Cette section reprend divers projets et études que je mène en machine learning.
-## Tensorflow
 
+## Culture générale des algorithmes
+[Segmentation des datasets, métriques de performance](https://alexpeterbec.github.io/metrics/scoring/algorithm-scoring/)
+
+## Tensorflow
 [De zéro à Tensorflow - Théorie et démarrage](https://alexpeterbec.github.io/definitions/tensorflow/tensors/tensorflow-theorie/)
 
 ## Concepts du deep learning, descente de gradient
