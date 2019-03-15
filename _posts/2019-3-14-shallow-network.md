@@ -103,6 +103,12 @@ On peut rassembler les poids $$w^{[1]\intercal}_{i}$$ dans une matrice (Ici de t
 
 Pour obtenir la **matrice des Z** (première opération dans les neurones) de la couche , on va multiplier la matrice des poids par les données en entrée, (ici le vecteur $$[x_{1}, x_{2}, x_{3}]$$), et on ajoute le vecteur colonne des poids B.
 
+$\left[ \begin{array}{c} z_{1} \\z_{2} \\z_{3} \\ \end{array} \right] =\left[ \begin{array}{cccc}
+w_{1}[1] & w_{1}[2] & w_{1}[3] \\w_{2}[1] & w_{2}[2] & w_{2}[3] \\
+w_{3}[1]  & w_{3}[2] & w_{3}[3] \\ \end{array} \right]
+.\left[ \begin{array}{c}x_{1} \\x_{2} \\x_{3} \\ \end{array} \right] +
+\left[ \begin{array}{c}b_{1} \\b_{2} \\b_{3} \\ \end{array} \right]$
+
 La matrice résultante (3, 1) correspond bien aux valeurs Z que l'on va passer à la fonction d'activation, on peut l'appeler $$Z^{[1]}$$.
 
 Pour chacune des couches on va utiliser le **même type de formules**, c'est la **taille des matrices** qui va varier selon le nombre de neurones, et selon le nombre de neurones de la couche précédente.
