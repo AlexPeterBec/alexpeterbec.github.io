@@ -129,8 +129,6 @@ On utilise donc la moyenne harmonique, qui favorise la plus petite valeur quand 
 
 $$F1 Score = \frac{2 \times Precision \times Recall}{Precision + Recall}$$
 
-# 
-
 
 # Sources
 
