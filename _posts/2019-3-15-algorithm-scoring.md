@@ -67,11 +67,11 @@ Dans le K-fold, on peut donc faire varier K de 2 à N :
 - La **stratified k-fold** cross validation, est une version pour les jeux de données **déséquilibrés**. On va introduire une contrainte d'équilibre des classes soit conservé (de 0 et de 1 par exemple).
 - La validation croisée **répétée** : On effectue plusieurs fois le process de KFold, avec un tirage aléatoire lors de la constitution des folds à chaque itération.
 
-# La matrice de confusion
+# Mesures pour la classification binaire
 
 Dans la partie précédente, on a évoqué la mesure de scores sur les différents dataset. Dans cette partie, on verra que la matrice de confusion nous permet d'obtenir diverses mesures de performance pour la classification binaire.
 
-## La matrice et ses éléments
+## La matrice de confusion
 
 Dans cette partie, on traite un problème de **classification binaire** (prédiction de 0 ou 1). La matrice de confusion va présenter les résultats en confrontant la dimension **Vérité (Actual)** et **Prédiction (Predicted)**.
 
@@ -129,6 +129,17 @@ On utilise donc la moyenne harmonique, qui favorise la plus petite valeur quand 
 
 $$F1 Score = \frac{2 \times Precision \times Recall}{Precision + Recall}$$
 
+## Area Under Curve (AUC)
+
+Maintenant que l'on a vu quelques exemples autour de la matrice de confusion, passons à une des mesures les plus largement utilisées pour l'évaluation de modèles de classification binaire : La mesure AUC.
+
+En détail, il s'agit de l'aire sous la courbe ROC (Receiver Operating Characteristic) que l'on mesure. On compare alors notre courbe à celle d'un classifieur aléatoire, qui est la courbe en rouge ci-dessous. Idéalement, on souhaite avoir la courbe la plus haute possible vers le coin superieur gauche, c-à-d avoir un taux maximal de vrais positifs.
+
+> L'AUC permet de quantifier à quel point l'algorithme s'éloigne d'un classifieur aléatoire.
+
+![image-center](https://docs.eyesopen.com/toolkits/cookbook/python/_images/roc-theory-small.png){: .align-center}
+
+En pratique, on va chercher à determiner les taux de **vrai et faux positifs** (tpr et fpr) pour établir cette mesure.
 
 # Sources
 

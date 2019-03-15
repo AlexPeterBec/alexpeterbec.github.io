@@ -22,7 +22,7 @@ Nous avons utilisé l'environnement cloud AWS, et nous avons mis en place un clu
 
 <a href="https://github.com/AlexPeterBec/GDELT-cloud-data" target="\_blank">Lien vers le projet sur Git</a> : Données, approche, architecture, résultats et visualisations.
 
-## Prédiction du prochain hit musical grâce à la collecte de données web
+## Prédiction du hit 2019 grâce à la collecte de données
 
 Hackathon d'une journée dans le cadre d'une unité d'enseignement sur les bonnes pratiques de la programmation Python. Le but était d'identifier les prochaines tendances et les caractéristiques des prochains hits musicaux pour l'année 2019. Pour y parvenir, nous devions collecter des données par nos propres moyens, par des techniques de scraping et l'utilisation de diverses APIs.
 
