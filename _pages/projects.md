@@ -1,7 +1,9 @@
 ---
-layout: single
+title: "Portfolio projets"
+layout: archive
 permalink: /projects/
 author_profile: true
+classes: wide
 ---
 
 # Utilisation d'algorithmes pour la géolocalisation
