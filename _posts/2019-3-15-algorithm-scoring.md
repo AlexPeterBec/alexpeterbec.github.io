@@ -19,7 +19,9 @@ Quand on travaille avec les algorithmes, on finit toujours par devoir évaluer l
 - Connaitre les performances du modèle, et le comparer à d'autres approches, comme dans les challenge Kaggle par exemple.
 
 Dans cet article nous verrons :
-- De quelle manière segmenter les données pour calculer les scores.
+1. Comment **segmenter les données** pour calculer les scores.
+2. La matrice de confusion pour la **classification binaire**.
+3. Mesures de performance pour les problèmes de **classification**.
 
 # Segmentation des données pour l'évaluation
 
@@ -61,8 +63,18 @@ Dans le K-fold, on peut donc faire varier K de 2 à N :
 - La **stratified k-fold** cross validation, est une version pour les jeux de données **déséquilibrés**. On va introduire une contrainte d'équilibre des classes soit conservé (de 0 et de 1 par exemple).
 - La validation croisée **répétée** : On effectue plusieurs fois le process de KFold, avec un tirage aléatoire lors de la constitution des folds à chaque itération.
 
+# La matrice de confusion
+
+Dans la partie précédente, on a évoqué la mesure de scores sur les différents dataset. Dans cette partie, on verra que la matrice de confusion nous permet d'obtenir diverses mesures de performance pour la classification binaire.
+
+Dans cette partie, on traite un problème de **classification binaire** (prédiction de 0 ou 1). La matrice de confusion va présenter les résultats en confrontant la dimension **Vérité (Actual)** et **Prédiction (Predicted)** :
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/machine-learning/confusion-matrix.png){: .align-center}
+
 
 # Sources
 
 - [TowardsDataScience : Evaluation de modèles](https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234)
-- [Performance Metrics for ML](https://www.dezyre.com/data-science-in-python-tutorial/performance-metrics-for-machine-learning-algorithm)
+- [Dezyre : Performance Metrics for ML](https://www.dezyre.com/data-science-in-python-tutorial/performance-metrics-for-machine-learning-algorithm)
+- [Machine Learning Mastery : Cross validation](https://machinelearningmastery.com/k-fold-cross-validation/)
+- [Confusion Matrix explained](https://medium.com/thalus-ai/performance-metrics-for-classification-problems-in-machine-learning-part-i-b085d432082b)
