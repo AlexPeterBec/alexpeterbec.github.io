@@ -14,6 +14,10 @@ header:
 categories: [metrics, scoring]
 ---
 
+<script type="text/javascript" async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 Quand on travaille avec les algorithmes, on finit toujours par devoir évaluer leur performances, notamment pour :
 - Quantifier l'impact d'un changement d'hyper-paramètres (paramètres de l'algorithme).
 - Connaitre les performances du modèle, et le comparer à d'autres approches, comme dans les challenge Kaggle par exemple.
