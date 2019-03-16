@@ -15,8 +15,10 @@ categories: [metrics, scoring]
 ---
 
 <script type="text/javascript" async
-src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+
+Chaque modèle de machine learning cherche à résoudre un problème avec un objectif différent, et des données différents. Il est donc primordial de comprendre le contexte avant de choisir une métrique.
 
 Quand on travaille avec les algorithmes, on finit toujours par devoir évaluer leur performances, notamment pour :
 - Quantifier l'impact d'un changement d'hyper-paramètres (paramètres de l'algorithme).
@@ -143,8 +145,21 @@ En détail, il s'agit de l'**aire sous la courbe ROC** (Receiver Operating Chara
 
 En pratique, on va chercher à determiner les taux de **vrai et faux positifs** (tpr et fpr) pour établir cette mesure.
 
-# Sources
+# Evaluer les regressions
 
+## RMSE : Root Mean Square Error
+
+## MAE
+
+## Lequel choisir ?
+
+## La mesure du R2
+
+
+
+
+
+# Sources
 - [TowardsDataScience : Evaluation de modèles](https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234)
 - [Dezyre : Performance Metrics for ML](https://www.dezyre.com/data-science-in-python-tutorial/performance-metrics-for-machine-learning-algorithm)
 - [Machine Learning Mastery : Cross validation](https://machinelearningmastery.com/k-fold-cross-validation/)

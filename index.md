@@ -14,7 +14,7 @@ Actuellement en MS Big Data à Telecom ParisTech, je rassemble ici chaque semain
 Je m'intéresse particulièrement aux sujets data engineering et data science, que je regroupe dans ces catégories :
 - [Data Engineering](https://alexpeterbec.github.io/engnr/) : Cloud, Containers, Bases de données
 - [Machine Learning](https://alexpeterbec.github.io/ml/) : Algorithmes, Réseaux de neurones
-- [Statistiques](https://alexpeterbec.github.io/st/) : d'après mes lectures
-- [Challenges Kaggle](https://alexpeterbec.github.io/kaggle/) : en cours
+- [Statistiques](https://alexpeterbec.github.io/st/)
+- [Projets](https://alexpeterbec.github.io/projects/) 
 
 A la recherche de nouveaux challenges dès le mois de Juillet 2019, n'hésitez pas à m'ajouter sur LinkedIn ou me contacter par mail. [Ici  mon CV](https://alexpeterbec.github.io/assets/docs/CV-Alexandre-Bec.pdf){:target="_blank"}.
