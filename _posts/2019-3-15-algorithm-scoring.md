@@ -18,16 +18,17 @@ categories: [metrics, scoring]
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-Chaque modèle de machine learning cherche à résoudre un problème avec un objectif différent, et des données différents. Il est donc primordial de comprendre le contexte avant de choisir une métrique.
+Chaque modèle de machine learning cherche à résoudre un problème avec un objectif différent, et des données différents. Il est primordial de comprendre le contexte choisir une métrique adaptée.
 
 Quand on travaille avec les algorithmes, on finit toujours par devoir évaluer leur performances, notamment pour :
-- Quantifier l'impact d'un changement d'hyper-paramètres (paramètres de l'algorithme).
-- Connaitre les performances du modèle, et le comparer à d'autres approches, comme dans les challenge Kaggle par exemple.
+- Evaluer la performance de notre modèle avec differents hyper-paramètres (paramètres de l'algorithme).
+- Connaitre les performances du modèle, et comparer le résultat avec d'autres personnes, comme dans les challenge Kaggle.
 
 Dans cet article nous verrons :
 1. Comment **segmenter les données** pour calculer les scores.
 2. La matrice de confusion pour la **classification binaire**.
 3. Mesures de performance pour les problèmes de **classification**.
+4. Mesures de performance pour les algorithmes de **régression**.
 
 # Segmentation des données pour l'évaluation
 
@@ -198,4 +199,4 @@ Lorsque l'on cherche à **comparer plusieurs modèles, utilisant un nombre diff�
 - [Dezyre - Performance Metrics for ML](https://www.dezyre.com/data-science-in-python-tutorial/performance-metrics-for-machine-learning-algorithm)
 - [Machine Learning Mastery - Cross validation](https://machinelearningmastery.com/k-fold-cross-validation/)
 - [Confusion Matrix explained](https://medium.com/thalus-ai/performance-metrics-for-classification-problems-in-machine-learning-part-i-b085d432082b)
-- [Medium - ](https://medium.com/usf-msds/choosing-the-right-metric-for-machine-learning-models-part-1-a99d7d7414e4)
+- [Medium - Choosing the right metrics](https://medium.com/usf-msds/choosing-the-right-metric-for-machine-learning-models-part-1-a99d7d7414e4)
