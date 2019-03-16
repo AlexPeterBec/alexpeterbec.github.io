@@ -145,22 +145,57 @@ En détail, il s'agit de l'**aire sous la courbe ROC** (Receiver Operating Chara
 
 En pratique, on va chercher à determiner les taux de **vrai et faux positifs** (tpr et fpr) pour établir cette mesure.
 
-# Evaluer les regressions
+## Perte Logarithmique
+
+La perte Logarithmique, ou **Log Loss**, est une fonction très répandue pour évaluer un classifieur multi-classe :
+
+- Pour N exemples d'entrainement, pour M classes différentes.
+- $$y_{ij}$$ : Indique si l'échantillon **i** appartient à la classe **j**, c'est la valeur observée, la vérité.
+- $$p_{ij}$$ : La probabilité que l'échantillon **i** appartienne à la classe **j**.
+
+$$LogarithmicLoss = -\frac{1}{N}\sum\limits_{i=1}^N\sum\limits_{j=1}^M y_{ij} * \log(p_{ij})$$
+
+Une LogLoss **proche de zéro** indique une bonne précision de l'algorithme. Cette fonction est souvent utilisée comme **fonction objective** (celle que l'on veut minimiser), par exemple dans les réseaux de neurones, et donne des classifieurs plus précis.
+
+# Evaluer les régressions
+
+Pour les algorithmes de régression, les deux principales mesures sont RMSE et MAE.
 
 ## RMSE : Root Mean Square Error
 
+La mesure RMSE est mesurée sur l'ensemble des n estimations. C'est la moyenne du carré des écarts entre la vraie valeur $$y_{j}$$, et la valeur prédite $$\hat y_{j}$$.
+
+$$RMSE = \sqrt{\frac{1}{n}\sum\limits_{j=1}^n (y_{j}-\hat y_{j})^2}$$
+
 ## MAE
 
-## Lequel choisir ?
+La **Mean Absolute Error** est la différence absolue entre la valeur observée et la valeur prédite. C'est un score linéaire : chaque différence individuelle est prise en compte avec le même poids.
 
-## La mesure du R2
+$$MAE = \frac{1}{n}\sum\limits_{j=1}^n \mid y_{j}-\hat y_{j} \mid$$
 
+## Laquelle choisir ?
 
+Il est facile de voir que la MAE prend la moyenne des écarts, alors que RMSE pénalise plus les grands écarts. Généralement, la RMSE est supérieure ou égale à la MAE.
 
+Bien que la **RMSE** soit plus complexe à calculer, et qu'elle soit biaisée envers les grands écarts, c'est la métrique la plus **largement utilisée** pour les cas de régression. Utilisée comme fonction de perte, on va préférer une **fonction carré**, plus facilement *dérivable*.
+
+## R2 et R2 ajusté
+
+Les mesures de **R2** et **R2 ajusté** sont souvent utilisées pour montrer si les variables choisies expliquent la variabilité de la valeur observée.
+
+$$R^2 = 1 - \frac{\sum\limits_{j=1}^n (y_{j}-\hat y_{j})^2}{\sum\limits_{j=1}^n (y_{j}-\overline{y)^2}$$
+
+$$R^{2}_{ajusté} = 1 - \bigg[ \frac{(1-R^2)(n-1)}{n-k-1} \bigg]$$
+
+- Avec $$n$$ le nombre d'observations, $$k$$ le nombre de predicteurs.
+- Le $$R^2$$ ajusté sera toujours inférieur au $$R^2$$.
+
+Lorsque l'on cherche à **comparer plusieurs modèles, utilisant un nombre différent de variables**. Le $$R^2$$ ajusté arrive à determiner si les nouvelles variables ont eu un **impact** positif, si elles ne sont pas utiles, le $$R^2$$ ajusté sera plus faible et on saura que nos variables supplémentaires n'auront pas amélioré le modèle.
 
 
 # Sources
-- [TowardsDataScience : Evaluation de modèles](https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234)
-- [Dezyre : Performance Metrics for ML](https://www.dezyre.com/data-science-in-python-tutorial/performance-metrics-for-machine-learning-algorithm)
-- [Machine Learning Mastery : Cross validation](https://machinelearningmastery.com/k-fold-cross-validation/)
+- [TowardsDataScience - Evaluation de modèles](https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234)
+- [Dezyre - Performance Metrics for ML](https://www.dezyre.com/data-science-in-python-tutorial/performance-metrics-for-machine-learning-algorithm)
+- [Machine Learning Mastery - Cross validation](https://machinelearningmastery.com/k-fold-cross-validation/)
 - [Confusion Matrix explained](https://medium.com/thalus-ai/performance-metrics-for-classification-problems-in-machine-learning-part-i-b085d432082b)
+- [Medium - ](https://medium.com/usf-msds/choosing-the-right-metric-for-machine-learning-models-part-1-a99d7d7414e4)
