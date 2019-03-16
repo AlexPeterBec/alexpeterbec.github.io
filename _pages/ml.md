@@ -4,7 +4,7 @@ permalink: /ml/
 author_profile: true
 ---
 
-Cette section reprend divers projets et études que je mène en machine learning.
+Cette section reprend divers projets, etudes, MOOCs que je mène en machine learning.
 
 ## Culture générale des algorithmes
 [Segmentation des datasets, métriques de performance](https://alexpeterbec.github.io/metrics/scoring/algorithm-scoring/)
