@@ -27,4 +27,5 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 ## Réseaux de neurones à une couche cachée
 
 [Assemblages de neurones](https://alexpeterbec.github.io/neural/nets/shallow-network/)
+
 [Fonctions d'activation](https://alexpeterbec.github.io/deep/learning/activation/activation-functions/)
