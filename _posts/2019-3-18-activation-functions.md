@@ -38,6 +38,8 @@ Dans chacun des neurones, on utilisait pour le calcul de **a** la fonction sigmo
 
 $$ a = \frac{1}{1 + e^{-z}}$$
 
+![image-center](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Funci%C3%B3n_sigmoide_01.svg/800px-Funci%C3%B3n_sigmoide_01.svg.png){: .align-center}
+
 Dans le cas de la classification binaire 0/1, il vaudra mieux prendre une fonction sigmoïde qui fournira directement le bon résultat.
 
 # Tangente Hyperbolique
