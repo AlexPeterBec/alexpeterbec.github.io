@@ -48,6 +48,8 @@ Un choix souvent mieux que la fonction sigmoïde est la **tangente hyperbolique 
 
 $$a = tanh(z) = \frac{e^{z}-e^{-z}}{e^{z}+e^{-z}}$$
 
+![image-center](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Hyperbolic_Tangent.svg/1200px-Hyperbolic_Tangent.svg.png){: .align-center}
+
 Il s'avère que pour les couches cachées, si on prend une fonction d'activation $$g(z)$$, ça fonctionne quasiment toujours mieux que la fonction sigmoïde.
 
 ## Limitation 
@@ -60,6 +62,8 @@ Une limitation des fonctions précédentes apparait pour des valeurs très grand
 
 La fonction **ReLU** vaut $a = max(0, z)$. Sa dérivée vaut zéro ou 1 (sauf en zéro où c'est théoriquement plus compliqué), cela rend les calculs plus faciles. C'est maintenant le choix à privilégier.
 
+![image-center](https://cdn-images-1.medium.com/max/1600/1*DfMRHwxY1gyyDmrIAd-gjQ.png){: .align-center}
+
 La pente de cette fonction est très différente de zéro sur un grand intervalle. En pratique, cette fonction permet au réseau d'apprendre plus vite qu'avec une sigmoïde ou une fonction tanh.
 
 Le problème avec la fonction ReLU est que le neurone meurt pour une grande plage de valeurs, car sa dérivée vaut zéro. Ce problème a provoqué l'apparition du Leaky ReLU.
@@ -67,6 +71,8 @@ Le problème avec la fonction ReLU est que le neurone meurt pour une grande plag
 ## Leaky ReLU
 
 La fonction Leaky ReLU vaut $max(0.01z, z)$, il y a une pente de 0.01 pour les valeurs négatives. La valeur de la pente est également une valeur paramétrable lors de l'optimisation du réseau.
+
+![image-center](https://cdn-images-1.medium.com/max/1600/1*ypsvQH7kvtI2BhzR2eT_Sw.png){: .align-center}
 
 # Sources
 - [TowardsDataScience - Sagar Sharma - Activation Functions in Neural Networks](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)
