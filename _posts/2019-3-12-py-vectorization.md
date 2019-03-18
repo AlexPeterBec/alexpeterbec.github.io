@@ -129,5 +129,37 @@ Lorsque l'on crée un vecteur aléatoire avec `np.random.randn(5)`par exemple, o
 - Sommer verticalement : `A.sum(axis=0)`
 - Verifier la dimension d'un vecteur : `assert(a.shape == (5, 1))`
 
+# Avec plusieurs données d'entrainement
+
+Comme on l'a fait pour l'exemple de la regression logistique, on va utiliser des tableaux numpy pour effectuer tout nos calculs d'un coup.
+
+Pour la matrice X :
+- Index horizontal : exemples d'entrainement
+- Index vertical : les différentes features
+
+Pour les matrices A et Z :
+- Index horizontal : Exemples d'entrainement
+- Index vertical : On descend avec la profondeur du réseau, correspond aux neurones des couches cachées.
+
+## Stacking des données
+
+Au debut de l'article on a vu comment effectuer les opérations de tout les neurones d'une couche avec les vecteurs numpy.
+
+Pour se débarasser de la boucle FOR qui nous fait itérer sur les données d'entrainement, on va maintenant rassembler nos données dans une matrice numpy.
+
+Notre matrice X des données d'entrainement :
+
+$$X = \left[ \begin{array}{ccc} \\ x^{(1)} \space x^{(2)} \space x^{(3)} \space ... \space x^{(m)} \\ \space \end{array} \right]$$
+
+On peut manipuler directement toutes nos données dans les produits de matrices suivants :
+
+$$Z^{[1]} = W^{[1]}X + b^{[1]}
+
+A^{[1]} = \sigma(Z^{[1]})
+
+Z^{[2]} = W^{[2]}A^{[1]}+b^{[2]}
+
+A^{[2]} = \sigma(Z^{[2]})$$
+
 # Sources
 - <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank">Deep Learning course</a> (Coursera - Andrew Ng)
