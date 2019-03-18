@@ -24,6 +24,6 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 
 [Python : La vectorisation](https://alexpeterbec.github.io/ml/python/py-vectorization/)
 
-## Réseaux de neurones profonds
+## Réseaux de neurones à une couche cachée
 
 [Assemblages de neurones](https://alexpeterbec.github.io/neural/nets/shallow-network/)
