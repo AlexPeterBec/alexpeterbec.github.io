@@ -1,7 +1,7 @@
 ---
 published: true
 title: "Fonctions d'activation"
-excerpt: "Sigmoid, ReLU..."
+excerpt: "Sigmoid, ReLU, Leaky ReLU, tanH"
 toc: true
 toc_sticky: true
 toc_label: "Fonctions d'activation"
@@ -68,3 +68,4 @@ La fonction Leaky ReLU vaut $max(0.01z, z)$, il y a une pente de 0.01 pour les v
 
 # Sources
 - [TowardsDataScience - Sagar Sharma - Activation Functions in Neural Networks](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)
+- [Coursera - Deep Learning](www.coursera.org/learn/neural-networks-deep-learning)
