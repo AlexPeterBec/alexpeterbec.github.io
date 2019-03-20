@@ -28,4 +28,6 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 
 [Assemblages de neurones](https://alexpeterbec.github.io/neural/nets/shallow-network/)
 
-[Fonctions d'activation](https://alexpeterbec.github.io/deep/learning/activation/activation-functions/)
+[Fonctions d'activation](https://alexpeterbec.github.io/deep/learning/activation/shallow-activation-functions/)
+
+[Descente de gradient (avec une couche cachée)](https://alexpeterbec.github.io/deep/learning/gradient/shallow-activation-functions/)

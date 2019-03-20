@@ -5,7 +5,7 @@ excerpt: "Sigmoid, ReLU, Leaky ReLU, tanH"
 toc: true
 toc_sticky: true
 toc_label: "Fonctions d'activation"
-toc_icon: "ruler-combined"
+toc_icon: "microchip"
 comments: true
 author_profile: false
 header:
