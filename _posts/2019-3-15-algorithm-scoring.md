@@ -39,7 +39,7 @@ Dans la segmentation du dataset en général, il est important de garder à l'es
 C'est un problème bien connu des data scientists, il s'agit de trouver un compromis pour **minimiser deux sources d'erreurs** liées entre elles :
 
 - **Le biais** : Il est souvent causé par un manque de relations pertinentes dans les données, on parle de **sous-apprentissage**. L'algorithme ne dispose pas d'assez de données pour établir les liens pertinents.
-- **La variance** : C'est lorsque l'algorithme se colle trop aux données d'apprentissage, il modélise alors des variations non significatives. Lorsque l'algorithme est ensuite confronté aux données de test qu'il n'a jamais vu, les prédictions seront moins précises.
+- **La variance** : C'est lorsque l'algorithme se colle trop aux données d'apprentissage, il modélise alors des variations non significatives, c'est le **sur-apprentissage**. Lorsque l'algorithme est ensuite confronté aux données de test qu'il n'a jamais vu, les prédictions seront moins précises.
 
 ## Split : train, validation, test
 C'est la première étape quand on commence à travailler avec un ensemble de données. Cela consiste à séparer nos données en deux sous-ensembles :
@@ -198,14 +198,14 @@ Bien que la **RMSE** soit plus complexe à calculer, et qu'elle soit biaisée en
 
 Les mesures de **R2** et **R2 ajusté** sont souvent utilisées pour montrer si les variables choisies expliquent la variabilité de la valeur observée.
 
-$$R^2 = 1 - \frac{\sum\limits_{j=1}^n (y_{j}-\hat y_{j})^2}{\sum\limits_{j=1}^n (y_{j}-\overline{y)^2}$$
+$$R^{2} = 1 - \frac{\sum\limits_{j=1}^n (y_{j}-\hat y_{j})^2}{\sum\limits_{j=1}^n (y_{j}-\overline{y}^{2})}$$
 
 $$R^{2}_{ajusté} = 1 - \bigg[ \frac{(1-R^2)(n-1)}{n-k-1} \bigg]$$
 
 - Avec $$n$$ le nombre d'observations, $$k$$ le nombre de predicteurs.
 - Le $$R^2$$ ajusté sera toujours inférieur au $$R^2$$.
 
-Lorsque l'on cherche à **comparer plusieurs modèles, utilisant un nombre différent de variables**. Le $$R^2$$ ajusté arrive à determiner si les nouvelles variables ont eu un **impact** positif, si elles ne sont pas utiles, le $$R^2$$ ajusté sera plus faible et on saura que nos variables supplémentaires n'auront pas amélioré le modèle.
+Lorsque l'on cherche à **comparer plusieurs modèles, utilisant un nombre différent de variables**. Le $$R^2$$ ajusté arrive à determiner si les nouvelles variables ont eu un **impact** positif, si elles ne sont pas utiles, le $$R^2_{ajusté}$$ sera plus faible et on saura que nos variables supplémentaires n'auront pas amélioré le modèle.
 
 
 # Sources
