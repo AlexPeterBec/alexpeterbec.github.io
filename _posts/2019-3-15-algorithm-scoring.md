@@ -32,7 +32,7 @@ Dans cet article nous verrons :
 
 # Segmentation des données pour l'évaluation
 
-## Train / Validation / Test split
+## Split : train, validation, test
 C'est la première étape quand on commence à travailler avec un ensemble de données. Cela consiste à séparer nos données en deux sous-ensembles :
 - Un set d'entrainement, le **train set**. Qui sera composé de la majorité des données, servant à entrainer notre modèle.
 - Un set de validation, le **validation set**. Qui est utilisé dans le cycle de développement, permet de fournir une évaluation non-biaisée du modèle lors de la recherche des hyper-paramètres.
@@ -44,7 +44,7 @@ Le train/validation/test split est une technique très répandue, qui fonctionne
     <img src="https://qph.fs.quoracdn.net/main-qimg-e4755860eefa095dcab79659e356cf56" alt="Evaluation Flow-chart" vspace="10">
 </div>
 
-## Validation croisée / K-fold
+## Validation croisée (K-fold)
 
 La validation croisée est une extension du train/test split. On parle aussi de **cross-validation** ou **cv** dans les paramètres des algorithmes. Elle est utilisée quand la **quantité de données est limitée**, ou bien quand on dispose des ressources/temps nécessaires pour effectuer **plusieurs passages** sur les données.
 
@@ -61,7 +61,20 @@ Dans le K-fold, on peut donc faire varier K de 2 à N :
 - Pour *K=N*, avec N le nombre de données d'entrainement. On cache uniquement une valeur à chaque passage, on parle de *Leave-one-out*. C'est un traitement généralement très couteux en temps de calcul.
 - Les valeurs de K utilisées sont généralement **5, 7, 10**, qui sont des valeurs acceptables, mais il n'y a pas de règle formelle.
 
-> Plus on augmente K, plus la difference entre les sets entrainement/validation est grande, on se rapproche d'un set d'entrainement complet. En se rapprochant du set d'entrainement complet, le biais introduit est plus faible.
+> Plus on augmente K, plus la difference entre les sets entrainement/validation est grande, on se rapproche d'un set d'entrainement complet. 
+
+En se rapprochant du set d'entrainement complet, le **biais introduit est plus faible**, car on lui cache moins de données, mais sa **variance** sera plus importante. 
+- Lorsque toutes les données ne sont pas visibles par l'algorithme, il va devoir effectuer des approximations, c'est le **biais**.
+- Lorsque l'algorithme décrit une fonction trop complexe qui est trop proche des données d'apprentissage, sa **variance** est élevée, car il ne saura pas bien généraliser à d'autres données.
+
+## Dilemme biais-variance
+
+Dans le choix de K, et dans la segmentation du dataset en général, il est important de garder à l'esprit la recherche d'équilibre biais-variance pour ne pas tomber dans le sous/sur-apprentissage.
+
+C'est un problème bien connu des data scientists, il s'agit de trouver un compromis pour **minimiser deux sources d'erreurs** liées entre elles :
+
+- **Le biais** : Il est souvent causé par un manque de relations pertinentes dans les données, on parle de **sous-apprentissage**. L'algorithme ne dispose pas d'assez de données pour établir les liens pertinents.
+- **La variance** : C'est lorsque l'algorithme se colle trop aux données d'apprentissage, il modélise alors des variations non significatives. Lorsque l'algorithme est ensuite confronté aux données de test qu'il n'a jamais vu, les prédictions seront moins précises.
 
 
 ## Variantes de la validation croisée
@@ -112,17 +125,19 @@ La précision nous informe sur la performance pour une classe donnée : Sur tout
 
 > Pour les prédictions d'une classe donnée, quelle proportion est bien classifiée.
 
-$$Justesse =  \frac{Succès(Classe1)}{Total(Classe1)} = \frac{VP}{VP + FP}$$
+$$Justesse = \frac{VP}{VP + FP}$$
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/machine-learning/confusion-matrix-precision.png){: .align-center}
 
 ## Sensibilité (Recall)
 
-Sur toutes les images de chat, quelle est la proportion d'images où l'algorithme a identifié un chat.
-
-> Proportion des cas bien identifiés pour une classe donnée.
+> Sur toutes les images de chat, quelle est la proportion d'images où l'algorithme a identifié un chat.
 
 $$Recall =  \frac{Succès(Classe1)}{Total(Classe1)} = \frac{VP}{VP + FN}$$
 
 Le choix entre **précision et sensibilité** se fera sur l'importance attachée aux faux négatifs ou faux positifs.
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/machine-learning/confusion-matrix-recall.png){: .align-center}
 
 ## F1-Score
 
@@ -200,3 +215,4 @@ Lorsque l'on cherche à **comparer plusieurs modèles, utilisant un nombre diff�
 - [Machine Learning Mastery - Cross validation](https://machinelearningmastery.com/k-fold-cross-validation/)
 - [Confusion Matrix explained](https://medium.com/thalus-ai/performance-metrics-for-classification-problems-in-machine-learning-part-i-b085d432082b)
 - [Medium - Choosing the right metrics](https://medium.com/usf-msds/choosing-the-right-metric-for-machine-learning-models-part-1-a99d7d7414e4)
+- [Wikipedia - Dilemme biais-variance](https://fr.wikipedia.org/wiki/Dilemme_biais-variance)
