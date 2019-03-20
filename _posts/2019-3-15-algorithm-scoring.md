@@ -1,6 +1,6 @@
 ---
 published: true
-title: "Evaluation des algorithmes"
+title: "Scoring des algorithmes"
 excerpt: "Datasets, scores, courbes, taux"
 toc: true
 toc_sticky: true
