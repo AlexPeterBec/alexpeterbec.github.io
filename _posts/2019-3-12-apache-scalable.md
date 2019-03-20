@@ -9,8 +9,8 @@ toc_icon: "align-center"
 comments: true
 author_profile: false
 header:
-  overlay_image: "assets/images/nn1/cover.jpg"
-  teaser: "assets/images/nn1/cover.jpg"
+  overlay_image: "assets/images/covers/cover2.jpg"
+  teaser: "assets/images/covers/cover2.jpg"
 categories: [kafka, cassandra, elastic, spark]
 ---
 

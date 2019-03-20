@@ -6,8 +6,8 @@ classes: wide
 comments: true
 author_profile: false
 header:
-  overlay_image: "assets/images/docker/cover.jpg"
-  teaser: "assets/images/docker/cover.jpg"
+  overlay_image: "assets/images/covers/cover-docker.jpg"
+  teaser: "assets/images/covers/cover-docker.jpg"
 categories: [docker, containers]
 ---
 

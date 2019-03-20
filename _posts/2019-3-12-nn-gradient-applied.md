@@ -9,8 +9,8 @@ toc_icon: "infinity"
 author_profile: false
 comments: true
 header:
-    overlay_image: "assets/images/nn1/cover.jpg"
-    teaser: "assets/images/nn1/cover.jpg"
+    overlay_image: "assets/images/covers/cover1.jpg"
+    teaser: "assets/images/covers/cover1.jpg"
 categories: [ml]
 ---
 <script type="text/javascript" async

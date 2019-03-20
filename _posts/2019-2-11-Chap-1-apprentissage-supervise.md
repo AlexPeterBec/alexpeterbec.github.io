@@ -6,8 +6,8 @@ classes: wide
 comments: true
 author_profile: false
 header:
-  overlay_image: "assets/images/stats1/curves-led.jpg"
-  teaser: "assets/images/stats1/curves-led.jpg"
+  overlay_image: "assets/images/covers/cover3.jpg"
+  teaser: "assets/images/covers/cover3.jpg"
 categories: [definitions, statistiques]
 ---
 

@@ -9,8 +9,8 @@ toc_icon: "ruler-combined"
 comments: true
 author_profile: false
 header:
-  overlay_image: "assets/images/tensorflow/cover.jpg"
-  teaser: "assets/images/tensorflow/cover.jpg"
+  overlay_image: "assets/images/covers/cover2.jpg"
+  teaser: "assets/images/covers/cover2.jpg"
 categories: [deep, learning, activation]
 ---
 

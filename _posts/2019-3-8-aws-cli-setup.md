@@ -9,9 +9,9 @@ toc_label: "CLI Setup"
 toc_icon: "terminal"
 comments: true
 header:
-  overlay_image: "assets/images/aws/cover.jpg"
+  overlay_image: "assets/images/covers/cover-cloud.jpg"
   overlay_filter: 0.2
-  teaser: "assets/images/aws/cover.jpg"
+  teaser: "assets/images/covers/cover-cloud.jpg"
 categories: [cloud, aws, cli]
 ---
 
