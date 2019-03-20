@@ -11,11 +11,11 @@ header:
 categories: [definitions, tensorflow, tensors]
 ---
 
-Tensorflow est une **librairie machine learning créée par Google** pour la conception, la construction et l'entrainement de modèles.
-
 <div align="center">
-  <img src="https://blogs.rstudio.com/tensorflow/posts/2017-08-17-tensorflow-v13-released/tensorflow-logo.png" alt="TF Logo">
+    <img src="https://blogs.rstudio.com/tensorflow/posts/2017-08-17-tensorflow-v13-released/tensorflow-logo.png" alt="TF Logo" width="200">
 </div>
+
+Tensorflow est une **librairie machine learning créée par Google** pour la conception, la construction et l'entrainement de modèles.
 
 Parmi les concurrents on trouve :
 - **PyTorch**, le framework ML de Facebook, basé sur le language Lua. Facile à prendre en main pour un developpeur Python, car se base sur le même flot de contrôle standard.
