@@ -12,7 +12,7 @@ categories: [definitions, tensorflow, tensors]
 ---
 
 <div align="center">
-    <img src="https://blogs.rstudio.com/tensorflow/posts/2017-08-17-tensorflow-v13-released/tensorflow-logo.png" alt="TF Logo" width="200">
+    <img src="https://blogs.rstudio.com/tensorflow/posts/2017-08-17-tensorflow-v13-released/tensorflow-logo.png" alt="TF Logo" width="400" vspace="20">
 </div>
 
 Tensorflow est une **librairie machine learning créée par Google** pour la conception, la construction et l'entrainement de modèles.
