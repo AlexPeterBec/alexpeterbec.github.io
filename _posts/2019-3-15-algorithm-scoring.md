@@ -203,7 +203,7 @@ $$R^{2} = 1 - \frac{\sum\limits_{j=1}^n (y_{j}-\hat y_{j})^2}{\sum\limits_{j=1}^
 $$R^{2}_{ajusté} = 1 - \bigg[ \frac{(1-R^2)(n-1)}{n-k-1} \bigg]$$
 
 - Avec $$n$$ le nombre d'observations, $$k$$ le nombre de predicteurs.
-- Le $$R^2$$ ajusté sera toujours inférieur au $$R^2$$.
+- Le $$R^2_{ajusté}$$ sera toujours inférieur au $$R^2$$.
 
 Lorsque l'on cherche à **comparer plusieurs modèles, utilisant un nombre différent de variables**. Le $$R^2$$ ajusté arrive à determiner si les nouvelles variables ont eu un **impact** positif, si elles ne sont pas utiles, le $$R^2_{ajusté}$$ sera plus faible et on saura que nos variables supplémentaires n'auront pas amélioré le modèle.
 
