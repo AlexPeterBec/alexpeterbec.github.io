@@ -176,13 +176,13 @@ Une LogLoss **proche de zéro** indique une bonne précision de l'algorithme. Ce
 
 Pour les algorithmes de régression, les deux principales mesures sont RMSE et MAE.
 
-## RMSE : Root Mean Square Error
+## Root Mean Square Error
 
 La mesure RMSE est mesurée sur l'ensemble des n estimations. C'est la moyenne du carré des écarts entre la vraie valeur $$y_{j}$$, et la valeur prédite $$\hat y_{j}$$.
 
 $$RMSE = \sqrt{\frac{1}{n}\sum\limits_{j=1}^n (y_{j}-\hat y_{j})^2}$$
 
-## MAE
+## Mean Absolute Error
 
 La **Mean Absolute Error** est la différence absolue entre la valeur observée et la valeur prédite. C'est un score linéaire : chaque différence individuelle est prise en compte avec le même poids.
 
