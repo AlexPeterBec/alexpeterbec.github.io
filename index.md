@@ -4,7 +4,7 @@ excerpt: ""
 author_profile: true
 layout: single
 header :
-    image: "assets/images/contents/main-cover.jpg"
+    image: "assets/images/covers/main-cover.jpg"
 ---
 
 Bonjour et bienvenue,
