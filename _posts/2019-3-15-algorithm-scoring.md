@@ -32,6 +32,15 @@ Dans cet article nous verrons :
 
 # Segmentation des données pour l'évaluation
 
+## Dilemme biais-variance
+
+Dans la segmentation du dataset en général, il est important de garder à l'esprit la recherche d'équilibre biais-variance pour ne pas tomber dans le sous/sur-apprentissage.
+
+C'est un problème bien connu des data scientists, il s'agit de trouver un compromis pour **minimiser deux sources d'erreurs** liées entre elles :
+
+- **Le biais** : Il est souvent causé par un manque de relations pertinentes dans les données, on parle de **sous-apprentissage**. L'algorithme ne dispose pas d'assez de données pour établir les liens pertinents.
+- **La variance** : C'est lorsque l'algorithme se colle trop aux données d'apprentissage, il modélise alors des variations non significatives. Lorsque l'algorithme est ensuite confronté aux données de test qu'il n'a jamais vu, les prédictions seront moins précises.
+
 ## Split : train, validation, test
 C'est la première étape quand on commence à travailler avec un ensemble de données. Cela consiste à séparer nos données en deux sous-ensembles :
 - Un set d'entrainement, le **train set**. Qui sera composé de la majorité des données, servant à entrainer notre modèle.
@@ -66,16 +75,6 @@ Dans le K-fold, on peut donc faire varier K de 2 à N :
 En se rapprochant du set d'entrainement complet, le **biais introduit est plus faible**, car on lui cache moins de données, mais sa **variance** sera plus importante. 
 - Lorsque toutes les données ne sont pas visibles par l'algorithme, il va devoir effectuer des approximations, c'est le **biais**.
 - Lorsque l'algorithme décrit une fonction trop complexe qui est trop proche des données d'apprentissage, sa **variance** est élevée, car il ne saura pas bien généraliser à d'autres données.
-
-## Dilemme biais-variance
-
-Dans le choix de K, et dans la segmentation du dataset en général, il est important de garder à l'esprit la recherche d'équilibre biais-variance pour ne pas tomber dans le sous/sur-apprentissage.
-
-C'est un problème bien connu des data scientists, il s'agit de trouver un compromis pour **minimiser deux sources d'erreurs** liées entre elles :
-
-- **Le biais** : Il est souvent causé par un manque de relations pertinentes dans les données, on parle de **sous-apprentissage**. L'algorithme ne dispose pas d'assez de données pour établir les liens pertinents.
-- **La variance** : C'est lorsque l'algorithme se colle trop aux données d'apprentissage, il modélise alors des variations non significatives. Lorsque l'algorithme est ensuite confronté aux données de test qu'il n'a jamais vu, les prédictions seront moins précises.
-
 
 ## Variantes de la validation croisée
 
