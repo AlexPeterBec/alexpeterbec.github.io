@@ -18,8 +18,6 @@ categories: [metrics, scoring]
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-Chaque modèle de machine learning cherche à résoudre un problème avec un objectif différent, et des données différents. Il est primordial de comprendre le contexte choisir une métrique adaptée.
-
 Quand on travaille avec les algorithmes, on finit toujours par devoir évaluer leur performances, notamment pour :
 - Evaluer la performance de notre modèle avec differents hyper-paramètres (paramètres de l'algorithme).
 - Connaitre les performances du modèle, et comparer le résultat avec d'autres personnes, comme dans les challenge Kaggle.
