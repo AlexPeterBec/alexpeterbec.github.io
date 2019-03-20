@@ -200,6 +200,8 @@ Les mesures de **R2** et **R2 ajusté** sont souvent utilisées pour montrer si 
 
 $$R^{2} = 1 - \frac{\sum\limits_{j=1}^n (y_{j}-\hat y_{j})^2}{\sum\limits_{j=1}^n (y_{j}-\overline{y}^{2})}$$
 
+La mesure du **R2** correspond au ratio entre deux écarts : l'écart entre les prédictions et la vraie valeur, et l'écart entre la vraie valeur et la valeur moyenne des prédictions.
+
 $$R^{2}_{ajusté} = 1 - \bigg[ \frac{(1-R^2)(n-1)}{n-k-1} \bigg]$$
 
 - Avec $$n$$ le nombre d'observations, $$k$$ le nombre de predicteurs.
