@@ -11,7 +11,7 @@ author_profile: false
 header:
   overlay_image: "assets/images/covers/cover2.jpg"
   teaser: "assets/images/covers/cover2.jpg"
-categories: [deep, learning, gradient]
+categories: [deep, learning, weights]
 ---
 
 <script type="text/javascript" async
