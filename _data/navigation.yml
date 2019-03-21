@@ -1,8 +1,8 @@
 # main links
 main:
-  - title: "Statistiques"
+  - title: "Algos & Stats"
     url: /st/
-  - title: "Engineering"
+  - title: "Data Engineering"
     url: /engnr/
   - title: "Machine Learning"
     url: /ml/
