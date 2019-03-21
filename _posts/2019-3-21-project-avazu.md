@@ -9,8 +9,8 @@ toc_icon: "mouse-pointer"
 comments: true
 author_profile: false
 header:
-  overlay_image: "assets/images/covers/cover5.jpg"
-  teaser: "assets/images/covers/cover5.jpg"
+  overlay_image: "assets/images/covers/cover5.png"
+  teaser: "assets/images/covers/cover5.png"
 categories: [kaggle]
 ---
 
@@ -24,7 +24,7 @@ Dans le monde de la publicité en ligne, le taux de conversion des clics (Click 
 
 Pour cette compétition, Kaggle a mis à disposition 11 jours de données provenant de la plateforme Avazu, afin d'entrainer et tester des modèles.
 
-Le but de ce challenge est donc de **prédire si l'utilisateur a cliqué** ou non sur la publicité affichée : Prédiction de 0 ou 1.
+> Le but de ce challenge est donc de **prédire si l'utilisateur a cliqué** ou non sur la publicité affichée : Prédiction de 0 ou 1.
 
 
 # Sources
