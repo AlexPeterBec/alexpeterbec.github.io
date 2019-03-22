@@ -6,6 +6,12 @@ author_profile: true
 classes: wide
 ---
 
+## Kaggle : Avazu Click-Through Rate prediction
+
+Challenge sur la prédiction du clic sur les publicités en ligne, basé sur 11 jours d'historique.
+
+<a href="https://alexpeterbec.github.io/kaggle/project-avazu" target="\_blank">Approche et résultats dans cet article.</a>
+
 ## Utilisation d'algorithmes pour la géolocalisation
 
 Projet en groupe dans le cadre du MS Big Data à Telecom Paris. Le défi était de prédire avec la meilleure précision possible, la localisation d'un objet connecté sur le réseau Sigfox, en utilisant les signaux des antennes.
