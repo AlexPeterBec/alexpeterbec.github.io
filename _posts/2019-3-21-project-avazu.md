@@ -34,7 +34,7 @@ Dans un premier temps, on affiche les données disponibles et on effectue quelqu
 
 On constate que le dataset est fortement déséquilibré. La variable "click", qui est la variable de sortie 0/1, comporte seulement 17% de 1. C'est à dire que sur les données disponibles, **l'utilisateur a cliqué sur la publicité dans 17% des cas**.
 
-## Les variables catégorielles
+## Identification des variables catégorielles
 
 Les variables catégorielles disponibles devront être traitées avant d'être utilisées. On obtient les variables non numériques (discrètes), avec la commande suivante :
 
@@ -48,6 +48,43 @@ On a donc les variables suivantes qui sont de type categorielle :
 ['id', 'site_id', 'site_domain', 'site_category', 'app_id', 'app_domain', 'app_category', 'device_id', 'device_ip', 'device_model']
 ```
 
+## Traitement du champs date
+
+Dans les données disponibles, les données de dates sont au format **YYMMDDHH**. ce qui est finalement peu exploitable par les algorithmes.
+
+Avec la fonction suivante on va éclater chaque information contenue dans le champs date, et construire un **objet *datetime***.
+
+```
+import datetime
+def datesplit(originalDate):
+originalDate = str(originalDate)
+
+year = int("20" + originalDate[0:2])
+month = int(originalDate[2:4])
+day = int(originalDate[4:6])
+hour = int(originalDate[6:8])
+
+return datetime.datetime(year, month, day, hour)
+```
+
+On peut finalement disposer de l'objet retourné, et obtenir directement la donnée qui nous interesse :
+
+```
+datesplit(14102915).weekday(), datesplit(14102915).hour
+```
+
+Maintenant que l'on dispose d'une fonction adaptée, on va l'appliquer à l'ensemble des données de date du dataframe **df_train** grâce a la fonction `.apply`. On conserve les informations pertinentes pour la consutation des publicités, à savoir l'heure de la journée, et le jour de la semaine.
+
+```
+df_train['weekday'] = df_train['hour'].apply(lambda x: datesplit(x).weekday())
+df_train['hour'] = df_train['hour'].apply(lambda x: datesplit(x).hour)
+```
+
+Visualisation de l'influence de l'**heure** de la journée, et du **jour** de la semaine :
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/challenges/click-hour.png){: .align-center}
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/challenges/click-day.png){: .align-center}
 
 
 # Sources
