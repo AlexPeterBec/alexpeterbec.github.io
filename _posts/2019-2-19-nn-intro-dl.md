@@ -27,7 +27,7 @@ Le Perceptron est une fonction mathématique, prenant des variables d'entrée po
 
 **Dans un espace à deux dimensions, le Perceptron est capable de tracer une droite pour séparer des points entre deux classes.**
 
-![image](/assets/images/nn1/perceptron.png?raw=true){: .center-image }
+![image](/assets/images/nn1/perceptron.png){: .align-center }
 
 
 # Apprentissage supervisé avec les Neural Nets
