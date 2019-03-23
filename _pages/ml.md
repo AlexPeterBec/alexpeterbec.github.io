@@ -14,7 +14,7 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 
 ## Concepts du deep learning, descente de gradient
 
-[Qu'est-ce qu'un réseau de neurones ?](https://alexpeterbec.github.io/nn/intro-dl/)
+[Qu'est-ce qu'un réseau de neurones ?](https://alexpeterbec.github.io/nn/nn-intro-dl/)
 
 [Réseau de neurones, Problème de classification binaire](https://alexpeterbec.github.io/nn/logreg/nn-log-reg/)
 
@@ -22,7 +22,7 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 
 [Descente de gradient appliquée à la regression logistique](https://alexpeterbec.github.io/ml/nn-gradient-applied/)
 
-[Python : La vectorisation](https://alexpeterbec.github.io/ml/python/py-vectorization/)
+[Python : La vectorisation](https://alexpeterbec.github.io/ml/python/nn-vectorization/)
 
 ## Réseaux de neurones à une couche cachée
 
