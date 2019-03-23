@@ -6,6 +6,7 @@ toc: true
 toc_sticky: true
 toc_label: "Challenge Avazu"
 toc_icon: "mouse-pointer"
+classes: wide
 comments: true
 author_profile: false
 header:
