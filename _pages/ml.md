@@ -38,5 +38,6 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 
 ## Réseaux de neurones profonds
 
-[Assemblage de couches](https://alexpeterbec.github.io/deep-learning/deep-networks/) : Notations, forward prop, dimensions des matrices
+[Assemblage de couches](https://alexpeterbec.github.io/deep-learning/deep-networks/) : Notations, forward prop, dimensions des matrices.
 
+[Deep Learning](https://alexpeterbec.github.io/deep-learning/deep-representation/) : Intérêt des réseaux profonds, schemas, Hyper-paramètres.
