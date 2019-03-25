@@ -47,9 +47,16 @@ En revanche, si on utilise une **couche unique**, on serait contraint d'utiliser
 
 # Représentation en blocs
 
+Le diagramme ci-dessous reprend de manière condensée l'évolution des variables au sein d'un réseau de neurones, dans les deux sens : forward et backward propagation.
+
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/nn1/nn-blocks.png){: .align-center}
 
 # Paramètres, Hyperparamètres
+
+Il est important de faire la distinction entre les **paramètres** et les **hyper-paramètres**.
+
+- **Paramètres** : $$w^{[1]}, b^{[1]}...$$, ce sont les paramètres de poids, de biais, du réseau, qui évoluent au cours de l'entrainement du réseau de neurones.
+- **Hyper-paramètres** : Ce sont tout les autres paramètres, qui vont influer sur l'évolution des paramètres : Learning rate, Nombre d'iterations (epoch), Nombre de couches, Nombre de neurones par couche, fonctions d'activation, batch..
 
 # Sources
 
