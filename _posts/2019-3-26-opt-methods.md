@@ -29,9 +29,9 @@ Dans les contenus précedents, on a vu uniquement des exemples où l'on calculai
 
 Supposons que l'on dispose de 5,000,000 données d'entrainement, et que l'on souhaite utiliser des mini-batch contenant 1000 exemples. On va donc créer 5,000 sous-ensembles et utiliser la notation suivante :
 
-$$X = [X^{\{1\}}, X^{{2}}, ... , X^{{5000}}]$$
+$$X = [X^{\{1\}}, X^{\{2\}}, ... , X^{\{5000\}}]$$
 
-$$Y =[Y^{\{1\}}, Y^{{2}}, ... , Y^{{5000}}]$$
+$$Y =[Y^{\{1\}}, Y^{\{2\}}, ... , Y^{\{5000\}}]$$
 
 $$X^{{1}}$$ a pour dimension $$(n_X, 1000)$$ et $$Y^{{1}}$$ a pour dimension $$(1, 1000)$$.
 
@@ -68,7 +68,7 @@ On utilisera des valeurs typiques : 64, 128, 256, 512. Puissances de 2, qui perm
 
 # Optimisation de la direction du gradient
 
-Dans cette partie, on verra quelques outils pour faire en sorte que le gradient aille dans une direction optimisée. 
+Dans cette partie, on verra quelques outils pour faire en sorte que le gradient aille dans une direction optimisée. Ces différentes méthodes nous permettent de résoudre les problèmes de plateaux qui ralentissent l'apprentissage.
 
 ## Moyenne mobile, poids exponentiels
 
@@ -80,7 +80,7 @@ $$V_t = \beta V_{t-1} + (1 - \beta) \theta_t$$
 
 Les valeurs calculées précédemment sont comprises $$V_{t-1}$$, si on détaille la valeur $$V_100$$ :
 
-$$V_100 = 0,1\cdot\theta_100 + 0.1\cdot0.9\cdot\theta_99 + 0.1\cdot(0.9)^2\cdot\theta_98 + 0.1\cdot(0.9)^3\cdot\theta_97 ... $$
+$$V_{100} = 0,1\cdot\theta_{100} + 0.1\cdot0.9\cdot\theta_{99} + 0.1\cdot(0.9)^2\cdot\theta_{98} + 0.1\cdot(0.9)^3\cdot\theta_{97} ... $$
 
 Avec $$\beta$$ on contrôle l'historique conservé :
 
@@ -99,7 +99,7 @@ Pour corriger ce biais initial, on utilise alors un facteur dépendant du temps 
 
 La **méthode du moment** est l'application directe de la pondération exponentielle vue plus haut. Cette méthode va directement s'implémenter lors de la mise à jour des poids pour l'apprentissage :
 
-- Calcul de dw et db
+- Calcul de $$dw$$ et $$db$$
 - $$V_dw = \beta_1 V_dw + (1- \beta_1)dw$$
 - $$V_db = \beta_1 V_db + (1- \beta_1)db$$
 - $$w = w - \alpha V_dw$$
@@ -111,7 +111,7 @@ Le paramètre $$\beta$$ est le même que dans la partie EWMA, c'est lui qui infl
 
 Le **Root Mean Square propagation** permet également à la descente de gradient d'aller plus rapidement dans la meilleure direction. Ici aussi, on applique un coefficient dynamique pour s'assurer que le gradient n'oscille pas trop.
 
-- Calcul de dw et db
+- Calcul de $$dw$$ et $$db$$
 - $$S_{dw} = \beta_2 S_{dw} + (1- \beta_2)dw^2$$
 - $$S_{db} = \beta_2 S_{db} + (1- \beta_2)db^2$$
 - $$w = w - \alpha \frac{dw}{\sqrt{S_{dw} + \epsilon}}$$
@@ -123,8 +123,8 @@ En divisant par le terme $$S_{db}$$, on corrige les valeurs trop extrêmes et on
 
 Adam signifie en réalité **Adaptative Moment Estimation**, il s'agit d'un assemblage des deux méthodes précédentes : RMSprop et EWMA.
 
-- Calcul de dw et db sur le mini-batch courant
-- $V_{dw} = \beta_1 V_{dw} + (1- \beta_1)dw$
+- Calcul de $$dw$$ et $$db$$ sur le mini-batch courant
+- $$V_{dw} = \beta_1 V_{dw} + (1- \beta_1)dw$$
 - $$V_{db} = \beta_1 V_{db} + (1- \beta_1)db$$
 - $$S_{dw} = \beta_2 S_{dw} + (1- \beta_2)dw^2$$
 - $$S_{db} = \beta_2 S_{db} + (1- \beta_2)db^2$$
@@ -132,12 +132,29 @@ Adam signifie en réalité **Adaptative Moment Estimation**, il s'agit d'un asse
 - $$V^{corr}_{db} = \frac{V_{db}}{1-\beta^{t}_1}$$
 - $$S^{corr}_{dw} = \frac{S_{dw}}{1-\beta^{t}_2}$$
 - $$S^{corr}_{db} = \frac{S_{db}}{1-\beta^{t}_2}$$
-- $$w = w -\alpha \frac{V^{corr}_{dw}}{\sqrt{S_{dw}^{corr} + \epsilon}}
-- $$b = b -\alpha \frac{V^{corr}_{db}}{\sqrt{S_{db}^{corr} + \epsilon}}
+- $$w = w -\alpha \frac{V^{corr}_{dw}}{\sqrt{S_{dw}^{corr} + \epsilon}}$$
+- $$b = b -\alpha \frac{V^{corr}_{db}}{\sqrt{S_{db}^{corr} + \epsilon}}$$
 
+Finalement, on peut influer sur le lissage avec les paramètres suivants :
+
+- $$\alpha$$ qui est le pas d'apprentissage.
+- $$\beta_1 = 0.9$$ le paramètre "momentum".
+- $$\beta_2 = 0.999$$ le paramètre RMSprop.
+- $$\epsilon = 10^{-8}$$ qui est une valeur de sécurité pour éviter de diviser par zéro.
 
 # Variation du pas d'apprentissage
 
+Une technique courante pour les réseaux de neurones est la **diminution du pas d'apprentissage à travers le temps**. Quand on se rapproche des meilleurs paramètres, il est préférable d'effectuer des pas plus petits, pour arriver au plus proche de l'objectif.
+
+Avec les formules suivantes, $$\alpha$$ diminue à mesure que l'on progresse dans les epochs :
+
+**Learning rate decay :**
+
+$$\alpha = \frac{1}{1 + decay \cdot + epoch}$$
+
+**Exponential decay :**
+
+$$\alpha = 0,95^{epoch}\cdot\alpha_0$$
 
 # Sources
 
