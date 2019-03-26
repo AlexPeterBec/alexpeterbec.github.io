@@ -13,6 +13,11 @@ header:
   teaser: "assets/images/covers/cover6.png"
 categories: [deep-learning]
 ---
+
+<script type="text/javascript" async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 # Approche de conception
 
 ## Démarche itérative
@@ -37,7 +42,9 @@ Ces notions sont abordées plus en détail dans [cet article](https://alexpeterb
 
 Le biais et la variance sont deux caractéristiques qui dégradent les performances du réseau. On cherche à les minimiser.
 
-Au final, on veut que notre algorithme ait une bonne performance sur des données qu'il n'a jamais vu. Et on veut également que ces performances soient stables sur un ensemble de cas d'usages, on veut que le réseau puisse "généraliser".
+Au final, on veut : 
+- Que notre algorithme ait une bonne performance sur les données d'entrainement. 
+- Que les performances soient stables sur un ensemble de cas d'usages, on veut que le réseau puisse "généraliser" sur de nouvelles données.
 
 Ces notions sont abordées plus en détail dans [cet article](https://alexpeterbec.github.io/metrics/scoring/algorithm-scoring/#dilemme-biais-variance).
 
@@ -45,9 +52,18 @@ Ces notions sont abordées plus en détail dans [cet article](https://alexpeterb
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/nn1/nn-iter.png){: .align-center}
 
+Avec les réseaux de neurones, on dispose de plus d'outils pour résoudre les problèmes de biais et de variance qu'avec les algorithmes classiques.
+
 # Régularisation du modèle
 
-L1, L2, DropOut
+Pendant l'apprentissage, le réseau minimise la fonction de coût $$J(w, b)$$, c'est la moyenne sur les données d'entrainement des fonctions de perte pour chaque exemple d'entrainement. L'application de techniques de régularisation a pour but **d'éviter le sur-apprentissage et de réduire la variance**. 
+
+## Régularisation L1 et L2
+
+Les régularisations L1 et L2 consistent à ajouter un terme de pénalisation de la fonction de coût :
+
+$$J(w, b) = \frac{1}{m} \sum_{1}^{m} L(\hat y^{(i)},y^{(i)}) + \frac{1}{2m}||w||^{2}_{2}$$
+
 
 # Premiers traitements : 
 
