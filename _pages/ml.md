@@ -45,8 +45,57 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 
 ![image](/assets/images/banners/deep-learning2.jpg){: .align-center }
 
+## Aspects pratiques du deep learning
+
+Mise en place du deep learning
+
+Régularisation du réseau
+
+Les problèmes de l'optimisation
+
+## Algorithmes d'optimisation
+
+Descente de gradient mini-batch
+
+Pondération exponentielle (EWMA)
+
+Autres méthodes : Descente de gradient dynamique, RMSprop, Adam Optimizer, Adaptation du pas d'apprentissage, Optima locaux
+
+## Tuning des paramètres, Batch normalisation, Tensorflow
+
+Tuning des hyper-paramètres
+
+Batch-normalisation
+
+Classification multiclasse - Softmax
+
+Introduction à Tensorflow
+
+
 ![image](/assets/images/banners/deep-learning3.jpg){: .align-center }
+
+## Première partie
+
+Orthogonalisation, Métriques d'évaluation, Répartition train/test, Performances
+
+## Seconde partie
+
+Nettoyage des données, Transfer learning, Multi-task learning, end-to-end deep learning
 
 ![image](/assets/images/banners/deep-learning4.jpg){: .align-center }
 
+## Les bases des CNN
+
+## Etudes de cas
+
+## Detection d'objets
+
+## Reconnaissance de visages & Neural style transfer
+
 ![image](/assets/images/banners/deep-learning5.jpg){: .align-center }
+
+## Réseaux récurrents
+
+## NLP & Word-embedding
+
+## Mécanismes d'attention
