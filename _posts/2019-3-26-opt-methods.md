@@ -14,6 +14,10 @@ header:
 categories: [deep-learning]
 ---
 
+<script type="text/javascript" async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 Dans les contenus précedents, on a vu uniquement des exemples où l'on calculait en bloc les sorties prédites par le réseau, pour l'ensemble des données d'entrainement. Mais à l'heure du big data, on utilise la technique du mini-batch, afin de traiter l'ensemble des données en **m** blocs.
 
 - Mode **batch**, on fait passer d'un seul coup, toutes les données dans notre réseau.
@@ -79,6 +83,7 @@ Les valeurs calculées précédemment sont comprises $$V_{t-1}$$, si on détaill
 $$V_100 = 0,1\cdot\theta_100 + 0.1\cdot0.9\cdot\theta_99 + 0.1\cdot(0.9)^2\cdot\theta_98 + 0.1\cdot(0.9)^3\cdot\theta_97 ... $$
 
 Avec $$\beta$$ on contrôle l'historique conservé :
+
 - Pour 0.9, on conserve l'information sur 10 valeurs.
 - Pour 0.98, on conserve l'information sur 50 valeurs
 
