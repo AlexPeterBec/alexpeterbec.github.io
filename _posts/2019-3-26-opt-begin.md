@@ -146,8 +146,6 @@ Pour les fonctions ReLU :
 
 $$w^{[l]} = np.random.randn(shape) * np.sqrt(\frac{2}{n^{[l-1]}})$$
 
-
-
 # Sources
 
 - [Coursera - Deep Learning](www.coursera.org/learn/neural-networks-deep-learning)
