@@ -47,19 +47,19 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 
 ## Aspects pratiques du deep learning
 
-Mise en place du deep learning
+[Les étapes incontournables pour concevoir un réseau :](https://alexpeterbec.github.io/deep-learning/opt-begin/) 
 
-Régularisation du réseau
-
-Les problèmes de l'optimisation
+- Approche itérative pour la conception des réseaux
+- Régularisation du modèle : L1, L2, DropOut
+- Premiers traitements : Normalisation, explosion du gradient, Initialisation des poids
 
 ## Algorithmes d'optimisation
 
-Descente de gradient mini-batch
+[Méthodes d'optimisation de l'apprentissage :](https://alexpeterbec.github.io/deep-learning/opt-methods/) 
 
-Pondération exponentielle (EWMA)
-
-Autres méthodes : Descente de gradient dynamique, RMSprop, Adam Optimizer, Adaptation du pas d'apprentissage, Optima locaux
+- Utiliser des mini-batches de données
+- Optimisation de la direction du gradient (EWMA, RMSprop, Adam)
+- Variation du pas d'apprentissage
 
 ## Tuning des paramètres, Batch normalisation, Tensorflow
 
