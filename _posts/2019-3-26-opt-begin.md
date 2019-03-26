@@ -105,6 +105,20 @@ Avec le drop-out, la fonction de coût est alors mal définie, il faut d'abord s
 
 ## Normalisation des données
 
+La normalisation des données, c'est super important, grâce à cette étape, on s'assure que le réseau apprend dans les meilleurs conditions.
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/nn1/center-norm.png){: .align-center}
+
+0. Sur le premier repère, on voit que les données sont réparties un peu trop librement dans l'espace. Notre but est de ramener leur répartition autour de zéro, afin d'interpréter chaque variable de la même manière.
+1. On calcule la moyenne de l'ensemble des valeurs, et on la retranche à toutes les valeurs. Comme illustré sur le second repère, on centre les données.
+2. On calcule la variance des données, et on divise l'ensemble des données par la variance. Comme illustré sur le troisième repère, on réduit l'amplitude des données.
+
+Evolution de l'allure de la fonction de coût avec la normalisation :
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/nn1/cost-function.png){: .align-center}
+
+Avec la normalisation des données, on passe du cas de gauche au cas de droite. On facilite ainsi la tâche pour la descente de gradient.
+
 
 ## Vanishing / Exploding gradient
 
