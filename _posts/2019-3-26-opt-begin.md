@@ -70,7 +70,7 @@ Avec $$\||w^{[L]}\||^{2}_{F}$$ la norme de Frobenius de la matrice des poids de 
 
 C'est la somme des valeurs au carré de la matrice des poids, qui est de dimension $$(n^{[l]}, n^{[l-1]})$$.
 
-$$\||w^{[l]}\||^{2}_{F} = \sum_{i=1}^{n^{[l-1]}} \sum_{j=1}^{n^{[l]}} (w_{ij}^{[l]})^{2}$$.
+$$\norm{w^{[l]}}^{2}_{F} = \sum_{i=1}^{n^{[l-1]}} \sum_{j=1}^{n^{[l]}} (w_{ij}^{[l]})^{2}$$.
 
 > Pourquoi uniquement effectuer la régularisation sur le vecteur w des poids ?
 
