@@ -58,12 +58,32 @@ Avec les réseaux de neurones, on dispose de plus d'outils pour résoudre les pr
 
 Pendant l'apprentissage, le réseau minimise la fonction de coût $$J(w, b)$$, c'est la moyenne sur les données d'entrainement des fonctions de perte pour chaque exemple d'entrainement. L'application de techniques de régularisation a pour but **d'éviter le sur-apprentissage et de réduire la variance**. 
 
-## Régularisation L1 et L2
+## Régularisation L2
 
-Les régularisations L1 et L2 consistent à ajouter un terme de pénalisation de la fonction de coût :
+Les régularisations L2 consiste à ajouter un terme de pénalisation de la fonction de coût :
 
-$$J(w, b) = \frac{1}{m} \sum_{1}^{m} L(\hat y^{(i)},y^{(i)}) + \frac{1}{2m}||w||^{2}_{2}$$
+$$J(w, b) = \frac{1}{m} \sum_{1}^{m} L(\hat y^{(i)},y^{(i)}) + \frac{\lambda}{2m} \sum_{l=1}^{L} ||w^{[l]}||^{2}_{F}$$
 
+Avec $$||w^{[L]}||^{2}_{F}$$ la norme de Frobenius de la matrice des poids de la couche L, et $$\lambda$$ le paramètre de régularisation (un nouvel hyperparamètre).
+
+> Calculer la norme de Frobenius :
+
+C'est la somme des valeurs au carré de la matrice des poids, qui est de dimension $$(n^{[l]}, n^{[l-1]})$$.
+
+$$||w^{[l]}||^{2}_{F} = \sum_{i=1}^{n^{[l-1]}} \sum_{j=1}^{n^{[l]}} (w_{ij}^{[l]})^{2}$$.
+
+
+> Pourquoi uniquement effectuer la régularisation sur le vecteur w des poids ?
+
+On pourrait inclure un terme prenant en compte la somme des éléments du vecteur de biais, mais cela inclue peu d'informations. La matrice des poids contient bien **plus d'informations** car sa dimension est pls grande.
+
+> Influence sur la mise à jour des paramètres :
+
+Avec le nouveau terme de régularisation, on modifie l'étape de mise à jour des paramètres :
+
+$$w^{[l]} = w^{[l]} - \alpha [ dw_{backprop} + \frac{\lambda}{m} w^{[l]}]$$
+
+En développant cette expression, on se renc dompte que le terme de régularisation se soustrit à la matrice des poids, et supprime ainsi certaines composantes.
 
 # Premiers traitements : 
 
