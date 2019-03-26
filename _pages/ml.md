@@ -13,7 +13,7 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 ## Tensorflow
 [De zéro à Tensorflow](https://alexpeterbec.github.io/definitions/tensorflow/tensors/tensorflow-theorie/)
 
-![image](/assets/images/banners/deep-learning1.png){: .align-center }
+![image](/assets/images/banners/deep-learning1.jpg){: .align-center }
 
 ## Concepts du deep learning, descente de gradient
 
@@ -43,10 +43,10 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 
 [Deep Learning](https://alexpeterbec.github.io/deep-learning/deep-representation/) : Intérêt des réseaux profonds, schemas, Hyper-paramètres.
 
-![image](/assets/images/banners/deep-learning2.png){: .align-center }
+![image](/assets/images/banners/deep-learning2.jpg){: .align-center }
 
-![image](/assets/images/banners/deep-learning3.png){: .align-center }
+![image](/assets/images/banners/deep-learning3.jpg){: .align-center }
 
-![image](/assets/images/banners/deep-learning4.png){: .align-center }
+![image](/assets/images/banners/deep-learning4.jpg){: .align-center }
 
-![image](/assets/images/banners/deep-learning5.png){: .align-center }
+![image](/assets/images/banners/deep-learning5.jpg){: .align-center }
