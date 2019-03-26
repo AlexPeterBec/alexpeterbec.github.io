@@ -113,17 +113,40 @@ La normalisation des données, c'est super important, grâce à cette étape, on
 1. On calcule la moyenne de l'ensemble des valeurs, et on la retranche à toutes les valeurs. Comme illustré sur le second repère, on centre les données.
 2. On calcule la variance des données, et on divise l'ensemble des données par la variance. Comme illustré sur le troisième repère, on réduit l'amplitude des données.
 
-Evolution de l'allure de la fonction de coût avec la normalisation :
+**Evolution de l'allure de la fonction de coût avec la normalisation :**
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/nn1/cost-function.png){: .align-center}
 
 Avec la normalisation des données, on passe du cas de gauche au cas de droite. On facilite ainsi la tâche pour la descente de gradient.
 
-
 ## Vanishing / Exploding gradient
 
+Si on remonte à l'expression de $$\hat y$$ en fonction des matrices de poids des L couches successives, de manière simplifiée, sans tenir compte des termes de biais, on obtient :
+
+$$\hat y = w^{[L]}w^{[L-1]}w^{[L-2]}...w^{[3]}w^{[2]}w^{[1]}.X$$
+
+En developpant, on se rend compte que la matrice des poids est mise à la puissance L-1. 
+
+- Si la matrice des poids comporte des petites valeurs, on parle donc de **vanishing gradient**. Par exemple $$0.9^L$$ diminue exponentiellement avec le nombre de couche L.
+- Si la matrice des poids comporte de grandes valeurs, on parle d'**exploding gradient**. Idem, pour l'explosion exponentielle des valeurs.
+
+Avec les réseaux actuels comportant 100, voire 200 couches, on devine facilement l'effet néfaste.
 
 ## Initialisation des poids
+
+Pour résoudre partiellement le problème du vanishing/exploding gradient, on utilise diverses méthodes d'initialisation des poids de la matrice W. 
+
+> L'idée est d'initialiser la matrice $$w^{[L]}$$ avec des valeurs autour de 1,et une variance de valeur $$\frac{1}{n}$$.
+
+Pour les fonction tanh (Xavier init) :
+
+$$w^{[l]} = np.random.randn(shape) * np.sqrt(\frac{1}{n^{[l-1]}})$$
+
+Pour les fonctions ReLU :
+
+$$w^{[l]} = np.random.randn(shape) * np.sqrt(\frac{2}{n^{[l-1]}})$$
+
+
 
 # Sources
 
