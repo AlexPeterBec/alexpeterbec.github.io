@@ -2,6 +2,7 @@
 layout: single
 permalink: /ml/
 author_profile: true
+classes: wide
 ---
 
 Cette section reprend divers projets, etudes, MOOCs que je mène en machine learning.
@@ -12,7 +13,7 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 ## Tensorflow
 [De zéro à Tensorflow](https://alexpeterbec.github.io/definitions/tensorflow/tensors/tensorflow-theorie/)
 
-![image](/assets/images/banners/deep-learning.png){: .align-center }
+![image](/assets/images/banners/deep-learning1.png){: .align-center }
 
 ## Concepts du deep learning, descente de gradient
 
@@ -41,3 +42,11 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 [Assemblage de couches](https://alexpeterbec.github.io/deep-learning/deep-networks/) : Notations, forward prop, dimensions des matrices.
 
 [Deep Learning](https://alexpeterbec.github.io/deep-learning/deep-representation/) : Intérêt des réseaux profonds, schemas, Hyper-paramètres.
+
+![image](/assets/images/banners/deep-learning2.png){: .align-center }
+
+![image](/assets/images/banners/deep-learning3.png){: .align-center }
+
+![image](/assets/images/banners/deep-learning4.png){: .align-center }
+
+![image](/assets/images/banners/deep-learning5.png){: .align-center }
