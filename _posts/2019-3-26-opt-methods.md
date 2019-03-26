@@ -81,7 +81,8 @@ $$V_100 = 0,1\cdot\theta_100 + 0.1\cdot0.9\cdot\theta_99 + 0.1\cdot(0.9)^2\cdot\
 Avec $$\beta$$ on contrôle l'historique conservé :
 - Pour 0.9, on conserve l'information sur 10 valeurs.
 - Pour 0.98, on conserve l'information sur 50 valeurs
-- Pour connaitre cette information, on considère qu'une valeur dont le coefficient est inférieur à **1/e** n'est plus conservée, ainsi $$0.9^10 = \frac{1}{e}$$.
+
+Pour connaitre cette information, on considère qu'une valeur dont le coefficient est inférieur à **1/e** n'est plus conservée, ainsi $$0.9^10 = \frac{1}{e}$$.
 
 ## Correction du biais initial
 
@@ -93,11 +94,15 @@ Pour corriger ce biais initial, on utilise alors un facteur dépendant du temps 
 
 La **méthode du moment** est l'application directe de la pondération exponentielle vue plus haut. Cette méthode va directement s'implémenter lors de la mise à jour des poids pour l'apprentissage :
 
-- Calcul de dw et db
-- $$V_dw = \beta_1 V_dw + (1- \beta_1)dw$$
-- $$V_db = \beta_1 V_db + (1- \beta_1)db$$ 
-- $$w = w - \alpha V_dw$$
-- $$b = b - \alpha V_db$$
+Calcul de dw et db
+
+$$V_dw = \beta_1 V_dw + (1- \beta_1)dw
+
+V_db = \beta_1 V_db + (1- \beta_1)db
+
+w = w - \alpha V_dw
+
+b = b - \alpha V_db$$
 
 Le paramètre $$\beta$$ est le même que dans la partie EWMA, c'est lui qui influe sur la "mémoire".
 
@@ -116,6 +121,8 @@ En divisant par le terme $$S_db$$, on corrige les valeurs trop extrêmes et on a
 ## Adam Optimisation
 
 Adam signifie en réalité **Adaptative Moment Estimation**, il s'agit d'un assemblage des deux méthodes précédentes : RMSprop et EWMA.
+
+- Calcul de dw et db sur le mini-batch courant
 
 # Variation du pas d'apprentissage
 
