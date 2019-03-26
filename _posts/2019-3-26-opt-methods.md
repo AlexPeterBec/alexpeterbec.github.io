@@ -29,9 +29,9 @@ Dans les contenus précedents, on a vu uniquement des exemples où l'on calculai
 
 Supposons que l'on dispose de 5,000,000 données d'entrainement, et que l'on souhaite utiliser des mini-batch contenant 1000 exemples. On va donc créer 5,000 sous-ensembles et utiliser la notation suivante :
 
-$$X = [X^{{1}}, X^{{2}}, ... , X^{{5000}}]$$
+$$X = [X^{\{1\}}, X^{{2}}, ... , X^{{5000}}]$$
 
-$$Y =[Y^{{1}}, Y^{{2}}, ... , Y^{{5000}}]$$
+$$Y =[Y^{\{1\}}, Y^{{2}}, ... , Y^{{5000}}]$$
 
 $$X^{{1}}$$ a pour dimension $$(n_X, 1000)$$ et $$Y^{{1}}$$ a pour dimension $$(1, 1000)$$.
 
@@ -99,15 +99,11 @@ Pour corriger ce biais initial, on utilise alors un facteur dépendant du temps 
 
 La **méthode du moment** est l'application directe de la pondération exponentielle vue plus haut. Cette méthode va directement s'implémenter lors de la mise à jour des poids pour l'apprentissage :
 
-Calcul de dw et db
-
-$$V_dw = \beta_1 V_dw + (1- \beta_1)dw
-
-V_db = \beta_1 V_db + (1- \beta_1)db
-
-w = w - \alpha V_dw
-
-b = b - \alpha V_db$$
+- Calcul de dw et db
+- $$V_dw = \beta_1 V_dw + (1- \beta_1)dw$$
+- $$V_db = \beta_1 V_db + (1- \beta_1)db$$
+- $$w = w - \alpha V_dw$$
+- $$b = b - \alpha V_db$$
 
 Le paramètre $$\beta$$ est le même que dans la partie EWMA, c'est lui qui influe sur la "mémoire".
 
@@ -116,18 +112,29 @@ Le paramètre $$\beta$$ est le même que dans la partie EWMA, c'est lui qui infl
 Le **Root Mean Square propagation** permet également à la descente de gradient d'aller plus rapidement dans la meilleure direction. Ici aussi, on applique un coefficient dynamique pour s'assurer que le gradient n'oscille pas trop.
 
 - Calcul de dw et db
-- $$S_dw = \beta_2 S_dw + (1- \beta_2)dw^2$$
-- $$S_db = \beta_2 S_db + (1- \beta_2)db^2$$
-- $$w = w - \alpha \frac{dw}{\sqrt{S_dw + \epsilon}}$$
-- $$b = b - \alpha \frac{db}{\sqrt{S_db + \epsilon}}$$
+- $$S_{dw} = \beta_2 S_{dw} + (1- \beta_2)dw^2$$
+- $$S_{db} = \beta_2 S_{db} + (1- \beta_2)db^2$$
+- $$w = w - \alpha \frac{dw}{\sqrt{S_{dw} + \epsilon}}$$
+- $$b = b - \alpha \frac{db}{\sqrt{S_{db} + \epsilon}}$$
 
-En divisant par le terme $$S_db$$, on corrige les valeurs trop extrêmes et on adoucit la trajectoire du gradient.
+En divisant par le terme $$S_{db}$$, on corrige les valeurs trop extrêmes et on adoucit la trajectoire du gradient.
 
 ## Adam Optimisation
 
 Adam signifie en réalité **Adaptative Moment Estimation**, il s'agit d'un assemblage des deux méthodes précédentes : RMSprop et EWMA.
 
 - Calcul de dw et db sur le mini-batch courant
+- $V_{dw} = \beta_1 V_{dw} + (1- \beta_1)dw$
+- $$V_{db} = \beta_1 V_{db} + (1- \beta_1)db$$
+- $$S_{dw} = \beta_2 S_{dw} + (1- \beta_2)dw^2$$
+- $$S_{db} = \beta_2 S_{db} + (1- \beta_2)db^2$$
+- $$V^{corr}_{dw} = \frac{V_{dw}}{1-\beta^{t}_1}$$
+- $$V^{corr}_{db} = \frac{V_{db}}{1-\beta^{t}_1}$$
+- $$S^{corr}_{dw} = \frac{S_{dw}}{1-\beta^{t}_2}$$
+- $$S^{corr}_{db} = \frac{S_{db}}{1-\beta^{t}_2}$$
+- $$w = w -\alpha \frac{V^{corr}_{dw}}{\sqrt{S_{dw}^{corr} + \epsilon}}
+- $$b = b -\alpha \frac{V^{corr}_{db}}{\sqrt{S_{db}^{corr} + \epsilon}}
+
 
 # Variation du pas d'apprentissage
 
