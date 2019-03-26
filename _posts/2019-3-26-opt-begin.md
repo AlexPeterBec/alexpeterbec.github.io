@@ -62,7 +62,7 @@ Pendant l'apprentissage, le réseau minimise la fonction de coût $$J(w, b)$$, c
 
 Les régularisations L2 consiste à ajouter un terme de pénalisation de la fonction de coût :
 
-$$J(w, b) = \frac{1}{m} \sum_{1}^{m} L(\hat y^{(i)},y^{(i)}) + \frac{\lambda}{2m} \sum_{l=1}^{L} \||w^{[l]}\||^{2}_{F}$$
+$$J(w, b) = \frac{1}{m} \sum_{1}^{m} L(\hat y^{(i)},y^{(i)}) + \frac{\lambda}{2m} \sum_{l=1}^{L} \|w^{[l]}\|^{2}_{F}$$
 
 Avec $$\||w^{[L]}\||^{2}_{F}$$ la norme de Frobenius de la matrice des poids de la couche L, et $$\lambda$$ le paramètre de régularisation (un nouvel hyperparamètre).
 
@@ -70,7 +70,7 @@ Avec $$\||w^{[L]}\||^{2}_{F}$$ la norme de Frobenius de la matrice des poids de 
 
 C'est la somme des valeurs au carré de la matrice des poids, qui est de dimension $$(n^{[l]}, n^{[l-1]})$$.
 
-$$\norm{w^{[l]}}^{2}_{F} = \sum_{i=1}^{n^{[l-1]}} \sum_{j=1}^{n^{[l]}} (w_{ij}^{[l]})^{2}$$.
+$$\|w^{[l]}\|^{2}_{F} = \sum_{i=1}^{n^{[l-1]}} \sum_{j=1}^{n^{[l]}} (w_{ij}^{[l]})^{2}$$.
 
 > Pourquoi uniquement effectuer la régularisation sur le vecteur w des poids ?
 
