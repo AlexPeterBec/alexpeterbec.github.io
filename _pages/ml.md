@@ -11,7 +11,7 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 [Segmentation des datasets, métriques de performance](https://alexpeterbec.github.io/metrics/scoring/algorithm-scoring/)
 
 ## Tensorflow
-[De zéro à Tensorflow](https://alexpeterbec.github.io/definitions/tensorflow/tensors/tensorflow-theorie/)
+[De zéro à Tensorflow](https://alexpeterbec.github.io/definitions/tensorflow/tensors/tensorflow-theorie/) : Principes de base de Tensorflow 1.13
 
 [Réseau ConvNet en Tensorflow](https://alexpeterbec.github.io/assets/tensorflow/ConvNet-MNIST.html) : Classification de chiffres manuscrits de la base MNIST avec un réseau ConvNet.
 
