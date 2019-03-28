@@ -27,13 +27,15 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 
 ## Réseaux de neurones à une couche cachée
 
-[Assemblages de neurones](https://alexpeterbec.github.io/neural/nets/shallow-network/)
+[Complexification du réseau](https://alexpeterbec.github.io/neural/nets/shallow-network/) :
 
-[Fonctions d'activation](https://alexpeterbec.github.io/deep/learning/activation/shallow-activation-functions/)
+- Passage à une couche cachée
+- Adaptation de la descente de gradient
 
-[Descente de gradient (avec une couche cachée)](https://alexpeterbec.github.io/deep/learning/gradient/shallow-gradient-descent/)
+[Grandeurs importantes](https://alexpeterbec.github.io/deep/learning/activation/shallow-activation-functions/) :
 
-[Initialisation des poids](https://alexpeterbec.github.io/deep/learning/weights/shallow-weight-init/)
+- Les fonctions d'activation courantes
+- Initialisation des poids pour garantir l'apprentissage
 
 ## Réseaux de neurones profonds
 
