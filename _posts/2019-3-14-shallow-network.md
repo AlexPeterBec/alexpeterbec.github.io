@@ -1,7 +1,7 @@
 ---
 published: true
 title: "Assemblage de neurones"
-excerpt: "Notions globales, représentations"
+excerpt: "Notions globales, représentations, descente de gradient"
 toc: true
 toc_sticky: true
 toc_label: "Réseaux de neurones"

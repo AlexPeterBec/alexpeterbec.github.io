@@ -1,7 +1,7 @@
 ---
 published: true
-title: "Fonctions d'activation"
-excerpt: "Sigmoid, ReLU, Leaky ReLU, tanH"
+title: "Paramètres des neurones"
+excerpt: ""
 toc: true
 toc_sticky: true
 toc_label: "Fonctions d'activation"
