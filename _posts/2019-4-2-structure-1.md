@@ -4,7 +4,7 @@ title: "Stratégie machine learning"
 excerpt: "Partie 1"
 toc: true
 toc_sticky: true
-toc_label: "Strategy 2"
+toc_label: "Strategy 1"
 toc_icon: "microchip"
 comments: true
 author_profile: false
@@ -28,16 +28,16 @@ L'idée est d'y voir plus clair sur les décisions à prendre pour améliorer so
 
 ## Comparaison avec une voiture
 
-Pour conduire une voiture on agit principalement sur 3 paramètres : le volant, l'accelerateur, le frein. Ces trois paramètres sont indépendants, et il n'existe pas de levier ou de pédale qui soit une combinaison de deux paramètres. On qualifie donc ces 3 paramètres d'orthogonaux.
+Pour conduire une voiture on agit principalement sur 3 paramètres : le volant, l'accelerateur, le frein. Ces trois paramètres sont indépendants, et il n'existe pas de levier ou de pédale qui soit une combinaison de deux paramètres. On qualifie ces 3 paramètres d'orthogonaux.
 
 ## Chaine de l'espoir du modèle
 
 Lorsque l'on design un algorithme de machine learning on fait des hypothèses successives sur les performances de notre modèle, depuis le set d'entrainement jusqu'aux données dans l'application finale. Pour agir sur ces performances, on dispose à chaque étape de leviers adaptés :
 
-- Bonnes performances sur le set d'entrainement (ex : Taille du réseau, Optimizers..)
-- Bonnes performances sur le set de developpement (ex : Regularisation, Grand train set)
-- Bonnes performances sur le test set (ex : grand dev set)
-- Bonnes performances dans l'appli finale (ex : changement de la fonction de coût, changement du test/dev set)
+- Bonnes performances sur le set d'**entrainement** (ex : Taille du réseau, Optimizers..)
+- Bonnes performances sur le set de **developpement** (ex : Regularisation, Grand train set)
+- Bonnes performances sur le **test** set (ex : grand dev set)
+- Bonnes performances dans l'**appli finale** (ex : changement de la fonction de coût, changement du test/dev set)
 
 # Evaluation du modèle
 
