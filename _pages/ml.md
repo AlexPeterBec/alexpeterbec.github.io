@@ -71,8 +71,6 @@ Tuning des hyper-paramètres :
 
 [Batch-normalisation et SoftMax](https://alexpeterbec.github.io/deep-learning/softmax-bn/)
 
-Classification multiclasse - Softmax
-
 Introduction à Tensorflow : Voir plus haut l'article [De zéro à Tensorflow](https://alexpeterbec.github.io/definitions/tensorflow/tensors/tensorflow-theorie/)
 
 
