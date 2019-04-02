@@ -63,13 +63,17 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 
 ## Tuning des paramètres, Batch normalisation, Tensorflow
 
-Tuning des hyper-paramètres
+Tuning des hyper-paramètres :
 
-Batch-normalisation
+- Préférer RandomSearch plutôt que GridSearch.
+- Effectuer plusieurs search sur les hyperparamètres en réduisant l'espace iterativement
+- Pour les paramètres comme *learning rate* exprimés en puissances de 10, préférer une échelle logarithmique.
+
+[Batch-normalisation et SoftMax](https://alexpeterbec.github.io/deep-learning/softmax-bn/)
 
 Classification multiclasse - Softmax
 
-Introduction à Tensorflow
+Introduction à Tensorflow : Voir plus haut l'article [De zéro à Tensorflow](https://alexpeterbec.github.io/definitions/tensorflow/tensors/tensorflow-theorie/)
 
 
 ![image](/assets/images/banners/deep-learning3.jpg){: .align-center }
