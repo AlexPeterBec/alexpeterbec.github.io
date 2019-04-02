@@ -69,18 +69,18 @@ Tuning des hyper-paramètres :
 - Effectuer plusieurs search sur les hyperparamètres en réduisant l'espace iterativement
 - Pour les paramètres comme *learning rate* exprimés en puissances de 10, préférer une échelle logarithmique.
 
-[Batch-normalisation et SoftMax](https://alexpeterbec.github.io/deep-learning/softmax-bn/)
+[Batch-normalisation et SoftMax](https://alexpeterbec.github.io/deep-learning/opt-softmax-bn/)
 
 Introduction à Tensorflow : Voir plus haut l'article [De zéro à Tensorflow](https://alexpeterbec.github.io/definitions/tensorflow/tensors/tensorflow-theorie/)
 
 
 ![image](/assets/images/banners/deep-learning3.jpg){: .align-center }
 
-## Première partie
+## [Première partie](https://alexpeterbec.github.io/deep-learning/structure-1/)
 
 Orthogonalisation, Métriques d'évaluation, Répartition train/test, Performances
 
-## Seconde partie
+## [Seconde partie](https://alexpeterbec.github.io/deep-learning/structure-2/)
 
 Nettoyage des données, Transfer learning, Multi-task learning, end-to-end deep learning
 
