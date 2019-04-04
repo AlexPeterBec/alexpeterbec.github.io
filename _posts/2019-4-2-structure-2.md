@@ -63,10 +63,27 @@ Ainsi, on se concentre mieux sur les données importantes. La règle générale 
 
 ## Analyse biais-variance
 
-| Erreur Train | 1% | 1% |
-|------------------|:---:|:----:|
-| Erreur Train-dev | 9% | 1.5% |
-| Erreur dev | 10% | 10% |
+Quand on utilise des données de distributions différentes entre le train et le dev/test, il est difficile d'évaluer la cause réelle de sous-performance :
+- Est-ce le modèle qui n'arrive pas à généraliser sur de nouvelles images ?
+- Est-ce un problème de différence de distribution ?
+
+Pour répondre à ces questions, on va créer un nouveau dataset, le **train-dev set**. C'est une sous-partie du train set que l'on va cacher lors de l'entrainement, ainsi on sait mieux évaluer :
+
+| Erreur Train | Erreur Train-dev | Erreur dev |
+|:--------------:|:------------------:|:------------:|
+| 1% | 9% | 10% |
+| 1% | 1.5% | 10% |
+
+- Dans le premier cas : Il y a un problème de variance, le modèle n'arrive pas à bien performer sur le train-dev, alors que les données sont proches du train set.
+- Dans le second cas : La différence des données pose problème, le modèle n'apprend pas suffisamment pour réussir une tâche plus complexe, ou trop différente.
+
+## Solution pour réduire la disparité
+
+Toujours dans le cas ou l'on dispose d'un train/dev/test avec des distribution différentes. La première chose à faire est d'analyser manuellement sur quels aspects les données diffèrent. Ensuite, selon les aspects identifiés, on peut essayer de générer artificiellement de nouvelles données.
+
+A partir des données dont on dispose et selon le cas d'usage, on dispose de moyens pour transformer nos données et les faire ressembler au cas d'usage final. C'est à dire faire apprendre à notre modèle des données proches de celles sur lesquelles on va l'évaluer.
+
+Par exemple, pour un système de reconnaissance vocale dans une voiture, on va mélanger des enregistrements audio avec des bruits de fond de voiture.
 
 # Transfert et Multi-tâches
 
