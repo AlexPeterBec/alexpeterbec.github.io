@@ -46,8 +46,27 @@ Au moment d'adresser une nouvelle tâche, le plus important est de constituer un
 
 Ensuite, on utilisera des methodes d'analyse de biais et variance pour **améliorer progressivement** le modèle et aborder chaque difficulté dans un ordre d'importance.
 
-
 # Disparité des train/test sets
+
+## Différentes sources
+
+Dans cette partie on verra les subtilités de travailler avec des jeux de données qui n'ont pas tous la même distribution.
+
+Exemple : On crée une appli de classificaiton d'images et on dispose de 200.000 images bien propres trouvées sur internet pour entrainer notre classifieur, et 10.000 images provenant de vrais photos soumises par des utilisateurs, c'est sur ces 10.000 que l'on souhaite avoir les meilleures performances.
+
+La solution qui vient d'abord à l'esprit serait de mélanger toutes les données, puis de les diviser en train/dev/test sets. En pratique on préferera la distribution suivante :
+- Train : 205.000 images, celles du web, et la moitié des images réelles.
+- Dev : 2.500 images réelles.
+- Test : 2.500 images réelles.
+
+Ainsi, on se concentre mieux sur les données importantes. La règle générale est d'évaluer le modèle sur les données qui nous intéressent.
+
+## Analyse biais-variance
+
+| Erreur Train | 1% | 1% |
+|------------------|:---:|:----:|
+| Erreur Train-dev | 9% | 1.5% |
+| Erreur dev | 10% | 10% |
 
 # Transfert et Multi-tâches
 
