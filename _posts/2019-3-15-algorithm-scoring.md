@@ -146,6 +146,13 @@ On utilise donc la moyenne harmonique, qui favorise la plus petite valeur quand 
 
 $$F1 Score = \frac{2 \times Precision \times Recall}{Precision + Recall}$$
 
+**Interêt d'utiliser la moyenne harmonique :** La moyenne harmonique permet de s'assurer que la precision **et** la sensibilité sont bonnes. Elle est très sensible aux valeurs basses, qui pénalisent fortement le calcul du score.
+
+Ci dessous une heatmap du F1-Score, on voit clairement que cet indicateur est très sensible à ce que les deux valeurs soient bonnes. ([Source](https://mikulskibartosz.name/f1-score-explained-d94ee90dec5b))
+
+![image-center](https://cdn-images-1.medium.com/max/1600/1*I6d5_6_U8J7cKUYWuTDwTQ.png){: .align-center}
+
+
 ## Area Under Curve (AUC)
 
 Maintenant que l'on a vu quelques exemples autour de la matrice de confusion, passons à une des mesures les plus **largement utilisées** pour l'évaluation de modèles de classification binaire : La mesure AUC.
