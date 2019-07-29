@@ -19,6 +19,7 @@ Resources
 ### Blogs
 [FastML](http://fastml.com/)  
 [KDnuggets](http://www.kdnuggets.com/)  
+[Chris Albon's amazing technical notes](https://chrisalbon.com/)
 
 ### Books
 [Artificial Intelligence - A Modern Approach](http://aima.cs.berkeley.edu/)  

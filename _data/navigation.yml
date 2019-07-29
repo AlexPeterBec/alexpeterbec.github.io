@@ -1,13 +1,13 @@
 # main links
 main:
+  - title: "Projets"
+    url: /projects/
+  - title: "Machine Learning"
+    url: /ml/
   - title: "Algos & Stats"
     url: /st/
   - title: "Data Engineering"
     url: /engnr/
-  - title: "Machine Learning"
-    url: /ml/
-  - title: "Projets"
-    url: /projects/
   - title: "Biblio"
     url: /resources/
   - title: "CV"
