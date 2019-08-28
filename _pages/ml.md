@@ -10,7 +10,7 @@ Cette section reprend divers projets, etudes, MOOCs que je mène en machine lear
 ## Culture générale des algorithmes
 [Segmentation des datasets, métriques de performance](https://alexpeterbec.github.io/metrics/scoring/algorithm-scoring/)
 
-[Machine learning avec R](https://alexpeterbec.github.io/r/r-ml-introduction)
+[Machine learning avec R](https://alexpeterbec.github.io/machine-learning/r/r-ml-intro)
 
 ## Tensorflow
 [De zéro à Tensorflow](https://alexpeterbec.github.io/definitions/tensorflow/tensors/tensorflow-theorie/) : Principes de base de Tensorflow 1.13
