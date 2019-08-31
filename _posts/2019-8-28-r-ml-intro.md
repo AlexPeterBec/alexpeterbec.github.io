@@ -21,26 +21,25 @@ The R documentation is not as friendly as Python for beginners, and putting all 
 Anecdotes :
 - The "." can be used inside variable names.
 - The "$" is used to access columns of a table.
-- To assign a variable, we can use either = or <-
+- To assign a variable, we equally use : = or <-
 
 # Workspace
 
 ## Getting started
 
-1. Install the [R language](https://cran.r-project.org/) on your computer.
-2. Install a free and complete IDE : [RStudio](https://www.rstudio.com/products/rstudio/#Desktop).
+Install the [R language](https://cran.r-project.org/) on your computer.
+Install a free and complete IDE : [RStudio](https://www.rstudio.com/products/rstudio/#Desktop).
 
-Keep in mind that RStudio is not R : RStudio sends instructions to R. In RStudio you have access to the R console, it's a useful way to test commands and edit parameters.
 
 ## Libraries
 
-The R basic install doesn't come with everything, just like with pip in Python, new libraries are installed with this command, in the R terminal :
+The R basic install doesn't come with every libraries, just like with pip in Python, new libraries are installed with this command, in the R terminal :
 
 ```r
 install.packages("thepackagename")
 ```
 
-Once a package is installed :
+Once a package is installed, here are some operations around libraries :
 
 ```r
 # Load readr in your code
@@ -69,6 +68,8 @@ my_var <- NULL # Delete any object in memory
 ```
 
 ## Create a function
+
+Functions in R are similar to Python functions :
 
 ```r
 prod_age <- function(creation_date) {
@@ -127,9 +128,13 @@ mytable$PRODUCT_AGE <-
 
 ## Working with dates
 
+When working with dates, the first step is to go from a date string to a date object. The as.Date does exactly this, and parses with the specified format.
+
+
+
 ```r
 # Convert a column into date format
-ventes$date_f <- as.Date(ventes$date, format = '%d/%m/%Y')
+sales$date_f <- as.Date(sales$date, format = '%d/%m/%Y')
 
 # Create column from time difference
 mytable$REGUL_DAYS = as.numeric(difftime(
