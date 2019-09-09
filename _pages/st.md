@@ -4,8 +4,6 @@ permalink: /st/
 author_profile: true
 ---
 
-# Fiches algorithmes
-
 
 # Statistiques
 
