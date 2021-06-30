@@ -1,10 +1,11 @@
 # Site settings
-title: Chowdown
-email: recipes@lane.sh
-description: The plain text recipe database for hackers
-#baseurl: "http://recipes.lane.sh"
-twitter_username: _seanlane
-github_username:  seanlane
+site:
+    title: Chowdown
+    email: recipes@lane.sh
+    description: The plain text recipe database for hackers
+    #baseurl: "http://recipes.lane.sh"
+    twitter_username: _seanlane
+    github_username:  seanlane
 
 # Build settings
 markdown: kramdown
